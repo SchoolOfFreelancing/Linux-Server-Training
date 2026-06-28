@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block admin or private areas (add as needed)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://www.schooloffreelancing.com/sitemap.xml
+
+# Crawl-delay for courtesy
+Crawl-delay: 10
