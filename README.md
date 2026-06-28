@@ -1,75 +1,33 @@
-![Gitter](https://badges.gitter.im/School-Of-Freelancing/Lobby.svg)
 ![Jekyll site CI](https://github.com/SchoolOfFreelancing/BackOffice/workflows/Jekyll%20site%20CI/badge.svg?branch=master)
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/SchoolOfFreelancing/Back-Office/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/SchoolOfFreelancing/Back-Office/tree/master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/SchoolOfFreelancing/Freelancing-On-Linux/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/SchoolOfFreelancing/Freelancing-On-Linux/tree/main)
 
-## Freelancing On Linux🐧
+## Linux System Administration – Hands-On Training for Freelancers
+
+## Guaranteed Income Based On Two Conditions
+1) Attend all training regularly and don't leave training due to personal issue or any technical glitches
+2) You need to purchase the necessary bids/connects on the freelance marketplace to apply jobs
+
+## Training Details:
+- Training: Freelancing on Linux
+- Format: Hands-on, Practical Training 
+- Duration: 180 hours over six months
+- Fee: $600 
+- Target Marketplace: Guru, Freelancer, Upwork
+
+## System & Participation Requirements:
+- An Ubuntu Desktop (24.04/26.04 LTS) PC requires a 64-bit dual-core processor (4 GHz), a minimum of 8 GB RAM (16 GB recommended), and at least 200 GB of available disk space. 
+- Participants must have a reliable fiber-optic internet connection with a real IP address or server access, a registered domain, a valid government-issued ID, and portable devices to support instant communication with clients.
+
 ## Training Pipeline
-**We are on a mission to empower Linux hands-on training to develop giant Linux freelancer🐧** 
-
-Enroll in our freelancing on Linux training and get guaranteed minimum income (GMI) by attending all sessions regularly and not drop out from training!
-
-* 🌍 [Website](https://www.schooloffreelancing.com/) - Everything You Need To Know
-* 📖 [Documentation](https://github.com/SchoolOfFreelancing/BackOffice/wiki) - Let's Get Started
-* :octocat: [GitHub](https://github.com/SchoolOfFreelancing) - Verified School Of Freelancing Organization's Domain
-* :rocket: [Trello](https://trello.com/b/RFo7GNdY/school-of-freelancing) - Online Corkboard
-* :film_projector: [YouTube](https://www.youtube.com/channel/UCVPPcG_DnwE_L1YgiIGsSIA/sub_confirmation=1) - YouTube Channel  	
-* :link: [LinkedIn](https://www.linkedin.com/company/school-of-freelancing) - LinkedIn
-* 👍 [Facebook](https://www.facebook.com/SchoolOfFreelancing/) - Facebook
-* 🕊 [Twitter](https://twitter.com/SchoolOfFreelan) - Twitter
-* 🐞 [Issue Tracker](https://github.com/SchoolOfFreelancing/BackOffice/issues) - Report Session Or Suggest New Features
-* 🗨 [Forums](https://www.facebook.com/groups/SchoolOfFreelancing/) - Community Discussions
-* :stars: [Tumblr](https://www.tumblr.com/blog/schooloffreelancing) - Tumblr
-* 🤳🏻 [Instagram](https://www.instagram.com/schooloffreelancing/)- Instagram
-* :iphone: [WhatsApp](https://wa.me/8801748973769) - WhatsApp
-* :pushpin: [Pinterest](https://www.pinterest.com/schooloffreelancing/) - Pinterest
-* :loop: [Medium](https://medium.com/@schooloffreelancing) - Medium
-* :camera: [TikTok](https://www.tiktok.com/@schooloffreelancing) - TikTok
-* :globe_with_meridians: [Slack](https://schooloffreelancing.slack.com/) - Slack
-* 👪 [Gitter](https://gitter.im/School-Of-Freelancing/Lobby) - Gitter
-
-## We :heart: Contributors Like You!
-
-**Update Requests:** please create a [pull request](https://github.com/SchoolOfFreelancing/BackOffice/pulls) including a step by step description to reproduce any training session  
-**Contribute features:** contact the core-team on our [Gitter channel](https://gitter.im/School-Of-Freelancing/Lobby) before you start contributing   
-**Reporting wrongdoing, fraud, abuse and misconduct** notify us: office@schooloffreelancing.com
-
-Before join training, please carefully read and understand our [training_rules](https://docs.google.com/document/d/1UX8gTwFavlUjCqeD4lQ9r6LFY757v0ZbEj7rq3Nlek8/edit?usp=sharing)
-
-For join training contact [Telegram](https://t.me/SchoolOfFreelancingTraining)
-
-Before join ***Linux Freelancing Training*** please check all sessions align and necessary to level up your current skills and you are happy to enroll our homeschooling training 🏫
-
-## Key Benefits and Advantages
-
-#### 🐧 Change You On-The-Go Individual Linux Freelancer
-#### ⚒ Develop You To Become A Linux Mentor
-#### 🎛 Enable You To Work As Linux Entrepreneur
-#### 🚀 Improve Your Linux Related R&D And Linux Consultant Support Skills
-
-
-## Getting Started
-
-_**Only 3 steps to start!**_ 😎
-If you are determined to enroll our training then we will schedule a time for five minutes one 2 one personal interview session with our mentor where mentor will check your PC configuration, Internet speed and your English reading and chatting skills. 
-
-**Steps 1:** Schedule appointment using [facebook messenger](https://www.facebook.com/SchoolOfFreelancing/) also WhatsApp +8801748973769 for voice  confirmation.
-
-**Steps 2:** If you pass our training prerequisite we will give you 24 hours time for deposit payment to start training. If you fail to deposit training fees within 24 hours you will be marked you as scam for waste our times. You are not able to seek any technical help to our mentor before enrollment such as, help you to setup Ubuntu Desktop Linux into your PC and  others.  
-
-**Steps 3:** After deposit payment to our concern payment method you can start [onboard training](https://trello.com/b/RFo7GNdY/school-of-freelancing). 
-
-Public discussions about our training are conducted in https://www.facebook.com/groups/SchoolOfFreelancing/ and https://gitter.im/School-Of-Freelancing/Lobby
-
-## The Session
-[Session 1](https://docs.google.com/document/d/17XTxh_9XgJ4--37dLbIe8ZNkr416ThnypsMwPjbb_nU/edit?usp=sharing) |
-[Session 2](https://docs.google.com/document/d/13iPvZZvilKKCK0To08sWtHG2O1IZgIOpVZP-erq8UR0/edit?usp=sharing) |
-[Session 3](https://docs.google.com/document/d/1Kk92VyZVxz9zrBzhluFVAceUDpKaYLnVV40WmMZvh7M/edit?usp=sharing) | 
-[Session 4](https://docs.google.com/document/d/1PVCZK948WGCmmNzrNNn_xdFUgvMRF-ZP2JBksvbrPRA/edit?usp=sharing) |
-[Session 5](https://docs.google.com/document/d/1Jrb2prwEBlkotss_Xv09hI83W_Z9XP0tIrAoLYNmKnw/edit?usp=sharing) |
-[Session 6](https://docs.google.com/document/d/1kUpBhSco_fw-lS-yKOLJNwU4DH5UZBfSPo4prfX3bQE/edit?usp=sharing) |
-[Session 7](https://docs.google.com/document/d/1O7OMhgAMd88gTBgWKj4m6Hn6HdhyBkoPB-6upS7G_Iw/edit?usp=sharing) |
-[Session 8](https://docs.google.com/document/d/1pfzpxxqv8_bfmn5YZ7evcLxmjR2_9WQzUsaxrYImg-Y/edit?usp=sharing) |
-[Session 9](https://docs.google.com/document/d/1a7YUcV_b3kxSz7_egMOh6e2VcM9cE0X4q8Rw7CRwNsQ/edit?usp=sharing) |
+[Session 01](https://docs.google.com/document/d/17XTxh_9XgJ4--37dLbIe8ZNkr416ThnypsMwPjbb_nU/edit?usp=sharing) |
+[Session 02](https://docs.google.com/document/d/13iPvZZvilKKCK0To08sWtHG2O1IZgIOpVZP-erq8UR0/edit?usp=sharing) |
+[Session 03](https://docs.google.com/document/d/1Kk92VyZVxz9zrBzhluFVAceUDpKaYLnVV40WmMZvh7M/edit?usp=sharing) | 
+[Session 04](https://docs.google.com/document/d/1PVCZK948WGCmmNzrNNn_xdFUgvMRF-ZP2JBksvbrPRA/edit?usp=sharing) |
+[Session 05](https://docs.google.com/document/d/1Jrb2prwEBlkotss_Xv09hI83W_Z9XP0tIrAoLYNmKnw/edit?usp=sharing) |
+[Session 06](https://docs.google.com/document/d/1kUpBhSco_fw-lS-yKOLJNwU4DH5UZBfSPo4prfX3bQE/edit?usp=sharing) |
+[Session 07](https://docs.google.com/document/d/1O7OMhgAMd88gTBgWKj4m6Hn6HdhyBkoPB-6upS7G_Iw/edit?usp=sharing) |
+[Session 08](https://docs.google.com/document/d/1pfzpxxqv8_bfmn5YZ7evcLxmjR2_9WQzUsaxrYImg-Y/edit?usp=sharing) |
+[Session 09](https://docs.google.com/document/d/1a7YUcV_b3kxSz7_egMOh6e2VcM9cE0X4q8Rw7CRwNsQ/edit?usp=sharing) |
 [Session 10](https://docs.google.com/document/d/1RxQ2RRDnRac60MnZEFUkenbNvyHG9sMv2IrVajtRIm4/edit?usp=sharing) |
 [Session 11](https://docs.google.com/document/d/1A9YpgJVa1AuSIRCjOW6QvdEBZzmB9HQKgPrANSsz1H8/edit?usp=sharing) |
 [Session 12](https://docs.google.com/document/d/15wrZuqa7j2YOOT6YRqwCj33IcIvYrCHktiOIP0SI_P8/edit?usp=sharing) |
@@ -90,17 +48,17 @@ Public discussions about our training are conducted in https://www.facebook.com/
 [Session 27](https://docs.google.com/document/d/19J49vklobxM3ITNyiag-vWpkzNcpVZQ--RgG6V4lLHk/edit?usp=sharing) |
 [Session 28](https://docs.google.com/document/d/1kJC9AHz8h3U-4q7Z3ezFFmDMhbtVr9f-DK0INrgU0Nw/edit?usp=sharing) |
 [Session 29](https://docs.google.com/document/d/1YkK40WR5AGZkhyLpvrUKh-K6zwEz7cU8AjAiMmVoGho/edit?usp=sharing) |
-[Session 30](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 31](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 32](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 33](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 34](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 35](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 36](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 37](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 38](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 39](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
-[Session 40](https://docs.google.com/document/d/1Gd825MRnMcu9WToQcLVP0eXsCpimF5c4BdYbZpN24A8/edit?usp=sharing) |
+[Session 30](https://docs.google.com/document/d/1RLgm0bXpuYGctXw6ceC4fvgr7mBhRVj0AquwhWNhxLE/edit?usp=sharing) |
+[Session 31](https://docs.google.com/document/d/1frq_8LVLuJqwT4O5MzeMpuaPKx2NDTAT65sJrvje6iI/edit?usp=sharing) |
+[Session 32](https://docs.google.com/document/d/13Beb2WhCJkCB7JHi37830dWvuTT1-aSaiMGz5nvwctM/edit?usp=sharing) |
+[Session 33](https://docs.google.com/document/d/19OzGrJbEFiRyZ-ULDRc343vjZv3T6qovLMUDPWg1WyQ/edit?usp=sharing) |
+[Session 34](https://docs.google.com/document/d/1p6g5F7-S2W2jI6WEvH_wxj1vYkA8jbl0v9cuYpYUfTQ/edit?usp=sharing) |
+[Session 35](https://docs.google.com/document/d/1Xd6Op7Ru604vOr2fwtS154xivJ6bVH3UNUKPQgW8y60/edit?usp=sharing) |
+[Session 36](https://docs.google.com/document/d/1IFki_c0atrgsDmw4_oQe8z-hP9pDsyYZrvjvlKD9q_I/edit?usp=sharing) |
+[Session 37](https://docs.google.com/document/d/15bednCwtjWudLk2V9ePlJeINnFIXiYOzfrJHdrxvskE/edit?usp=sharing) |
+[Session 38](https://docs.google.com/document/d/1ef2Tg4pFVAsGdbm2QRpTAqvVYL4jZFPAVkyl5m_EBfo/edit?usp=sharing) |
+[Session 39](https://docs.google.com/document/d/1qZklM7C8_ZTAN5l347FI63ctT_NZo2pP_yVZCOQykoc/edit?usp=sharing) |
+[Session 40](https://docs.google.com/document/d/1DRZxQD0Ovq9PhdbyIPZjD7HVoMpKproldPmbbRF8B74/edit?usp=sharing) |
 [Session 41](https://docs.google.com/document/d/1V0OkBO9XWV4-hN9Q-XtsYSxKjC__SNkpPcFXgKnBdMM/edit?usp=sharing) |
 [Session 42](https://docs.google.com/document/d/1dJGjdk3p1eVF7KXe6oiWzeNJDD64gKCK0RfnJ4gI3Qs/edit?usp=sharing) |
 [Session 43](https://docs.google.com/document/d/18sQR2-JsWdxo5XreFbAkoxrmKuflq8VmmutNhe-ewAo/edit?usp=sharing) |
@@ -150,12 +108,27 @@ Public discussions about our training are conducted in https://www.facebook.com/
 [Session 87](https://docs.google.com/document/d/15OqgWmAY6X7eM9brkKxul9v9es27gxxsTIVhhzQUUZo/edit?usp=sharing) |
 [Session 88](https://docs.google.com/document/d/1ZdEwBOcLgHhbj4c793m9ZesQ0G7tOKn7yjNqr6C2eDs/edit?usp=sharing) |
 [Session 89](https://docs.google.com/document/d/1Odd0vGlzsbvofGBQAuPaWqYHAQ93_uBx1jtWGfgeTbI/edit?usp=sharing) |
-[Session 90](https://docs.google.com/document/d/1-s46iGGrjwTVECCoF-6sgV8sobj_Ql1Aj5_h2VziSl0/edit?usp=sharing) |
+[Session 90](https://docs.google.com/document/d/1-s46iGGrjwTVECCoF-6sgV8sobj_Ql1Aj5_h2VziSl0/edit?usp=sharing)
 
-## Copyright and License 
-[School Of Freelancing](https://www.schooloffreelancing.com/) 
+Pay using [PayPal](https://www.paypal.com/ncp/payment/J5F7BS5QZMWGJ) | [bKash](https://shop.bkash.com/school-of-freelancing018907576/pay/bdt60000/cLNdZh) | [Wise](https://www.wise.com/) 
 
+Trainees must complete 100% of the program and achieve their first income through marketplaces or direct clients. Before enrolling, ensure this training aligns with your freelancing goals and that you are prepared for remote learning. If you aim to succeed on leading freelance marketplaces, join this [training](https://forms.gle/hkyz9uR2Z8WVPUPH7).
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L53CU1H)
+## Digital Presence
+[LinkedIn](https://www.linkedin.com/company/school-of-freelancing)
+[Facebook](https://www.facebook.com/SchoolOfFreelancing)
+[Instagram](https://www.instagram.com/schooloffreelancing)
+[Threads](https://www.threads.net/@schooloffreelancing)
+[YouTube](https://youtu.be/bbJCBn_vUzs) 
+[PiNet Brainstorm](https://brainstorm.pinet.com/project/66eac4846833d5003cb3ba54)
 
-  
+## A Successful Student Profiles
+[Website](https://www.rakibulinux.com/)
+[YouTube](https://www.youtube.com/@rakibulinux/videos)
+[Freelancer](https://www.freelancer.com/u/rakibulinux)
+[Upwork](https://www.upwork.com/freelancers/~0153f4b81fd98956f2)
+[GitHub](https://github.com/rakibulinux/)
+
+## Gets Started
+- [WhatsApp](https://wa.me/8801748973769)
+- [Telegram](https://t.me/SchoolOfFreelancingTraining)
