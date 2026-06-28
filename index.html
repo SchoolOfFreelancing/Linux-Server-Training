@@ -95,6 +95,22 @@
       }
     },
     {
+      "@type": "SearchAction",
+      "@id": "https://www.schooloffreelancing.com/#searchaction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.schooloffreelancing.com/training.html?q={search_term_string}",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      },
+      "query-input": [
+        "required name=search_term_string",
+        "required name=course_type"
+      ]
+    },
+    {
       "@type": "LocalBusiness",
       "@id": "https://www.schooloffreelancing.com/#localbusiness",
       "name": "School of Freelancing",
