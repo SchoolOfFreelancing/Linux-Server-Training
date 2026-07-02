@@ -111,7 +111,7 @@
     <div id="enrollment-form-wrap">
       <div class="enrollment-form-card" data-reveal data-delay="100">
 
-        <h2>Complete Your Enrollment</h2>
+        <h2>Training Enrolment Form</h2>
         <p>All fields marked * are required. Secure checkout — your data is protected.</p>
 
         <form id="enrollment-form" novalidate>
@@ -252,22 +252,22 @@
           <div class="form-row">
             <div class="form-group">
               <label for="enroll-fname">First Name *</label>
-              <input type="text" id="enroll-fname" name="fname" placeholder="John" required autocomplete="given-name" />
+              <input type="text" id="enroll-fname" name="fname" required autocomplete="given-name" />
             </div>
             <div class="form-group">
               <label for="enroll-lname">Last Name *</label>
-              <input type="text" id="enroll-lname" name="lname" placeholder="Doe" required autocomplete="family-name" />
+              <input type="text" id="enroll-lname" name="lname" required autocomplete="family-name" />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="enroll-email">Email Address *</label>
-              <input type="email" id="enroll-email" name="email" placeholder="you@email.com" required autocomplete="email" />
+              <input type="email" id="enroll-email" name="email" required autocomplete="email" />
             </div>
             <div class="form-group">
               <label for="enroll-phone">Phone Number *</label>
-              <input type="tel" id="enroll-phone" name="phone" placeholder="+234 800 000 0000" required autocomplete="tel" />
+              <input type="tel" id="enroll-phone" name="phone" required autocomplete="tel" />
             </div>
           </div>
 
@@ -275,7 +275,7 @@
             <div class="form-group">
               <label for="enroll-country">Country *</label>
               <select id="enroll-country" name="country" required>
-  <option value="" disabled selected>Select country...</option>
+  <option value="" disabled selected>Select Country...</option>
 
   <option value="AF">Afghanistan</option>
   <option value="AL">Albania</option>
@@ -550,11 +550,10 @@
     <!-- Success Screen -->
     <div id="enrollment-success" class="success-screen" style="display:none;">
       <span class="success-icon">🎉</span>
-      <h2>You're In! Welcome to School of Freelancing</h2>
-      <p style="max-width:500px; margin:0 auto 24px;">Check your email inbox — your login credentials and course access link will arrive within 2 hours. If you don't see it, check spam.</p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="courses.html" class="btn btn-primary">Browse More Courses</a>
-        <a href="index.html"   class="btn btn-outline">Back to Home</a>
+      <h2><span>Your training enrollment successfully submitted</span></h2>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="https://t.me/SchoolOfFreelancingTraining" class="btn btn-primary" target="_blank">Get Started</a>
+        <a href="index.html" class="btn btn-outline" target="_self">Back to Home</a>
       </div>
     </div>
 
