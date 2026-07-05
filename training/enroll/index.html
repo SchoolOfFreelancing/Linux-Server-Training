@@ -3,310 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enroll Training — School of Freelancing</title>
+<title>Verify Payment — School of Freelancing (Admin)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="/assets/js/sof-shared.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-dark sticky-top">
-  <div class="container"><a class="navbar-brand fw-bold" href="index.html"><span class="text-brand">:~#</span> SCHOOL OF FREELANCING</a></div>
-</nav>
+<section class="section" style="padding-top:60px; min-height:80vh;">
+  <div class="container" style="max-width:640px;">
 
-<header class="py-5 text-center">
-  <div class="container">
-    <h1>Secure Your <span class="text-brand">Spot Today</span></h1>
-    <p>Select a training, pick a payment method, and submit — we'll verify your payment and send your invoice.</p>
-  </div>
-</header>
+    <h1 style="margin-bottom:24px;">Payment Verification</h1>
 
-<main class="container pb-5" style="max-width:780px;">
-  <div id="alert-box" class="alert d-none"></div>
+    <div id="verify-loading">Checking link…</div>
 
-  <form id="enrollment-form" novalidate>
-    <section class="card-panel mb-4">
-      <h2 class="section-title">1. Select Your Training *</h2>
-      <div id="course-grid" class="row g-3"></div>
-    </section>
-
-    <section class="card-panel mb-4">
-      <h2 class="section-title">2. Your Details *</h2>
-      <div class="row g-3">
-        <div class="col-md-6"><label class="form-label">Full Name *</label>
-          <input type="text" class="form-control" id="fullName" required minlength="2" maxlength="120"></div>
-        <div class="col-md-6"><label class="form-label">Email Address *</label>
-          <input type="email" class="form-control" id="email" required>
-          <div class="form-text">All future communication (invoice, receipts) goes here.</div></div>
-        <div class="col-md-6"><label class="form-label">Phone Number *</label>
-          <input type="tel" class="form-control" id="phone" required minlength="6" maxlength="30"></div>
-        <div class="col-md-6"><label class="form-label">Country *</label>
-          <select class="form-select" id="country" required>
-            <option value="" disabled selected>Select Country...</option>
-            <option value="Afghanistan">Afghanistan</option>
-            <option value="Albania">Albania</option>
-            <option value="Algeria">Algeria</option>
-            <option value="Andorra">Andorra</option>
-            <option value="Angola">Angola</option>
-            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-            <option value="Argentina">Argentina</option>
-            <option value="Armenia">Armenia</option>
-            <option value="Australia">Australia</option>
-            <option value="Austria">Austria</option>
-            <option value="Azerbaijan">Azerbaijan</option>
-            <option value="Bahamas">Bahamas</option>
-            <option value="Bahrain">Bahrain</option>
-            <option value="Bangladesh">Bangladesh</option>
-            <option value="Barbados">Barbados</option>
-            <option value="Belarus">Belarus</option>
-            <option value="Belgium">Belgium</option>
-            <option value="Belize">Belize</option>
-            <option value="Benin">Benin</option>
-            <option value="Bhutan">Bhutan</option>
-            <option value="Bolivia">Bolivia</option>
-            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-            <option value="Botswana">Botswana</option>
-            <option value="Brazil">Brazil</option>
-            <option value="Brunei">Brunei</option>
-            <option value="Bulgaria">Bulgaria</option>
-            <option value="Burkina Faso">Burkina Faso</option>
-            <option value="Burundi">Burundi</option>
-            <option value="Cabo Verde">Cabo Verde</option>
-            <option value="Cambodia">Cambodia</option>
-            <option value="Cameroon">Cameroon</option>
-            <option value="Canada">Canada</option>
-            <option value="Central African Republic">Central African Republic</option>
-            <option value="Chad">Chad</option>
-            <option value="Chile">Chile</option>
-            <option value="China">China</option>
-            <option value="Colombia">Colombia</option>
-            <option value="Comoros">Comoros</option>
-            <option value="Congo">Congo</option>
-            <option value="Congo (Democratic Republic)">Congo (Democratic Republic)</option>
-            <option value="Costa Rica">Costa Rica</option>
-            <option value="Côte d'Ivoire">Côte d'Ivoire</option>
-            <option value="Croatia">Croatia</option>
-            <option value="Cuba">Cuba</option>
-            <option value="Cyprus">Cyprus</option>
-            <option value="Czechia">Czechia</option>
-            <option value="Denmark">Denmark</option>
-            <option value="Djibouti">Djibouti</option>
-            <option value="Dominica">Dominica</option>
-            <option value="Dominican Republic">Dominican Republic</option>
-            <option value="Ecuador">Ecuador</option>
-            <option value="Egypt">Egypt</option>
-            <option value="El Salvador">El Salvador</option>
-            <option value="Equatorial Guinea">Equatorial Guinea</option>
-            <option value="Eritrea">Eritrea</option>
-            <option value="Estonia">Estonia</option>
-            <option value="Eswatini">Eswatini</option>
-            <option value="Ethiopia">Ethiopia</option>
-            <option value="Fiji">Fiji</option>
-            <option value="Finland">Finland</option>
-            <option value="France">France</option>
-            <option value="Gabon">Gabon</option>
-            <option value="Gambia">Gambia</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Germany">Germany</option>
-            <option value="Ghana">Ghana</option>
-            <option value="Greece">Greece</option>
-            <option value="Grenada">Grenada</option>
-            <option value="Guatemala">Guatemala</option>
-            <option value="Guinea">Guinea</option>
-            <option value="Guinea-Bissau">Guinea-Bissau</option>
-            <option value="Guyana">Guyana</option>
-            <option value="Haiti">Haiti</option>
-            <option value="Honduras">Honduras</option>
-            <option value="Hungary">Hungary</option>
-            <option value="Iceland">Iceland</option>
-            <option value="India">India</option>
-            <option value="Indonesia">Indonesia</option>
-            <option value="Iran">Iran</option>
-            <option value="Iraq">Iraq</option>
-            <option value="Ireland">Ireland</option>
-            <option value="Israel">Israel</option>
-            <option value="Italy">Italy</option>
-            <option value="Jamaica">Jamaica</option>
-            <option value="Japan">Japan</option>
-            <option value="Jordan">Jordan</option>
-            <option value="Kazakhstan">Kazakhstan</option>
-            <option value="Kenya">Kenya</option>
-            <option value="Kiribati">Kiribati</option>
-            <option value="North Korea">North Korea</option>
-            <option value="South Korea">South Korea</option>
-            <option value="Kuwait">Kuwait</option>
-            <option value="Kyrgyzstan">Kyrgyzstan</option>
-            <option value="Laos">Laos</option>
-            <option value="Latvia">Latvia</option>
-            <option value="Lebanon">Lebanon</option>
-            <option value="Lesotho">Lesotho</option>
-            <option value="Liberia">Liberia</option>
-            <option value="Libya">Libya</option>
-            <option value="Liechtenstein">Liechtenstein</option>
-            <option value="Lithuania">Lithuania</option>
-            <option value="Luxembourg">Luxembourg</option>
-            <option value="Madagascar">Madagascar</option>
-            <option value="Malawi">Malawi</option>
-            <option value="Malaysia">Malaysia</option>
-            <option value="Maldives">Maldives</option>
-            <option value="Mali">Mali</option>
-            <option value="Malta">Malta</option>
-            <option value="Marshall Islands">Marshall Islands</option>
-            <option value="Mauritania">Mauritania</option>
-            <option value="Mauritius">Mauritius</option>
-            <option value="Mexico">Mexico</option>
-            <option value="Micronesia">Micronesia</option>
-            <option value="Moldova">Moldova</option>
-            <option value="Monaco">Monaco</option>
-            <option value="Mongolia">Mongolia</option>
-            <option value="Montenegro">Montenegro</option>
-            <option value="Morocco">Morocco</option>
-            <option value="Mozambique">Mozambique</option>
-            <option value="Myanmar">Myanmar</option>
-            <option value="Namibia">Namibia</option>
-            <option value="Nauru">Nauru</option>
-            <option value="Nepal">Nepal</option>
-            <option value="Netherlands">Netherlands</option>
-            <option value="New Zealand">New Zealand</option>
-            <option value="Nicaragua">Nicaragua</option>
-            <option value="Niger">Niger</option>
-            <option value="Nigeria">Nigeria</option>
-            <option value="North Macedonia">North Macedonia</option>
-            <option value="Norway">Norway</option>
-            <option value="Oman">Oman</option>
-            <option value="Pakistan">Pakistan</option>
-            <option value="Palau">Palau</option>
-            <option value="Palestine">Palestine</option>
-            <option value="Panama">Panama</option>
-            <option value="Papua New Guinea">Papua New Guinea</option>
-            <option value="Paraguay">Paraguay</option>
-            <option value="Peru">Peru</option>
-            <option value="Philippines">Philippines</option>
-            <option value="Poland">Poland</option>
-            <option value="Portugal">Portugal</option>
-            <option value="Qatar">Qatar</option>
-            <option value="Romania">Romania</option>
-            <option value="Russia">Russia</option>
-            <option value="Rwanda">Rwanda</option>
-            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-            <option value="Saint Lucia">Saint Lucia</option>
-            <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
-            <option value="Samoa">Samoa</option>
-            <option value="San Marino">San Marino</option>
-            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-            <option value="Saudi Arabia">Saudi Arabia</option>
-            <option value="Senegal">Senegal</option>
-            <option value="Serbia">Serbia</option>
-            <option value="Seychelles">Seychelles</option>
-            <option value="Sierra Leone">Sierra Leone</option>
-            <option value="Singapore">Singapore</option>
-            <option value="Slovakia">Slovakia</option>
-            <option value="Slovenia">Slovenia</option>
-            <option value="Solomon Islands">Solomon Islands</option>
-            <option value="Somalia">Somalia</option>
-            <option value="South Africa">South Africa</option>
-            <option value="South Sudan">South Sudan</option>
-            <option value="Spain">Spain</option>
-            <option value="Sri Lanka">Sri Lanka</option>
-            <option value="Sudan">Sudan</option>
-            <option value="Suriname">Suriname</option>
-            <option value="Sweden">Sweden</option>
-            <option value="Switzerland">Switzerland</option>
-            <option value="Syria">Syria</option>
-            <option value="Taiwan">Taiwan</option>
-            <option value="Tajikistan">Tajikistan</option>
-            <option value="Tanzania">Tanzania</option>
-            <option value="Thailand">Thailand</option>
-            <option value="Timor-Leste">Timor-Leste</option>
-            <option value="Togo">Togo</option>
-            <option value="Tonga">Tonga</option>
-            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-            <option value="Tunisia">Tunisia</option>
-            <option value="Turkey">Turkey</option>
-            <option value="Turkmenistan">Turkmenistan</option>
-            <option value="Tuvalu">Tuvalu</option>
-            <option value="Uganda">Uganda</option>
-            <option value="Ukraine">Ukraine</option>
-            <option value="United Arab Emirates">United Arab Emirates</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="United States">United States</option>
-            <option value="Uruguay">Uruguay</option>
-            <option value="Uzbekistan">Uzbekistan</option>
-            <option value="Vanuatu">Vanuatu</option>
-            <option value="Vatican City">Vatican City</option>
-            <option value="Venezuela">Venezuela</option>
-            <option value="Vietnam">Vietnam</option>
-            <option value="Yemen">Yemen</option>
-            <option value="Zambia">Zambia</option>
-            <option value="Zimbabwe">Zimbabwe</option>
-            <option value="Other">Other</option>
-          </select></div>
-      </div>
-    </section>
-
-    <section class="card-panel mb-4">
-      <h2 class="section-title">3. Choose Payment Method *</h2>
-      <div class="row g-3 mb-3">
-        <div class="col-md-6"><label class="form-label">Payment Method *</label>
-          <select class="form-select" id="paymentMethod" required>
-            <option value="bank_qr">International Bank / Mobile Wallet QR (local currency or USD)</option>
-            <option value="USDT_TRC20">USDT (TRC20)</option>
-            <option value="ETH_ERC20">ETH (ERC20)</option>
-            <option value="BTC">BTC</option>
-          </select></div>
-        <div class="col-md-6" id="currency-wrap"><label class="form-label">Pay In *</label>
-          <select class="form-select" id="paymentCurrency" required><option value="USD">USD</option></select></div>
-      </div>
-
-      <div class="payment-box text-center p-3 mb-3">
-        <div id="qr-code" class="d-flex justify-content-center mb-2"></div>
-        <div id="pay-amount" class="fw-bold fs-5 text-brand mb-2"></div>
-        <div id="address-wrap" class="d-none mb-2">
-          <code id="pay-address" class="d-block small"></code>
-          <button type="button" id="copy-btn" class="btn btn-outline-light btn-sm mt-2">📋 Copy Address</button>
-        </div>
-        <p id="pay-instructions" class="text-muted small mb-0"></p>
-      </div>
-
-      <div class="mb-3"><label class="form-label">Optional Note</label>
-        <textarea class="form-control" id="note" maxlength="500" rows="2"></textarea></div>
-
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="checkbox" id="paymentConfirm" required>
-        <label class="form-check-label" for="paymentConfirm">I have completed / scanned this payment *</label>
-      </div>
-      <div class="form-check mb-3">
-        <input class="form-check-input" type="checkbox" id="termsAgree" required>
-        <label class="form-check-label" for="termsAgree">I agree to the <a href="http://localhost/terms/" target="_blank">Terms of Service</a> and <a href="http://localhost/privacy/" target="_blank">Privacy Policy</a> *</label>
-      </div>
-    </section>
-
-    <div class="card-panel mb-4 d-flex justify-content-between align-items-center">
-      <span class="text-muted">Total</span><span id="order-total" class="fs-4 fw-bold text-brand">$0</span>
-    </div>
-
-    <button type="submit" id="submit-btn" class="btn btn-brand btn-lg w-100">🔒 Complete Enrollment</button>
-    <p class="text-center text-muted small mt-2">🔐 Your data is protected · Payment manually verified within 1 hour</p>
-  </form>
-</main>
-
-<div class="modal fade" id="successModal" tabindex="-1" data-bs-backdrop="static">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-light border-brand">
-      <div class="modal-body text-center p-4">
-        <div class="display-4 mb-3">🎉</div>
-        <h4>Your training enrollment has been successfully submitted.</h4>
-        <p class="text-muted mt-3">Please contact School Of Freelancing on Telegram to start your training after your payment has been verified.</p>
-        <a id="telegram-btn" href="#" target="_blank" class="btn btn-brand mt-2">Contact on Telegram</a>
+    <div id="verify-invalid" style="display:none;">
+      <div class="checkbox-group" style="background:#3a1a1a; border:1px solid #a33; border-radius:var(--radius-md); padding:20px;">
+        <p style="margin:0;">⚠️ This link is invalid, incomplete, or has been tampered with. Do not act on it — re-send the enrollment notification email if needed.</p>
       </div>
     </div>
-  </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/config.js"></script>
-<script src="js/utils.js"></script>
-<script src="js/enroll.js"></script>
+    <div id="verify-card" style="display:none;">
+      <div class="enrollment-form-card">
+        <h2>Enrollment Details</h2>
+        <table style="width:100%; font-size:0.9rem; margin-bottom:24px;">
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Enrollment ID</td><td id="v-id"></td></tr>
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Student</td><td id="v-name"></td></tr>
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Email</td><td id="v-email"></td></tr>
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Phone</td><td id="v-phone"></td></tr>
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Country</td><td id="v-country"></td></tr>
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Training</td><td id="v-training"></td></tr>
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Fee</td><td id="v-fee"></td></tr>
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Payment Method</td><td id="v-method"></td></tr>
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Transaction ID</td><td id="v-tx"></td></tr>
+          <tr><td style="color:var(--text-muted); padding:6px 0;">Submitted</td><td id="v-ts"></td></tr>
+        </table>
+
+        <button id="verify-btn" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">
+          ✅ Mark as Paid & Send Invoice
+        </button>
+        <p id="verify-status" style="margin-top:16px; font-size:0.85rem; color:var(--text-muted);"></p>
+      </div>
+    </div>
+
+    <div id="verify-done" style="display:none;">
+      <div class="checkbox-group" style="background:#1a3a1a; border:1px solid #3a3; border-radius:var(--radius-md); padding:20px;">
+        <p style="margin:0;">✅ Payment marked as paid. Invoice <strong id="done-invoice"></strong> generated and emailed to the student.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var d = params.get('d');
+  var s = params.get('s');
+
+  var loadingEl = document.getElementById('verify-loading');
+  var invalidEl = document.getElementById('verify-invalid');
+  var cardEl = document.getElementById('verify-card');
+  var doneEl = document.getElementById('verify-done');
+  var statusEl = document.getElementById('verify-status');
+  var btn = document.getElementById('verify-btn');
+
+  if (!d || !s) {
+    loadingEl.style.display = 'none';
+    invalidEl.style.display = 'block';
+    return;
+  }
+
+  var record = null;
+
+  SOF.verifySignature(d, s).then(function (valid) {
+    loadingEl.style.display = 'none';
+    if (!valid) {
+      invalidEl.style.display = 'block';
+      return;
+    }
+    try {
+      record = SOF.decodeVerifyPayload(d);
+    } catch (e) {
+      invalidEl.style.display = 'block';
+      return;
+    }
+    document.getElementById('v-id').textContent = record.id;
+    document.getElementById('v-name').textContent = record.name;
+    document.getElementById('v-email').textContent = record.email;
+    document.getElementById('v-phone').textContent = record.phone;
+    document.getElementById('v-country').textContent = record.country;
+    document.getElementById('v-training').textContent = record.training;
+    document.getElementById('v-fee').textContent = '$' + record.fee;
+    document.getElementById('v-method').textContent = record.method;
+    document.getElementById('v-tx').textContent = record.tx || '(not provided)';
+    document.getElementById('v-ts').textContent = record.ts;
+    cardEl.style.display = 'block';
+  }).catch(function () {
+    loadingEl.style.display = 'none';
+    invalidEl.style.display = 'block';
+  });
+
+  function buildInvoicePdf(invoiceNumber, paymentDate) {
+    var doc = new window.jspdf.jsPDF();
+    doc.setFontSize(18);
+    doc.text('School of Freelancing', 14, 20);
+    doc.setFontSize(11);
+    doc.text('Invoice', 14, 30);
+    doc.setFontSize(10);
+    doc.text('Invoice Number: ' + invoiceNumber, 14, 42);
+    doc.text('Payment Date: ' + paymentDate, 14, 49);
+    doc.text('Enrollment ID: ' + record.id, 14, 56);
+
+    doc.text('Bill To:', 14, 70);
+    doc.text(record.name, 14, 77);
+    doc.text(record.email, 14, 84);
+    doc.text(record.phone + '  |  ' + record.country, 14, 91);
+
+    doc.text('Training: ' + record.training, 14, 105);
+    doc.text('Amount Paid: $' + record.fee, 14, 112);
+    doc.text('Payment Method: ' + record.method, 14, 119);
+    doc.text('Transaction ID: ' + (record.tx || 'N/A'), 14, 126);
+
+    doc.setFontSize(12);
+    doc.text('Status: PAID', 14, 142);
+    doc.setFontSize(9);
+    doc.text('office@schooloffreelancing.com  |  schooloffreelancing.com', 14, 280);
+
+    return doc;
+  }
+
+  btn.addEventListener('click', function () {
+    btn.disabled = true;
+    btn.textContent = 'Processing…';
+    statusEl.textContent = '';
+
+    var invoiceNumber = SOF.generateInvoiceNumber();
+    var paymentDate = new Date().toLocaleString();
+    var doc = buildInvoicePdf(invoiceNumber, paymentDate);
+
+    // Local record update (best-effort — only visible if reopened on this browser)
+    SOF.updateEnrollmentStatus(record.id, {
+      status: 'paid',
+      invoiceNumber: invoiceNumber,
+      paymentDate: paymentDate
+    });
+
+    // Always give the admin a local copy
+    doc.save(invoiceNumber + '.pdf');
+
+    var canEmail = window.emailjs && SOF.CONFIG.EMAILJS_PUBLIC_KEY.indexOf('YOUR_') !== 0;
+    if (!canEmail) {
+      statusEl.textContent = 'EmailJS not configured — invoice downloaded only. Send it to the student manually.';
+      finish(invoiceNumber);
+      return;
+    }
+
+    var pdfBlob = doc.output('blob');
+    var pdfFile = new File([pdfBlob], invoiceNumber + '.pdf', { type: 'application/pdf' });
+
+    emailjs.init({ publicKey: SOF.CONFIG.EMAILJS_PUBLIC_KEY });
+    emailjs.send(SOF.CONFIG.EMAILJS_SERVICE_ID, SOF.CONFIG.TEMPLATE_INVOICE_SENT, {
+      to_email: record.email,
+      student_name: record.name,
+      enrollment_id: record.id,
+      invoice_number: invoiceNumber,
+      training_name: record.training,
+      training_fee: '$' + record.fee,
+      payment_date: paymentDate,
+      invoice_pdf: pdfFile // template must define a File-type variable named invoice_pdf
+    }).then(function () {
+      statusEl.textContent = 'Invoice emailed to ' + record.email + '.';
+      finish(invoiceNumber);
+    }).catch(function (err) {
+      console.error(err);
+      statusEl.textContent = 'Invoice downloaded, but the email failed to send. Attach it manually.';
+      finish(invoiceNumber);
+    });
+  });
+
+  function finish(invoiceNumber) {
+    document.getElementById('done-invoice').textContent = invoiceNumber;
+    cardEl.style.display = 'none';
+    doneEl.style.display = 'block';
+  }
+})();
+</script>
 </body>
 </html>

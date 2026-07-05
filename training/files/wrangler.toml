@@ -1,0 +1,8 @@
+name = "sof-verify-signer"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# Deploy: wrangler deploy
+# Set secret (never commit): wrangler secret put VERIFY_SECRET
+# Optional custom route:
+# routes = [{ pattern = "api.schooloffreelancing.com/*", zone_name = "schooloffreelancing.com" }]
