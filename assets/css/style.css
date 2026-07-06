@@ -176,16 +176,16 @@ img { max-width: 100%; height: auto; display: block; }
   width: 100%;
   z-index: 1000;
   padding: 16px 0;
-  background: rgba(10, 26, 10, 0.9);
+  background: #0024ED;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: var(--transition);
 }
 
 .navbar.scrolled {
   padding: 10px 0;
-  border-bottom-color: var(--border-active);
-  box-shadow: 0 4px 30px rgba(0, 255, 65, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 36, 237, 0.3);
 }
 
 .nav-container {
@@ -203,21 +203,25 @@ img { max-width: 100%; height: auto; display: block; }
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--green-bright);
-  text-shadow: 0 0 15px var(--green-glow);
+  color: white;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 .nav-logo .logo-icon {
   width: 36px; height: 36px;
-  background: var(--green-bright);
+  background: white;
   border-radius: var(--radius-sm);
   display: flex; align-items: center; justify-content: center;
-  color: var(--bg-primary);
+  color: #0024ED;
   font-size: 1.2rem;
-  box-shadow: 0 0 15px var(--green-glow);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
-.nav-logo span { color: var(--text-primary); }
+.nav-logo span { color: white; }
+
+.nav-logo .cursor {
+  background: white !important;
+}
 
 .nav-links {
   display: flex;
@@ -229,7 +233,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.8rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: white;
   padding: 6px 14px;
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
@@ -238,22 +242,23 @@ img { max-width: 100%; height: auto; display: block; }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--green-bright);
-  border-color: var(--border-color);
-  background: var(--green-faint);
-  text-shadow: 0 0 8px var(--green-bright);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .nav-cta {
-  background: var(--green-bright) !important;
-  color: var(--bg-primary) !important;
-  border-color: var(--green-bright) !important;
+  background: transparent !important;
+  color: white !important;
+  border-color: transparent !important;
   font-weight: 600;
-  box-shadow: 0 0 15px var(--green-glow);
+  box-shadow: none !important;
 }
 
 .nav-cta:hover {
-  background: var(--green-mid) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
   text-shadow: none !important;
   transform: translateY(-1px);
 }
@@ -271,7 +276,7 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-toggle span {
   display: block;
   width: 24px; height: 2px;
-  background: var(--green-bright);
+  background: white;
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -386,22 +391,22 @@ img { max-width: 100%; height: auto; display: block; }
   text-transform: uppercase;
 }
 
-/* Terminal Window */
+/* Terminal Window - Ubuntu 24.04 style */
 .terminal-window {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: #430541;
+  border: 1px solid #555753;
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-glow), var(--shadow-card);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0, 0.5);
 }
 
 .terminal-bar {
-  background: var(--bg-secondary);
+  background: #3c3f41;
   padding: 10px 16px;
   display: flex;
   align-items: center;
   gap: 8px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #555753;
 }
 
 .terminal-dot {
@@ -409,15 +414,15 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 50%;
 }
 
-.dot-red    { background: #ff5f57; }
-.dot-yellow { background: #ffbd2e; }
-.dot-green  { background: #28ca41; }
+.dot-red    { background: #ef2929; }
+.dot-yellow { background: #fce94f; }
+.dot-green  { background: #8ae234; }
 
 .terminal-title {
   flex: 1;
   text-align: center;
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: #babdb6;
   letter-spacing: 0.1em;
 }
 
@@ -426,6 +431,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-family: var(--font-code);
   font-size: 0.85rem;
   line-height: 1.9;
+  color: #eeeeec;
 }
 
 .terminal-line {
@@ -434,11 +440,11 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 4px;
 }
 
-.prompt { color: var(--green-bright); }
-.cmd    { color: var(--text-primary); }
-.output { color: var(--text-secondary); padding-left: 20px; }
-.output.success { color: var(--green-mid); }
-.output.highlight { color: var(--accent-amber); }
+.prompt { color: #8ae234; }
+.cmd    { color: #eeeeec; }
+.output { color: #babdb6; padding-left: 20px; }
+.output.success { color: #8ae234; }
+.output.highlight { color: #fce94f; }
 
 .cursor {
   display: inline-block;
@@ -625,6 +631,85 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ---------- Courses Section ---------- */
+#courses {
+  background: #0024ED;
+  color: white;
+}
+
+#courses .section-title,
+#courses .section-subtitle,
+#courses .section-label,
+#courses .course-title,
+#courses .course-desc,
+#courses .course-price,
+#courses .course-info,
+#courses .tag,
+#courses .btn-outline {
+  color: white !important;
+}
+
+#courses .section-label {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#courses .course-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+#courses .course-card:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#courses .course-banner {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#courses .course-meta {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#courses .btn-outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#courses .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+#courses .btn-primary {
+  background: white;
+  color: #0024ED;
+}
+
+#courses .btn-primary:hover {
+  background: #f0f0f0;
+  color: #0024ED;
+}
+
+#courses .tag-green {
+  color: #a8ffb8;
+  border-color: rgba(168, 255, 184, 0.3);
+  background: rgba(168, 255, 184, 0.1);
+}
+
+#courses .tag-amber {
+  color: #ffd680;
+  border-color: rgba(255, 214, 128, 0.3);
+  background: rgba(255, 214, 128, 0.1);
+}
+
+#courses .tag-cyan {
+  color: #80fff5;
+  border-color: rgba(128, 255, 245, 0.3);
+  background: rgba(128, 255, 245, 0.1);
+}
+
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

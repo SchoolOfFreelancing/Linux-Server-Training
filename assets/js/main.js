@@ -19,9 +19,9 @@ function initMatrix() {
   const drops = Array(columns).fill(1);
 
   function draw() {
-    ctx.fillStyle = 'rgba(10, 26, 10, 0.05)';
+    ctx.fillStyle = 'rgba(10, 12, 61, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#00ff41';
+    ctx.fillStyle = '#0024ed';
     ctx.font = fontSize + 'px Share Tech Mono, monospace';
 
     for (let i = 0; i < drops.length; i++) {
@@ -274,9 +274,9 @@ function initBackToTop() {
   btn.setAttribute('aria-label', 'Back to top');
   btn.style.cssText = `
     position:fixed; bottom:28px; right:28px; width:44px; height:44px;
-    background:#00ff41; color:#0a1a0a; border:none; border-radius:4px;
+    background:#0024ed; color:#000a3d; border:none; border-radius:4px;
     font-size:1.2rem; cursor:pointer; z-index:999;
-    box-shadow:0 0 15px rgba(0,255,65,0.4);
+    box-shadow:0 0 15px rgba(0,36,237,0.4);
     transition:all 0.3s ease; opacity:0; transform:translateY(10px);
     font-family:monospace; font-weight:bold;
   `;
@@ -316,16 +316,16 @@ function initCookieNotice() {
   const notice = document.createElement('div');
   notice.id = 'cookie-notice';
   notice.style.cssText = `
-    position:fixed; bottom:0; left:0; width:100%; background:#0d1f0d;
-    border-top:1px solid rgba(0,255,65,0.25); padding:16px 24px;
+    position:fixed; bottom:0; left:0; width:100%; background:#000a3d;
+    border-top:1px solid rgba(0,36,237,0.25); padding:16px 24px;
     display:flex; align-items:center; justify-content:space-between;
     gap:16px; z-index:1000; font-family:'Share Tech Mono',monospace;
-    font-size:0.82rem; color:#8fbc8f; flex-wrap:wrap;
+    font-size:0.82rem; color:#8fa3ff; flex-wrap:wrap;
   `;
   notice.innerHTML = `
-    <span>🍪 We use cookies to enhance your learning experience. By continuing, you agree to our <a href="#" style="color:#00ff41">Cookie Policy</a>.</span>
+    <span>🍪 We use cookies to enhance your learning experience. By continuing, you agree to our <a href="#" style="color:#0024ed">Cookie Policy</a>.</span>
     <button onclick="document.getElementById('cookie-notice').remove();localStorage.setItem('cookie-ok','1')"
-      style="background:#00ff41;color:#0a1a0a;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:0.8rem;font-weight:600;flex-shrink:0">
+      style="background:#0024ed;color:#000a3d;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:0.8rem;font-weight:600;flex-shrink:0">
       Accept
     </button>`;
   document.body.appendChild(notice);

@@ -21,14 +21,14 @@
     VERIFY_BASE_URL: 'https://www.schooloffreelancing.com/verify/',
 
     // EmailJS — https://dashboard.emailjs.com
-    EMAILJS_PUBLIC_KEY: 'YOUR_EMAILJS_PUBLIC_KEY',
-    EMAILJS_SERVICE_ID: 'YOUR_EMAILJS_SERVICE_ID',
+    EMAILJS_PUBLIC_KEY: 'tqpmvGmipGbpGyfh_',
+    EMAILJS_SERVICE_ID: 'service_g07i2wo',
     TEMPLATE_OFFICE_NOTIFY: 'YOUR_TEMPLATE_OFFICE_NOTIFY_ID',
     TEMPLATE_STUDENT_RECEIVED: 'YOUR_TEMPLATE_STUDENT_RECEIVED_ID',
     TEMPLATE_INVOICE_SENT: 'YOUR_TEMPLATE_INVOICE_SENT_ID', // must have a File/attachment variable named invoice_pdf
 
     // Casual-tampering deterrent only — see security note above.
-    VERIFY_SECRET: 'REPLACE_WITH_A_LONG_RANDOM_STRING_BEFORE_LAUNCH'
+    VERIFY_SECRET: 'uOF0AUJ0+M4UFI3EJxTQp+XyAXA7mxHPNan5812U0gU='
   };
 
   // ---- Sanitization / validation ----
