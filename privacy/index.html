@@ -55,6 +55,52 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
+<!-- Custom styles for background and text color -->
+<style>
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #cccccc;
+  }
+  body {
+    background-color: #0024ED !important;
+    color: white !important;
+  }
+  /* Ensure all text elements inherit white color */
+  body * {
+    color: inherit;
+  }
+  /* Override specific elements that might have hardcoded colors */
+  .hero-title, .section-title, .section-subtitle, .course-title, .course-desc,
+  .course-price, .footer-brand p, .footer-links a, .footer-bottom p,
+  .nav-links a, .btn, .tag, .cta-banner h2, .cta-banner p {
+    color: white !important;
+  }
+  /* Ensure links are visible on blue background */
+  a {
+    color: #fff !important;
+  }
+  a:hover {
+    color: #ccc !important;
+  }
+  /* Button adjustments for visibility */
+  .btn-primary {
+    background-color: white !important;
+    color: #0024ED !important;
+    border-color: white !important;
+  }
+  .btn-primary:hover {
+    background-color: #f0f0f0 !important;
+  }
+  .btn-outline {
+    border-color: white !important;
+    color: white !important;
+  }
+  .btn-outline:hover {
+    background-color: white !important;
+    color: #0024ED !important;
+  }
+</style>
 </head>
 <body>
 

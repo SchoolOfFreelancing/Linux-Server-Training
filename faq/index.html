@@ -38,6 +38,52 @@
 
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230a1a0a'/><text y='24' x='4' font-size='22' fill='%2300ff41'>$</text></svg>" />
+<!-- Custom styles for background and text color -->
+<style>
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #cccccc;
+  }
+  body {
+    background-color: #0024ED !important;
+    color: white !important;
+  }
+  /* Ensure all text elements inherit white color */
+  body * {
+    color: inherit;
+  }
+  /* Override specific elements that might have hardcoded colors */
+  .hero-title, .section-title, .section-subtitle, .course-title, .course-desc,
+  .course-price, .footer-brand p, .footer-links a, .footer-bottom p,
+  .nav-links a, .btn, .tag, .cta-banner h2, .cta-banner p {
+    color: white !important;
+  }
+  /* Ensure links are visible on blue background */
+  a {
+    color: #fff !important;
+  }
+  a:hover {
+    color: #ccc !important;
+  }
+  /* Button adjustments for visibility */
+  .btn-primary {
+    background-color: white !important;
+    color: #0024ED !important;
+    border-color: white !important;
+  }
+  .btn-primary:hover {
+    background-color: #f0f0f0 !important;
+  }
+  .btn-outline {
+    border-color: white !important;
+    color: white !important;
+  }
+  .btn-outline:hover {
+    background-color: white !important;
+    color: #0024ED !important;
+  }
+</style>
 </head>
 <body>
 
