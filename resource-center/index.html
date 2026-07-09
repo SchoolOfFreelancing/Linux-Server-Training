@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resource Center | School of Freelancing</title>
+  <meta name="description" content="The School of Freelancing Resource Center: browse our FAQs for quick answers, or read testimonials from past students and clients." />
+  <meta name="keywords" content="school of freelancing resource center, freelancing training faqs, school of freelancing testimonials" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.schooloffreelancing.com/resource-center/">
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.schooloffreelancing.com/resource-center/">
+  <meta property="og:title"       content="Resource Center | School of Freelancing" />
+  <meta property="og:description" content="Browse our FAQs for quick answers, or read testimonials from past students and clients." />
+  <meta property="og:image"       content="https://www.schooloffreelancing.com/assets/images/og-home.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://www.schooloffreelancing.com/resource-center/",
+    "name": "Resource Center",
+    "url": "https://www.schooloffreelancing.com/resource-center/",
+    "description": "Resource Center hub for School of Freelancing: FAQs and testimonials.",
+    "isPartOf": { "@id": "https://www.schooloffreelancing.com/#website" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230a1a0a'/><text y='24' x='4' font-size='22' fill='%2300ff41'>$</text></svg>" />
+<!-- Custom styles for background and text color -->
+<style>
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #cccccc;
+  }
+  body {
+    background-color: #0024ED !important;
+    color: white !important;
+  }
+  /* Ensure all text elements inherit white color */
+  body * {
+    color: inherit;
+  }
+  /* Override specific elements that might have hardcoded colors */
+  .hero-title, .section-title, .section-subtitle, .course-title, .course-desc,
+  .course-price, .footer-brand p, .footer-links a, .footer-bottom p,
+  .nav-links a, .btn, .tag, .cta-banner h2, .cta-banner p {
+    color: white !important;
+  }
+  /* Ensure links are visible on blue background */
+  a {
+    color: #fff !important;
+  }
+  a:hover {
+    color: #ccc !important;
+  }
+  /* Button adjustments for visibility */
+  .btn-primary {
+    background-color: white !important;
+    color: #0024ED !important;
+    border-color: white !important;
+  }
+  .btn-primary:hover {
+    background-color: #f0f0f0 !important;
+  }
+  .btn-outline {
+    border-color: white !important;
+    color: white !important;
+  }
+  .btn-outline:hover {
+    background-color: white !important;
+    color: #0024ED !important;
+  }
+  .resource-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin: 20px 0 40px; }
+  .resource-card {
+    background: rgba(255,255,255,0.08); border-radius: 10px; padding: 32px 28px;
+    text-decoration: none !important; display:block;
+  }
+  .resource-card:hover { background: rgba(255,255,255,0.16); }
+  .resource-card .resource-icon { font-size: 2rem; margin-bottom: 12px; }
+  .resource-card h2 { font-size: 1.2rem; margin-bottom: 8px; }
+  .resource-card p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0; }
+</style>
+</head>
+<body>
+
+<canvas id="matrix-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <div class="logo-icon">$_</div>School of <span>Freelancing</span>
+    </a>
+  <ul class="nav-links" role="list">
+     <li><a href="/" target="_self">Home</a></li>
+      <li><a href="/freelancing-training/" target="_self">Training</a></li>
+      <li><a href="/linux-it-services/" class="active" target="_self">Tech Support</a></li>
+      <li><a href="/resource-center/testimonials/" target="_self">Testimonials</a></li>
+      <li><a href="/about-us/" target="_self">About us</a></li>
+      <li><a href="/get-started/" class="nav-cta" target="_self">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+
+
+<!-- PAGE HERO -->
+<section class="page-hero" aria-label="Resource Center hero">
+  <div class="container">
+    <h1 data-reveal><span style="color:var(--text-primary)">Resource Center</span></h1>
+    <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; max-width:700px; margin:16px auto 0;">
+      Everything you need to know before you get started — quick answers to common questions, and real feedback from past students and clients.
+    </p>
+  </div>
+</section>
+
+<!-- RESOURCE LINKS -->
+<section class="section" aria-labelledby="resource-center-heading">
+  <div class="container" style="max-width:900px;">
+    <div class="section-header" data-reveal>
+      <span class="section-label">Browse Resources</span>
+      <h2 id="resource-center-heading"><span style="color:var(--text-primary)">Where Would You Like to Start?</span></h2>
+    </div>
+
+    <div class="resource-grid" data-reveal>
+      <a class="resource-card" href="/resource-center/faqs/">
+        <div class="resource-icon">❓</div>
+        <h2>FAQs</h2>
+        <p>Quick answers about our training programs, payment, technical support, and how registration works.</p>
+      </a>
+      <a class="resource-card" href="/resource-center/testimonials/">
+        <div class="resource-icon">⭐</div>
+        <h2>Testimonials</h2>
+        <p>Read what past students and support clients say about training with, and getting support from, School of Freelancing.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="display:inline-flex; margin-bottom:16px;">
+          <div class="logo-icon" aria-hidden="true">:~#</div>
+          <span>School of Freelancing<span class="cursor" aria-hidden="true"></span></span>
+        </a>
+        <p>AI-powered Linux training for freelancers & Tech support for businesses. Build real skills, solve real problems, and scale with confidence.</p>
+        <div class="footer-social">
+          <a href="https://github.com/SchoolOfFreelancing" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.youtube.com/@SchoolOfFreelancing" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/company/schooloffreelancing" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/SchoolOfFreelancing" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://instagram.com/schooloffreelancing" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.threads.com/schooloffreelancing" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i></a>
+          <a href="https://wa.me/8801748973769" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://t.me/SchoolOfFreelancingTraining" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://x.com/FreelancingOf" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <span>Training</span>
+        <ul class="footer-links">
+          <li><a href="/freelancing-training/">Hermes Agent Training</a></li>
+          <li><a href="/freelancing-training/">Telnyx SMS API Training</a></li>
+          <li><a href="/freelancing-training/">FusionPBX VoIP Training</a></li>
+          <li><a href="/freelancing-training/">OpenAI Platform Training</a></li>
+          <li><a href="/freelancing-training/">Linux Freelancing Training</a></li>
+          <li><a href="/freelancing-training/">All Freelancing Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <span>Tech Support</span>
+        <ul class="footer-links">
+          <li><a href="/linux-it-services/">Linux Support</a></li>
+          <li><a href="/linux-it-services/">Telnyx SMS API Support</a></li>
+          <li><a href="/linux-it-services/">Twilio SMS API Support</a></li>
+          <li><a href="/linux-it-services/">Hummingbot Setup Support</a></li>
+          <li><a href="/linux-it-services/">FusionPBX VoIP Support</a></li>
+          <li><a href="/linux-it-services/">View All Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <span>Legal</span>
+        <ul class="footer-links">
+           <li><a href="/resource-center/faqs/" target="_self">FAQs</a></li>
+            <li><a href="/legal/refund-policy/">Refund Policy</a></li>
+              <li><a href="/legal/training-rules/">Training Rules</a></li>
+            <li><a href="/legal/privacy-policy/">Privacy Policy</a></li>
+                       <li><a href="/legal/terms-and-conditions/" target="_self">Terms & Conditions</a></li>
+            <li><a href="/legal/credential-verification/">Credential Verification</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© School of Freelancing. All rights reserved. Built with ❤️ from Bangladesh.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

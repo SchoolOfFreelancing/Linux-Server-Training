@@ -1,5 +1,5 @@
 # School of Freelancing - Robots.txt
-# Search Engine Crawling Directives
+# Search Engine & AI Crawler Directives
 
 # Default rules for all search engines
 User-agent: *
@@ -36,9 +36,91 @@ Crawl-delay: 2
 User-agent: YandexBot
 Crawl-delay: 2
 
-# Sitemap location for all search engines
+##################################################
+# AI search / answer engines & LLM crawlers
+# This is a marketing/lead-gen site — we want
+# maximum visibility in AI-generated answers and
+# citations, so every major AI crawler is explicitly
+# allowed with no crawl-delay. Revisit if that
+# stance ever changes (e.g. to opt out of training
+# use while still allowing live retrieval).
+##################################################
+
+# OpenAI — ChatGPT search/browsing and training crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic — Claude search/browsing and training crawlers
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google's AI features (separate from classic Googlebot above)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# ByteDance / TikTok
+User-agent: Bytespider
+Allow: /
+
+# Amazon (Alexa+, Rufus)
+User-agent: Amazonbot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Common Crawl (widely used as LLM pretraining data)
+User-agent: CCBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# Sitemap location for all search engines and crawlers
 Sitemap: https://www.schooloffreelancing.com/sitemap.xml
-Sitemap: https://www.schooloffreelancing.com/sitemap-pages.xml
+
+# LLM-oriented site index (see https://llmstxt.org)
+# https://www.schooloffreelancing.com/llms.txt
+# https://www.schooloffreelancing.com/llms-full.txt
 
 # Additional crawling instructions
 # Cache static assets for better performance

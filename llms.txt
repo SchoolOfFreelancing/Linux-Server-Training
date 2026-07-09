@@ -1,0 +1,30 @@
+# School of Freelancing
+
+> School of Freelancing is a Linux/tech freelancing training and remote IT support business based in Bangladesh, delivering everything online worldwide. It runs hands-on, instructor-led training programs (Linux, DevOps, AI platforms, VoIP, SMS APIs) that prepare students to earn on freelance marketplaces (Guru, Freelancer, Upwork), and offers paid remote technical support in the same technology areas for businesses.
+
+## Core Pages
+
+- [Home](https://www.schooloffreelancing.com/): Overview of training and support offerings.
+- [Freelancing Training](https://www.schooloffreelancing.com/freelancing-training/): Full catalog of hands-on training programs.
+- [Linux & IT Services](https://www.schooloffreelancing.com/linux-it-services/): Full catalog of remote technical support services.
+- [About Us](https://www.schooloffreelancing.com/about-us/): Company background and mission.
+- [Get Started](https://www.schooloffreelancing.com/get-started/): Contact channels (Telegram, WhatsApp, email) to begin training or request support.
+- [Register](https://www.schooloffreelancing.com/register/): How to register for a training program or support service.
+- [Locations](https://www.schooloffreelancing.com/location/): Countries served (all delivery is remote/online, priced in USD).
+
+## Resources
+
+- [Testimonials](https://www.schooloffreelancing.com/resource-center/testimonials/)
+- [FAQs](https://www.schooloffreelancing.com/resource-center/faqs/)
+
+## Legal
+
+- [Privacy Policy](https://www.schooloffreelancing.com/legal/privacy-policy/)
+- [Terms & Conditions](https://www.schooloffreelancing.com/legal/terms-and-conditions/)
+- [Refund Policy](https://www.schooloffreelancing.com/legal/refund-policy/)
+- [Training Rules](https://www.schooloffreelancing.com/legal/training-rules/)
+- [Credential Verification](https://www.schooloffreelancing.com/legal/credential-verification/)
+
+## Optional
+
+- [llms-full.txt](https://www.schooloffreelancing.com/llms-full.txt): Full listing of every training program and support service page.

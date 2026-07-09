@@ -22,20 +22,41 @@ RewriteRule ^index\.html$ / [R=301,L]
 RewriteRule ^(.+)/index\.html$ /$1/ [R=301,L]
 
 ##################################################
-# Redirect old flat HTML pages to clean folders
+# Redirect old flat HTML pages to current folders
 ##################################################
-RewriteRule ^training\.html$ /training/ [R=301,L]
-RewriteRule ^enrollment\.html$ /training/enroll/ [R=301,L]
-RewriteRule ^tech-support\.html$ /tech-support/ [R=301,L]
-RewriteRule ^support\.html$ /tech-support/ [R=301,L]
-RewriteRule ^get-support\.html$ /tech-support/get-support/ [R=301,L]
-RewriteRule ^get_support\.html$ /tech-support/get-support/ [R=301,L]
-RewriteRule ^testimonials\.html$ /testimonials/ [R=301,L]
-RewriteRule ^about\.html$ /about/ [R=301,L]
-RewriteRule ^faq\.html$ /faq/ [R=301,L]
-RewriteRule ^privacy-policy\.html$ /privacy-policy/ [R=301,L]
-RewriteRule ^terms\.html$ /terms/ [R=301,L]
-RewriteRule ^contact\.html$ /contact/ [R=301,L]
+RewriteRule ^training\.html$ /freelancing-training/ [R=301,L]
+RewriteRule ^enrollment\.html$ /get-started/ [R=301,L]
+RewriteRule ^tech-support\.html$ /linux-it-services/ [R=301,L]
+RewriteRule ^support\.html$ /linux-it-services/ [R=301,L]
+RewriteRule ^get-support\.html$ /linux-it-services/ [R=301,L]
+RewriteRule ^get_support\.html$ /linux-it-services/ [R=301,L]
+RewriteRule ^testimonials\.html$ /resource-center/testimonials/ [R=301,L]
+RewriteRule ^about\.html$ /about-us/ [R=301,L]
+RewriteRule ^faq\.html$ /resource-center/faqs/ [R=301,L]
+RewriteRule ^privacy-policy\.html$ /legal/privacy-policy/ [R=301,L]
+RewriteRule ^terms\.html$ /legal/terms-and-conditions/ [R=301,L]
+RewriteRule ^contact\.html$ /get-started/ [R=301,L]
+
+##################################################
+# Redirect deleted section folders to their new
+# equivalents from the 2026-07 site restructure
+##################################################
+RewriteRule ^training/enroll(/.*)?$ /get-started/ [R=301,L]
+RewriteRule ^training/oldenroll(/.*)?$ /get-started/ [R=301,L]
+RewriteRule ^training/enroll1(/.*)?$ /get-started/ [R=301,L]
+RewriteRule ^training/files(/.*)?$ /get-started/ [R=301,L]
+RewriteRule ^training/?$ /freelancing-training/ [R=301,L]
+RewriteRule ^tech-support/get-support/?$ /linux-it-services/ [R=301,L]
+RewriteRule ^tech-support/?$ /linux-it-services/ [R=301,L]
+RewriteRule ^about/?$ /about-us/ [R=301,L]
+RewriteRule ^contact/?$ /get-started/ [R=301,L]
+RewriteRule ^testimonials/?$ /resource-center/testimonials/ [R=301,L]
+RewriteRule ^faq/?$ /resource-center/faqs/ [R=301,L]
+RewriteRule ^terms/?$ /legal/terms-and-conditions/ [R=301,L]
+RewriteRule ^privacy/?$ /legal/privacy-policy/ [R=301,L]
+RewriteRule ^refund/?$ /legal/refund-policy/ [R=301,L]
+RewriteRule ^training-rules/?$ /legal/training-rules/ [R=301,L]
+RewriteRule ^verify/?$ /legal/credential-verification/ [R=301,L]
 
 ##################################################
 # Internally load index.html for clean folder URLs
