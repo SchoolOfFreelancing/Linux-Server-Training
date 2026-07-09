@@ -49,35 +49,47 @@ function initNavbar() {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
   });
 
-  // Active link
+  // Active link (site uses clean trailing-slash URLs, e.g. /training/)
   const links = document.querySelectorAll('.nav-links a');
-  const page  = location.pathname.split('/').pop() || 'index.html';
+  const path = location.pathname;
   links.forEach(a => {
     const href = a.getAttribute('href');
-    if (href === page || (page === '' && href === 'index.html')) {
-      a.classList.add('active');
-    }
+    const isActive = href === '/' ? path === '/' : path.startsWith(href);
+    a.classList.toggle('active', isActive);
   });
 }
 
 /* ---------- Mobile Menu ---------- */
 function initMobileMenu() {
-  const toggle = document.querySelector('.nav-toggle');
-  const links  = document.querySelector('.nav-links');
+  const toggle  = document.querySelector('.nav-toggle');
+  const links   = document.querySelector('.nav-links');
+  const overlay = document.querySelector('.nav-overlay');
   if (!toggle || !links) return;
 
+  function closeMenu() {
+    toggle.classList.remove('open');
+    links.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  function openMenu() {
+    toggle.classList.add('open');
+    links.classList.add('open');
+    if (overlay) overlay.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
   toggle.addEventListener('click', () => {
-    toggle.classList.toggle('open');
-    links.classList.toggle('open');
-    document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
+    if (links.classList.contains('open')) closeMenu(); else openMenu();
   });
 
+  if (overlay) overlay.addEventListener('click', closeMenu);
+
   links.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      toggle.classList.remove('open');
-      links.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    a.addEventListener('click', closeMenu);
   });
 }
 

@@ -310,50 +310,90 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-<!-- Custom styles for background and text color -->
+<!-- Homepage polish: layered background, glow accents, glass cards -->
 <style>
-  :root {
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --text-muted: #cccccc;
-  }
+  /* Layered ambient background instead of flat blue */
   body {
-    background-color: #0024ED !important;
-    color: white !important;
+    background:
+      radial-gradient(ellipse 70% 55% at 12% -8%, rgba(94, 130, 255, 0.45) 0%, transparent 60%),
+      radial-gradient(ellipse 55% 45% at 105% 12%, rgba(0, 255, 225, 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 85% 65% at 50% 112%, rgba(0, 8, 80, 0.85) 0%, transparent 65%),
+      linear-gradient(180deg, #0024ED 0%, #001bb0 55%, #00137e 100%);
+    background-attachment: fixed;
   }
-  /* Ensure all text elements inherit white color */
-  body * {
-    color: inherit;
+
+  /* Hero title: soft gradient sheen, cyan glow on keywords */
+  .hero-title {
+    background: linear-gradient(180deg, #ffffff 55%, #b9c6ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  /* Override specific elements that might have hardcoded colors */
-  .hero-title, .section-title, .section-subtitle, .course-title, .course-desc,
-  .course-price, .footer-brand p, .footer-links a, .footer-bottom p,
-  .nav-links a, .btn, .tag, .cta-banner h2, .cta-banner p {
-    color: white !important;
+  .hero-title .highlight {
+    background: linear-gradient(90deg, #00ffe1, #7ea2ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(0 0 18px rgba(0, 255, 225, 0.35));
   }
-  /* Ensure links are visible on blue background */
-  a {
-    color: #fff !important;
+  .hero-stats { flex-wrap: wrap; row-gap: 16px; }
+  .hero-stats .stat-number { background: linear-gradient(90deg, #ffffff, #9fe8ff);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+  /* Terminal window: deeper shadow + cyan halo (theme shadow value is broken) */
+  .terminal-window {
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 50px rgba(0, 255, 225, 0.08);
   }
-  a:hover {
-    color: #ccc !important;
+
+  /* Neon underline for section titles */
+  .section-title span { position: relative; padding-bottom: 14px; display: inline-block; }
+  .section-title span::after {
+    content: '';
+    position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+    width: 72px; height: 3px; border-radius: 3px;
+    background: linear-gradient(90deg, #00ffe1, #7ea2ff);
+    box-shadow: 0 0 14px rgba(0, 255, 225, 0.55);
   }
-  /* Button adjustments for visibility */
-  .btn-primary {
-    background-color: white !important;
-    color: #0024ED !important;
-    border-color: white !important;
+
+  /* Glass cards with lift + glow on hover (courses and services alike) */
+  #courses .course-card, #services .course-card {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .btn-primary:hover {
-    background-color: #f0f0f0 !important;
+  #courses .course-card:hover, #services .course-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 255, 225, 0.45);
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 255, 225, 0.12);
   }
-  .btn-outline {
-    border-color: white !important;
-    color: white !important;
+  #services .course-banner { background: rgba(0, 0, 0, 0.2); }
+  .course-banner img {
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .btn-outline:hover {
-    background-color: white !important;
-    color: #0024ED !important;
+  .course-card:hover .course-banner img { transform: scale(1.08); }
+
+  /* Fix leftover green hover from an older theme */
+  .btn-primary:hover { background: #eef2ff; }
+
+  /* CTA: glass panel with glow instead of flat blue */
+  .cta-banner {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  }
+
+  .footer {
+    background: rgba(0, 9, 60, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 </style>
 
@@ -366,27 +406,27 @@
 <nav class="navbar" aria-label="Main navigation">
   <div class="nav-container">
     <a href="/" class="nav-logo" aria-label="#1 Linux Freelancing Training & Tech Support | School of Freelancing">
-      <div class="logo-icon" aria-hidden="true">:~#</div><span>SCHOOL OF FREELANCING<span class="cursor" aria-hidden="true"></span></span>
+      <div class="logo-icon" aria-hidden="true"><i class="fa-sharp-duotone fa-solid fa-house"></i></div><span>SCHOOL OF FREELANCING</span>
     </a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="/" class="active">Home</a></li>
-      <li><a href="/training/">Training</a></li>
-      <li><a href="/tech-support/">Support Services</a></li>
-      <li><a href="/testimonials/">Testimonials</a></li>
-      <li><a href="/about/">About us</a></li>
-      <li><a href="/contact/" class="nav-cta">Contact</a></li>
+      <li><a href="/training/" class="nav-cta">Freelancing Training</a></li>
+      <li><a href="/tech-support/" class="nav-cta">Linux & IT Services</a></li>
+      <li><a href="/testimonials/" class="nav-cta">Testimonials</a></li>
+      <li><a href="/about/" class="nav-cta">About us</a></li>
+      <li><a href="/contact/" class="nav-cta">Get Started</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
 <!-- ===== HERO ===== -->
 <section class="hero" aria-label="Hero section">
   <div class="hero-container">
     <div class="hero-content">
-      <h1 class="hero-title" data-reveal data-delay="100">Linux Freelancing Training & Technical Services Worldwide</h1>
+      <h1 class="hero-title" data-reveal data-delay="100">Linux Freelancing Training & Technical Services <span class="highlight">Worldwide</span></h1>
       <div class="hero-actions" data-reveal data-delay="300">
         <a href="/training/" class="btn btn-primary btn-lg">Start Training</a>
         <a href="/tech-support/" class="btn btn-outline btn-lg">Get Support</a>
@@ -659,9 +699,8 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="nav-logo" style="display:inline-flex; margin-bottom:16px;">
-         <span>School of Freelancing V1.3.4</span>
-        </a>
+                <span><B>SCHOOL OF FREELANCING v1.3.4</B></span>
+       
         <p>AI-powered Linux training for freelancers & Tech support for businesses. Build real skills, solve real problems, and scale with confidence.</p>
         <div class="footer-social">
           <a href="https://github.com/SchoolOfFreelancing" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>

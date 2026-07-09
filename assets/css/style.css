@@ -176,16 +176,18 @@ img { max-width: 100%; height: auto; display: block; }
   width: 100%;
   z-index: 1000;
   padding: 16px 0;
-  background: #0024ED;
-  backdrop-filter: blur(12px);
+  background: rgba(0, 20, 170, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: var(--transition);
 }
 
 .navbar.scrolled {
   padding: 10px 0;
+  background: rgba(0, 15, 130, 0.75);
   border-bottom-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 30px rgba(0, 36, 237, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -230,6 +232,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .nav-links a {
+  position: relative;
   font-size: 0.8rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -240,27 +243,53 @@ img { max-width: 100%; height: auto; display: block; }
   transition: var(--transition);
 }
 
-.nav-links a:hover,
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 14px; right: 14px; bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #00ffe1, #7ea2ff);
+  box-shadow: 0 0 10px rgba(0, 255, 225, 0.6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
 .nav-links a.active {
   color: white;
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.15);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .nav-cta {
-  background: transparent !important;
-  color: white !important;
+  background: white !important;
+  color: var(--bg-primary) !important;
   border-color: transparent !important;
-  font-weight: 600;
-  box-shadow: none !important;
+  font-weight: 700;
+  padding: 8px 20px !important;
+  border-radius: 100px !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.35) !important;
 }
 
+.nav-cta::after { display: none; }
+
 .nav-cta:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
-  color: white !important;
+  background: #eef2ff !important;
+  color: var(--bg-primary) !important;
   text-shadow: none !important;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) !important;
 }
 
 .nav-toggle {
@@ -280,6 +309,18 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 2px;
   transition: var(--transition);
 }
+
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 8, 60, 0.6);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 998;
+}
+
+.nav-overlay.open { display: block; }
 
 /* ---------- Hero Section ---------- */
 .hero {
@@ -1888,6 +1929,14 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 1024px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .hero-container { gap: 40px; }
+}
+
+/* Tablet: ease nav crowding before the hamburger breakpoint kicks in */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-container { gap: 12px; }
+  .nav-links { gap: 2px; }
+  .nav-links a { padding: 6px 10px; font-size: 0.72rem; letter-spacing: 0.06em; }
+  .nav-logo { font-size: 0.95rem; }
 }
 
 @media (max-width: 768px) {
