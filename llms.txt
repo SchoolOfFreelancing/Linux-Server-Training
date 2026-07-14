@@ -8,7 +8,7 @@
 - [Freelancing Training](https://www.schooloffreelancing.com/freelancing-training/): Full catalog of hands-on training programs.
 - [Linux & IT Services](https://www.schooloffreelancing.com/linux-it-services/): Full catalog of remote technical support services.
 - [About Us](https://www.schooloffreelancing.com/about-us/): Company background and mission.
-- [Get Started](https://www.schooloffreelancing.com/get-started/): Contact channels (Telegram, WhatsApp, email) to begin training or request support.
+- [Contact Us](https://www.schooloffreelancing.com/contact-us/): Contact channels (Telegram, WhatsApp, email) to begin training or request support.
 - [Register](https://www.schooloffreelancing.com/register/): How to register for a training program or support service.
 - [Locations](https://www.schooloffreelancing.com/location/): Countries served (all delivery is remote/online, priced in USD).
 

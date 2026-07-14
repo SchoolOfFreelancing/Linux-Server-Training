@@ -208,9 +208,9 @@ function initFAQ() {
   });
 }
 
-/* ---------- Course Option Select ---------- */
-function initCourseOptions() {
-  const options = document.querySelectorAll('.course-option');
+/* ---------- Training Option Select ---------- */
+function initTrainingOptions() {
+  const options = document.querySelectorAll('.training-option');
   if (!options.length) return;
 
   options.forEach(opt => {
@@ -262,6 +262,44 @@ function initEnrollmentForm() {
       const success = document.getElementById('enrollment-success');
       if (success) success.style.display = 'block';
     }, 2200);
+  });
+}
+
+/* ---------- Payment Confirmation Form ---------- */
+function initPaymentForm() {
+  const form = document.getElementById('payment-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const program = form.program.value;
+    const method = form.method.value;
+    const txn = form.txn.value.trim();
+
+    const message =
+      `New Payment Confirmation\n` +
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Paid For: ${program}\n` +
+      `Payment Method: ${method}\n` +
+      `Transaction ID/Reference: ${txn}`;
+
+    const url = `https://wa.me/8801748973769?text=${encodeURIComponent(message)}`;
+
+    const btn = form.querySelector('[type="submit"]');
+    btn.textContent = 'Opening WhatsApp...';
+    btn.disabled = true;
+
+    window.open(url, '_blank', 'noopener');
+
+    setTimeout(() => {
+      btn.textContent = '✅ Confirm Payment via WhatsApp';
+      btn.disabled = false;
+    }, 2000);
   });
 }
 
@@ -353,9 +391,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initSkillBars();
   initFAQ();
-  initCourseOptions();
+  initTrainingOptions();
   initContactForm();
   initEnrollmentForm();
+  initPaymentForm();
   initSmoothScroll();
   initBackToTop();
   initBlogSearch();

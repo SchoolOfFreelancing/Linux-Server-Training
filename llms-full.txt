@@ -16,7 +16,6 @@
 - [Goautodial VoIP Training](https://www.schooloffreelancing.com/freelancing-training/goautodial-training/) — $400, 20 Hours, 5 Days
 - [Ubuntu Linux Training](https://www.schooloffreelancing.com/freelancing-training/ubuntu-linux-training/) — $200, 20 Hours, 5 Days
 - [CentOS Linux Training](https://www.schooloffreelancing.com/freelancing-training/centos-linux-training/) — $200, 20 Hours, 5 Days
-- [Ansible AWX Training](https://www.schooloffreelancing.com/freelancing-training/ansible-awx-training/) — $200, 20 Hours, 5 Days
 - [OpenAI Platform Training](https://www.schooloffreelancing.com/freelancing-training/openai-training/) — $200, 20 Hours, 5 Days
 - [Claude Platform Training](https://www.schooloffreelancing.com/freelancing-training/claude-training/) — $200, 20 Hours, 5 Days
 - [Telnyx SMS API Training](https://www.schooloffreelancing.com/freelancing-training/telnyx-sms-api-training/) — $500, 38 Hours, 1-4 Weeks
@@ -31,23 +30,22 @@
 - [OpenClaw AI Agent Support](https://www.schooloffreelancing.com/linux-it-services/openclaw-ai-services/) — $350, 72 Hours, 3 Days
 - [LocalAI Support](https://www.schooloffreelancing.com/linux-it-services/local-ai-services/) — $350, 72 Hours, 3 Days
 - [ZeroClaw Support](https://www.schooloffreelancing.com/linux-it-services/zeroclaw-ai-services/) — $350, 72 Hours, 3 Days
-- [GitLab Community Edition Setup](https://www.schooloffreelancing.com/linux-it-services/gitlab-support/) — $350, 72 Hours, 3 Days
-- [GitHub Enterprise Server Setup](https://www.schooloffreelancing.com/linux-it-services/github-support/) — $350, 72 Hours, 3 Days
-- [Telnyx VoIP SIP Support](https://www.schooloffreelancing.com/linux-it-services/telnyx-sip-trunking-support/) — $500, 72 Hours, 3 Days
-- [Twilio VoIP SIP Support](https://www.schooloffreelancing.com/linux-it-services/twilio-sip-trunking-support/) — $500, 72 Hours, 3 Days
-- [FusionPBX VoIP Support](https://www.schooloffreelancing.com/linux-it-services/fusionpbx-voip-support/) — $500, 72 Hours, 3 Days
-- [Goautodial VoIP Support](https://www.schooloffreelancing.com/linux-it-services/goautodial-voip-support/) — $500, 72 Hours, 3 Days
-- [Ubuntu Linux Support](https://www.schooloffreelancing.com/linux-it-services/ubuntu-linux-support/) — $500, 72 Hours, 3 Days
-- [CentOS Linux Support](https://www.schooloffreelancing.com/linux-it-services/centos-linux-support/) — $500, 72 Hours, 3 Days
-- [Ansible AWX Support](https://www.schooloffreelancing.com/linux-it-services/ansible-awx-support/) — $500, 72 Hours, 3 Days
-- [OpenAI Platform Support](https://www.schooloffreelancing.com/linux-it-services/openai-platform-support/) — $500, 72 Hours, 3 Days
-- [Claude Platform Support](https://www.schooloffreelancing.com/linux-it-services/claude-ai-platform-support/) — $500, 72 Hours, 3 Days
-- [Telnyx SMS API Setup & Support](https://www.schooloffreelancing.com/linux-it-services/telnyx-sms-api-support/) — $1100, 40 Hours, 1-4 Weeks
-- [Twilio SMS API Support](https://www.schooloffreelancing.com/linux-it-services/twilio-sms-api-support/) — $1100, 40 Hours, 1-4 Weeks
-- [Jasmin SMS Gateway Support](https://www.schooloffreelancing.com/linux-it-services/jasmin-sms-gateway-support/) — $1100, 20 Hours, 1 Week
-- [DigitalOcean Cloud Support](https://www.schooloffreelancing.com/linux-it-services/digitalocean-cloud-support/) — $500, 72 Hours, 3 Days
-- [Hummingbot Installation Support](https://www.schooloffreelancing.com/linux-it-services/hummingbot-installation-support/) — $1500, 40 Hours, 6 Days
-- [Vapi Platform Support](https://www.schooloffreelancing.com/linux-it-services/vapi-platform-support/) — $600, 30 Hours, 5 Days
+- [GitLab Community Edition Setup](https://www.schooloffreelancing.com/linux-it-services/gitlab-services/) — $350, 72 Hours, 3 Days
+- [GitHub Enterprise Server Setup](https://www.schooloffreelancing.com/linux-it-services/github-services/) — $350, 72 Hours, 3 Days
+- [Telnyx VoIP SIP Support](https://www.schooloffreelancing.com/linux-it-services/telnyx-sip-trunking-services/) — $500, 72 Hours, 3 Days
+- [Twilio VoIP SIP Support](https://www.schooloffreelancing.com/linux-it-services/twilio-sip-trunking-services/) — $500, 72 Hours, 3 Days
+- [FusionPBX VoIP Support](https://www.schooloffreelancing.com/linux-it-services/fusionpbx-voip-services/) — $500, 72 Hours, 3 Days
+- [Goautodial VoIP Support](https://www.schooloffreelancing.com/linux-it-services/goautodial-voip-services/) — $500, 72 Hours, 3 Days
+- [Ubuntu Linux Support](https://www.schooloffreelancing.com/linux-it-services/ubuntu-linux-services/) — $500, 72 Hours, 3 Days
+- [CentOS Linux Support](https://www.schooloffreelancing.com/linux-it-services/centos-linux-services/) — $500, 72 Hours, 3 Days
+- [OpenAI Platform Support](https://www.schooloffreelancing.com/linux-it-services/openai-platform-services/) — $500, 72 Hours, 3 Days
+- [Claude Platform Support](https://www.schooloffreelancing.com/linux-it-services/claude-ai-platform-services/) — $500, 72 Hours, 3 Days
+- [Telnyx SMS API Setup & Support](https://www.schooloffreelancing.com/linux-it-services/telnyx-sms-api-services/) — $1100, 40 Hours, 1-4 Weeks
+- [Twilio SMS API Support](https://www.schooloffreelancing.com/linux-it-services/twilio-sms-api-services/) — $1100, 40 Hours, 1-4 Weeks
+- [Jasmin SMS Gateway Support](https://www.schooloffreelancing.com/linux-it-services/jasmin-sms-gateway-services/) — $1100, 20 Hours, 1 Week
+- [DigitalOcean Cloud Support](https://www.schooloffreelancing.com/linux-it-services/digitalocean-cloud-services/) — $500, 72 Hours, 3 Days
+- [Hummingbot Installation Support](https://www.schooloffreelancing.com/linux-it-services/hummingbot-installation-services/) — $1500, 40 Hours, 6 Days
+- [Vapi Platform Support](https://www.schooloffreelancing.com/linux-it-services/vapi-platform-services/) — $600, 30 Hours, 5 Days
 
 ## Locations (https://www.schooloffreelancing.com/location/)
 
@@ -58,7 +56,7 @@ Each has its own page at `https://www.schooloffreelancing.com/location/{country-
 ## Company & Contact
 
 - [About Us](https://www.schooloffreelancing.com/about-us/)
-- [Get Started](https://www.schooloffreelancing.com/get-started/) — Telegram, WhatsApp, email, phone contact channels
+- [Contact Us](https://www.schooloffreelancing.com/contact-us/) — Telegram, WhatsApp, email, phone contact channels
 - [Register](https://www.schooloffreelancing.com/register/) — how to enroll or book a support engagement
 - [Testimonials](https://www.schooloffreelancing.com/resource-center/testimonials/)
 - [FAQs](https://www.schooloffreelancing.com/resource-center/faqs/)

@@ -87,8 +87,8 @@
     color: inherit;
   }
   /* Override specific elements that might have hardcoded colors */
-  .hero-title, .section-title, .section-subtitle, .course-title, .course-desc,
-  .course-price, .footer-brand p, .footer-links a, .footer-bottom p,
+  .hero-title, .section-title, .section-subtitle, .training-title, .training-desc,
+  .training-price, .footer-brand p, .footer-links a, .footer-bottom p,
   .nav-links a, .btn, .tag, .cta-banner h2, .cta-banner p {
     color: white !important;
   }
@@ -143,84 +143,100 @@
 <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
 <!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="container">
-    <h1 data-reveal><span style="color:var(--text-primary)">Ready to Register?</span></h1>
-    <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; max-width:700px; margin:16px auto 0;">
-      There's no online signup form anymore — registering is a quick, human process. Follow the three steps below and we'll get you started.
-    </p>
-  </div>
-</section>
-
 <!-- REGISTRATION STEPS -->
 <section class="section" style="padding-top:0;">
   <div class="container">
+  
 
-    <div class="notice" data-reveal>
-      <span><strong style="color:var(--white-bright)">We're available 24/7 on Telegram and WhatsApp, with an average response time of just 1 hour. Message us to register — we'll reply as soon as possible.</strong></span>
-    </div>
+    <!-- Payment Confirmation Form -->
+    <div class="contact-form-wrap" data-reveal style="max-width:640px; margin:60px auto 0;">
+      <h2 class="form-title">Already Paid? Confirm It Here</h2>
+      <p class="form-subtitle">Submit your payment details below — it opens WhatsApp with your info pre-filled, just hit send and we'll verify and activate your seat within an hour.</p>
 
-    <div class="features-grid" data-reveal style="margin: 40px 0;">
-      <div class="feature-card">
-        <div class="feature-icon">1️⃣</div>
-        <h3 class="feature-title">CHOOSE YOUR PROGRAM</h3>
-        <p class="feature-desc">Browse our <a href="/freelancing-training/">Freelancing Training</a> programs or our <a href="/linux-it-services/">Linux & IT Services</a> for businesses, and decide which one fits what you need.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">2️⃣</div>
-        <h3 class="feature-title">MESSAGE US TO CONFIRM</h3>
-        <p class="feature-desc">Contact us on Telegram, WhatsApp, or email with the program or service you picked. We'll confirm schedule, scope, and pricing with you directly.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">3️⃣</div>
-        <h3 class="feature-title">CONFIRM & PAY</h3>
-        <p class="feature-desc">Once details are confirmed, complete payment via PayPal, bKash, or Wise. Training seats or support work begin right after payment is confirmed.</p>
-      </div>
-    </div>
-
-    <div class="contact-grid">
-
-      <!-- Contact Info -->
-      <aside aria-label="Contact information" style="max-width:520px; margin:0 auto;">
-        <div class="contact-info" data-reveal>
-
-         <div class="contact-item">
-            <div class="contact-icon"><a href="https://t.me/SchoolOfFreelancingTraining" target="_blank" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-telegram"></i></a></div>
-            <div class="contact-detail">
-              <strong><a href="https://t.me/SchoolOfFreelancingTraining" target="_blank" rel="noopener noreferrer" target="_blank">Telegram</a></strong>
-              <span><a href="https://t.me/SchoolOfFreelancingTraining" target="_blank" rel="noopener noreferrer" target="_blank">Register for Training</a></span>
-            </div>
+      <form id="payment-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pf-name">Full Name *</label>
+            <input type="text" id="pf-name" name="name" placeholder="John Doe" required autocomplete="name" />
           </div>
-
-          <div class="contact-item">
-            <div class="contact-icon"><a href="https://wa.me/8801748973769" target="_blank">💬</a></div>
-            <div class="contact-detail">
-              <strong><a href="https://wa.me/8801748973769" target="_blank">WhatsApp</a></strong>
-                    <span><a href="https://wa.me/8801748973769" target="_blank">Register for Support</a></span>
-            </div>
+          <div class="form-group">
+            <label for="pf-email">Email Address *</label>
+            <input type="email" id="pf-email" name="email" placeholder="you@email.com" required autocomplete="email" />
           </div>
-
-          <div class="contact-item">
-            <div class="contact-icon"><a href="mailto:office@schooloffreelancing.com" target="_blank">📧</a></div>
-            <div class="contact-detail">
-              <strong>Email</strong>
-              <a href="mailto:office@schooloffreelancing.com">office@schooloffreelancing.com</a>
-              <span style="display:block; font-size:0.75rem; margin-top:2px; color:var(--text-muted)"><a href="mailto:office@schooloffreelancing.com">Send your registration request</a></span>
-            </div>
-          </div>
-
         </div>
-      </aside>
 
-    </div>
+        <div class="form-group">
+          <label for="pf-program">Training / Service Paid For *</label>
+          <select id="pf-program" name="program" required>
+            <option value="" disabled selected>Select a program or service...</option>
+            <optgroup label="Freelancing Training">
+              <option>Linux Freelancing Training</option>
+              <option>Hermes Agent Training</option>
+              <option>Odysseus AI Workspace Training</option>
+              <option>OpenClaw Hands-on Training</option>
+              <option>LocalAI Hands-on Training</option>
+              <option>ZeroClaw Hands-on Training</option>
+              <option>GitLab Hands-on Training</option>
+              <option>GitHub Hands-on Training</option>
+              <option>FusionPBX VoIP Training</option>
+              <option>Goautodial VoIP Training</option>
+              <option>Ubuntu Linux Training</option>
+              <option>CentOS Linux Training</option>
+              <option>OpenAI Platform Training</option>
+              <option>Claude Platform Training</option>
+              <option>Telnyx SMS API Training</option>
+              <option>Twilio SMS API Training</option>
+              <option>Jasmin SMS Gateway Training</option>
+            </optgroup>
+            <optgroup label="Linux & IT Services">
+              <option>Linux Server Services</option>
+              <option>Hermes Agent Support</option>
+              <option>Odysseus AI Workspace Support</option>
+              <option>OpenClaw AI Agent Support</option>
+              <option>LocalAI Support</option>
+              <option>ZeroClaw Support</option>
+              <option>GitLab Community Edition Setup</option>
+              <option>GitHub Enterprise Server Setup</option>
+              <option>Telnyx VoIP SIP Support</option>
+              <option>Twilio VoIP SIP Support</option>
+              <option>FusionPBX VoIP Support</option>
+              <option>Goautodial VoIP Support</option>
+              <option>Ubuntu Linux Support</option>
+              <option>CentOS Linux Support</option>
+              <option>OpenAI Platform Support</option>
+              <option>Claude Platform Support</option>
+              <option>Telnyx SMS API Setup & Support</option>
+              <option>Twilio SMS API Support</option>
+              <option>Jasmin SMS Gateway Support</option>
+              <option>DigitalOcean Cloud Support</option>
+              <option>Hummingbot Installation Support</option>
+              <option>Vapi Platform Support</option>
+            </optgroup>
+            <option value="Other">Other / Not Listed</option>
+          </select>
+        </div>
 
-    <div class="cta-banner" data-reveal style="margin-top:60px;">
-      <h2>Accepted Payment Methods</h2>
-      <p>We accept PayPal, bKash, and Wise. We'll share the exact payment details once your program or service is confirmed — full payment is required before training starts, and support work is billed on a milestone basis.</p>
-      <div class="cta-actions">
-        <a href="/freelancing-training/" class="btn btn-primary btn-lg">View Training Programs</a>
-        <a href="/linux-it-services/" class="btn btn-outline btn-lg">View IT Services →</a>
-      </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pf-method">Payment Method *</label>
+            <select id="pf-method" name="method" required>
+              <option value="" disabled selected>Select payment method...</option>
+              <option>PayPal</option>
+              <option>bKash</option>
+              <option>Wise</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pf-txn">Transaction ID / Reference *</label>
+            <input type="text" id="pf-txn" name="txn" placeholder="e.g. TXN123456789" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">
+          ✅ Confirm Payment via WhatsApp
+        </button>
+      </form>
     </div>
 
   </div>

@@ -25,7 +25,7 @@ RewriteRule ^(.+)/index\.html$ /$1/ [R=301,L]
 # Redirect old flat HTML pages to current folders
 ##################################################
 RewriteRule ^training\.html$ /freelancing-training/ [R=301,L]
-RewriteRule ^enrollment\.html$ /get-started/ [R=301,L]
+RewriteRule ^enrollment\.html$ /contact-us/ [R=301,L]
 RewriteRule ^tech-support\.html$ /linux-it-services/ [R=301,L]
 RewriteRule ^support\.html$ /linux-it-services/ [R=301,L]
 RewriteRule ^get-support\.html$ /linux-it-services/ [R=301,L]
@@ -35,21 +35,21 @@ RewriteRule ^about\.html$ /about-us/ [R=301,L]
 RewriteRule ^faq\.html$ /resource-center/faqs/ [R=301,L]
 RewriteRule ^privacy-policy\.html$ /legal/privacy-policy/ [R=301,L]
 RewriteRule ^terms\.html$ /legal/terms-and-conditions/ [R=301,L]
-RewriteRule ^contact\.html$ /get-started/ [R=301,L]
+RewriteRule ^contact\.html$ /contact-us/ [R=301,L]
 
 ##################################################
 # Redirect deleted section folders to their new
 # equivalents from the 2026-07 site restructure
 ##################################################
-RewriteRule ^training/enroll(/.*)?$ /get-started/ [R=301,L]
-RewriteRule ^training/oldenroll(/.*)?$ /get-started/ [R=301,L]
-RewriteRule ^training/enroll1(/.*)?$ /get-started/ [R=301,L]
-RewriteRule ^training/files(/.*)?$ /get-started/ [R=301,L]
+RewriteRule ^training/enroll(/.*)?$ /contact-us/ [R=301,L]
+RewriteRule ^training/oldenroll(/.*)?$ /contact-us/ [R=301,L]
+RewriteRule ^training/enroll1(/.*)?$ /contact-us/ [R=301,L]
+RewriteRule ^training/files(/.*)?$ /contact-us/ [R=301,L]
 RewriteRule ^training/?$ /freelancing-training/ [R=301,L]
 RewriteRule ^tech-support/get-support/?$ /linux-it-services/ [R=301,L]
 RewriteRule ^tech-support/?$ /linux-it-services/ [R=301,L]
 RewriteRule ^about/?$ /about-us/ [R=301,L]
-RewriteRule ^contact/?$ /get-started/ [R=301,L]
+RewriteRule ^contact/?$ /contact-us/ [R=301,L]
 RewriteRule ^testimonials/?$ /resource-center/testimonials/ [R=301,L]
 RewriteRule ^faq/?$ /resource-center/faqs/ [R=301,L]
 RewriteRule ^terms/?$ /legal/terms-and-conditions/ [R=301,L]

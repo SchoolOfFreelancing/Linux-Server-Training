@@ -1,49 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/ansible-awx-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/centos-linux-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/centos-linux-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/claude-ai-platform-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/claude-ai-platform-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/digitalocean-cloud-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/digitalocean-cloud-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/fusionpbx-voip-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/fusionpbx-voip-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/github-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/github-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/gitlab-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/gitlab-support/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/goautodial-voip-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/goautodial-voip-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -55,13 +49,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/hummingbot-installation-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/hummingbot-installation-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/jasmin-sms-gateway-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/jasmin-sms-gateway-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -85,7 +79,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/openai-platform-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/openai-platform-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -97,37 +91,37 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/telnyx-sip-trunking-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/telnyx-sip-trunking-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/telnyx-sms-api-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/telnyx-sms-api-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/twilio-sip-trunking-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/twilio-sip-trunking-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/twilio-sms-api-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/twilio-sms-api-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/ubuntu-linux-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/ubuntu-linux-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/vapi-platform-support/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-it-services/vapi-platform-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
