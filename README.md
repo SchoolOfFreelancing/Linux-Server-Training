@@ -157,10 +157,9 @@ Yes. Linux & IT Support Services are available directly via Upwork, Freelancer, 
 | Channel | Link |
 |---|---|
 | 🌍 Website | [schooloffreelancing.com](https://www.schooloffreelancing.com/) |
-| 📖 Documentation | [BackOffice Wiki](https://github.com/SchoolOfFreelancing/BackOffice/wiki) |
+| 📖 Documentation | [BackOffice Wiki](https://github.com/SchoolOfFreelancing/School-Of-Freelancing/wiki) |
 | :octocat: GitHub | [SchoolOfFreelancing](https://github.com/SchoolOfFreelancing) |
-| 🚀 Trello | [Onboarding Board](https://trello.com/b/RFo7GNdY/school-of-freelancing) |
-| 🎥 YouTube | [Channel](https://www.youtube.com/channel/UCVPPcG_DnwE_L1YgiIGsSIA?sub_confirmation=1) |
+| 🎥 YouTube | [YouTube Channel](https://www.youtube.com/@SchoolOfFreelancing) |
 | 🔗 LinkedIn | [School Of Freelancing](https://www.linkedin.com/company/school-of-freelancing) |
 | 👍 Facebook | [SchoolOfFreelancing](https://www.facebook.com/SchoolOfFreelancing/) |
 | 🕊 Twitter/X | [@SchoolOfFreelan](https://twitter.com/SchoolOfFreelan) |
