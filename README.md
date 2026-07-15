@@ -6,7 +6,7 @@
 **100% Open Source, On-Demand, Hands-On Training & Services**
 
 ![TargetOS](https://img.shields.io/badge/TargetOS-Linux-0069FF)
-![Format](https://img.shields.io/badge/Format-Remote_Hands--on_Training-brightgreen)
+![Format](https://img.shields.io/badge/Format-Training_and--Service-brightgreen)
 ![Support](https://img.shields.io/badge/Support-24%2F7-orange)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 ![Website](https://img.shields.io/badge/website-schooloffreelancing.com-0024ED)
