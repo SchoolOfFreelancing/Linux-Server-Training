@@ -9,7 +9,7 @@
 ![Format](https://img.shields.io/badge/Format-Remote_Hands--on_Training-brightgreen)
 ![Support](https://img.shields.io/badge/Support-24%2F7-orange)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
-![Website](https://img.shields.io/badge/website-schooloffreelancing.com-0024ED)]
+![Website](https://img.shields.io/badge/website-schooloffreelancing.com-0024ED)
 
 </div>
 
