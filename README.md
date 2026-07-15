@@ -3,7 +3,7 @@
 # School Of Freelancing 🐧
 ### Linux & AI Freelancing Training & Services
 
-**100% Open Source, On-Demand, Hands-On Training & Services**
+**100% Open-Source. Built on Experience. Backed by Experts.**
 
 ![TargetOS](https://img.shields.io/badge/TargetOS-Linux-0069FF)
 ![Format](https://img.shields.io/badge/Format-Training_and--Service-brightgreen)
