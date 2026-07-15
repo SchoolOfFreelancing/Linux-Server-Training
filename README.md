@@ -5,9 +5,11 @@
 
 **100% Open Source, On-Demand, Hands-On Training & Services**
 
-[![Gitter](https://badges.gitter.im/School-Of-Freelancing/Lobby.svg)](https://gitter.im/School-Of-Freelancing/Lobby)
-[![Jekyll site CI](https://github.com/SchoolOfFreelancing/BackOffice/workflows/Jekyll%20site%20CI/badge.svg?branch=master)](https://github.com/SchoolOfFreelancing/BackOffice/actions)
-[![Website](https://img.shields.io/badge/website-schooloffreelancing.com-0024ED)](https://www.schooloffreelancing.com/)
+![TargetOS](https://img.shields.io/badge/TargetOS-Linux-0069FF)
+![Format](https://img.shields.io/badge/Format-Remote_Hands--on_Training-brightgreen)
+![Support](https://img.shields.io/badge/Support-24%2F7-orange)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![Website](https://img.shields.io/badge/website-schooloffreelancing.com-0024ED)](https://www.schooloffreelancing.com/)
 
 </div>
 
