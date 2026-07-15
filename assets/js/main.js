@@ -359,6 +359,37 @@ function initBlogSearch() {
   });
 }
 
+/* ---------- Category Filter (training/services hub pages) ---------- */
+function initCategoryFilter() {
+  const buttons = document.querySelectorAll('.filter-btn[data-filter]');
+  if (!buttons.length) return;
+
+  const cards = document.querySelectorAll('.training-card[data-category]');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      buttons.forEach(b => {
+        const active = b === btn;
+        b.classList.toggle('btn-primary', active);
+        b.classList.toggle('btn-secondary', !active);
+        b.setAttribute('aria-pressed', String(active));
+      });
+
+      cards.forEach(card => {
+        const show = filter === 'all' || card.getAttribute('data-category') === filter;
+        card.style.display = show ? '' : 'none';
+        if (show) {
+          // cards hidden before their reveal animation fired stay invisible — force them visible
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }
+      });
+    });
+  });
+}
+
 /* ---------- Cookie Notice ---------- */
 function initCookieNotice() {
   if (localStorage.getItem('cookie-ok')) return;
@@ -398,5 +429,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initBackToTop();
   initBlogSearch();
+  initCategoryFilter();
   initCookieNotice();
 });

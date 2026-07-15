@@ -331,6 +331,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-attachment: fixed;
   }
 
+  /* Pull the hero up under the navbar: the theme's min-height:100vh +
+     vertical centering leaves a huge empty band below the fixed navbar */
+  .hero {
+    min-height: 0;
+    padding-top: 190px; /* fixed navbar is ~72px tall */
+    padding-bottom: 70px;
+  }
+
   /* Hero title: soft gradient sheen, cyan glow on keywords */
   .hero-title {
     background: linear-gradient(180deg, #ffffff 55%, #b9c6ff 100%);
@@ -389,6 +397,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* Fix leftover green hover from an older theme */
   .btn-primary:hover { background: #eef2ff; }
+
+  /* Give every outline button the same white-glass look and bright hover
+     as the #trainings "View All Training" button (base hover is blue-on-blue) */
+  .btn-outline {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: #fff;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+  }
 
   /* CTA: glass panel with glow instead of flat blue */
   .cta-banner {
@@ -500,73 +521,158 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="trainings-grid">
 
       <!-- Linux Freelancing Training -->
-      <article class="training-card" data-reveal data-delay="0">
-        <div class="training-banner" style="background:linear-gradient(135deg,#0d2b0d,#1a4a1a);">
-          <img width="120" height="120" loading="lazy" src="/assets/images/linux.png" alt="Linux Freelancing Training">
+      <article class="training-card" data-reveal data-delay="0" style="background: #0024ed;" itemscope itemtype="https://schema.org/Course">
+        <meta itemprop="provider" content="School Of Freelancing">
+
+        <div class="training-banner" style="background: #0024ed;">
+          <img
+            width="120"
+            height="120"
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/linux.png"
+            alt="Linux Freelancing Training for System Administrators and Freelancers">
         </div>
-        <div class="training-body">
-          <h3 class="training-title"><a href="/freelancing-training/linux-freelancing-training/" target="_self" rel="noopener"><span class="tag tag-green">Linux Freelancing Training</span></a></h3>
-          <p class="training-desc">Become a Linux System Administrator, build a freelancing business, and win high-paying global clients.</p>
-          <ul style="font-size:0.8rem; color:#fff; margin-bottom:16px; padding-left:0;">
-           <li style="margin-bottom:4px;"><B>Training Features:</b></li>
-            <li style="margin-bottom:4px;">✔ Online Instructor-Led Training</li>
-            <li style="margin-bottom:4px;">✔ 90 Hands-on Training Modules</li>
-            <li style="margin-bottom:4px;">✔ Guaranteed Minimum Income (GMI)*</li>
-            <li>✔ Credential Verification Support</li>
+
+        <div class="training-body" style="color: #fff;">
+          <h3 class="training-title" style="color: #fff;">
+            <a href="/freelancing-training/linux-freelancing-training/" class="service-link" itemprop="url">
+              <span itemprop="name">Linux Freelancing Training</span>
+            </a>
+          </h3>
+
+          <p class="training-desc" style="color: #fff; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;" itemprop="description">
+            Become a Linux System Administrator, build a freelancing business, and win high-paying global clients.
+          </p>
+
+          <p style="font-size: 0.85rem; color: #fff; margin-bottom: 6px;"><strong>Training Features:</strong></p>
+          <ul class="service-features-list" style="font-size: 0.85rem; color: #fff; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">Online Instructor-Led Training</li>
+            <li style="margin-bottom: 4px;">90 Hands-on Training Modules</li>
+            <li style="margin-bottom: 4px;">Guaranteed Minimum Income (GMI)*</li>
+            <li>Credential Verification Support</li>
           </ul>
-                  
-                    <div class="training-meta">
-            <div>
-              <span class="training-price">$600, 180 Hours, 6 Months</span>
+
+          <div class="training-meta" style="margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <div class="price-container">
+              <span class="price-label" style="display: block; font-size: 0.75rem; opacity: 0.8; text-transform: uppercase;">Training Investment</span>
+              <strong class="training-price" style="color: #fff; font-size: 1.25rem;">
+                Starting at <span itemprop="price" content="600">$600</span>
+              </strong>
+              <meta itemprop="priceCurrency" content="USD">
+              <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
+                Allocation: 180 Training Hours / <time datetime="P6M">6 Months</time>
+              </span>
             </div>
           </div>
-          <a href="/freelancing-training/linux-freelancing-training/" target="_self" class="btn btn-primary" style="width:100%; justify-content:center;">View Modules & Enroll</a>
+
+          <a href="/freelancing-training/linux-freelancing-training/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+            View Modules &amp; Enroll
+          </a>
         </div>
       </article>
 
       <!-- Hermes Agent Training -->
-      <article class="training-card" data-reveal data-delay="100">
-        <div class="training-banner" style="background:linear-gradient(135deg,#0d1f2b,#1a3a4a);">
-          <img width="120" height="120" loading="lazy" src="/assets/images/hermesagent.png" alt="Hermes Agent Training">
+      <article class="training-card" data-reveal data-delay="100" style="background: #0024ed;" itemscope itemtype="https://schema.org/Course">
+        <meta itemprop="provider" content="School Of Freelancing">
+
+        <div class="training-banner" style="background: #0024ed;">
+          <img
+            width="120"
+            height="120"
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/hermesagent.png"
+            alt="Hermes AI Agent Engineer Freelancing Training">
         </div>
-        <div class="training-body">
-    <h3 class="training-title"><a href="/freelancing-training/hermes-agent-training/" target="_self" rel="noopener"><span class="tag tag-green">Hermes Agent Training</span></a></h3>
-          <p class="training-desc">Launch Your Freelance Career as a Hermes AI Agent Engineer and Attract Premium Global Projects.</p>
-          <ul style="font-size:0.8rem; color:#fff; margin-bottom:16px; padding-left:0;">
-           <li style="margin-bottom:4px;"><B>Training Features:</b></li>
-            <li style="margin-bottom:4px;">✔ Online Instructor-Led Training</li>
-            <li style="margin-bottom:4px;">✔ 20 Hands-on Training Modules</li>
-            <li style="margin-bottom:4px;">✔ Guaranteed Minimum Income (GMI)*</li>
-            <li>✔ Credential Verification Support</li>
+
+        <div class="training-body" style="color: #fff;">
+          <h3 class="training-title" style="color: #fff;">
+            <a href="/freelancing-training/hermes-agent-training/" class="service-link" itemprop="url">
+              <span itemprop="name">Hermes Agent Training</span>
+            </a>
+          </h3>
+
+          <p class="training-desc" style="color: #fff; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;" itemprop="description">
+            Launch Your Freelance Career as a Hermes AI Agent Engineer and Attract Premium Global Projects.
+          </p>
+
+          <p style="font-size: 0.85rem; color: #fff; margin-bottom: 6px;"><strong>Training Features:</strong></p>
+          <ul class="service-features-list" style="font-size: 0.85rem; color: #fff; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">Online Instructor-Led Training</li>
+            <li style="margin-bottom: 4px;">20 Hands-on Training Modules</li>
+            <li style="margin-bottom: 4px;">Guaranteed Minimum Income (GMI)*</li>
+            <li>Credential Verification Support</li>
           </ul>
-                  <div class="training-meta">
-            <div>
-              <span class="training-price">$250, 20 Hours, 2 Weeks</span>
+
+          <div class="training-meta" style="margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <div class="price-container">
+              <span class="price-label" style="display: block; font-size: 0.75rem; opacity: 0.8; text-transform: uppercase;">Training Investment</span>
+              <strong class="training-price" style="color: #fff; font-size: 1.25rem;">
+                Starting at <span itemprop="price" content="250">$250</span>
+              </strong>
+              <meta itemprop="priceCurrency" content="USD">
+              <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
+                Allocation: 20 Training Hours / <time datetime="P2W">2 Weeks</time>
+              </span>
             </div>
           </div>
-          <a href="/freelancing-training/hermes-agent-training/" target="_self" class="btn btn-primary" style="width:100%; justify-content:center;">View Modules & Enroll</a>
+
+          <a href="/freelancing-training/hermes-agent-training/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+            View Modules &amp; Enroll
+          </a>
         </div>
       </article>
 
       <!-- Telnyx SMS Training -->
-      <article class="training-card" data-reveal data-delay="100" data-category="sms" id="smst">
-        <div class="training-banner" style="background:linear-gradient(135deg,#1f0d2b,#3a1a4a);">
-          <img width="140" height="100" loading="lazy" src="/assets/images/telnyx.png" alt="Telnyx SMS API Training">
+      <article class="training-card" data-reveal data-delay="100" data-category="sms" id="smst" style="background: #0024ed;" itemscope itemtype="https://schema.org/Course">
+        <meta itemprop="provider" content="School Of Freelancing">
+
+        <div class="training-banner" style="background: #0024ed;">
+          <img
+            width="140"
+            height="100"
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/telnyx.png"
+            alt="Telnyx SMS API Messaging Specialist Freelancing Training">
         </div>
-        <div class="training-body">
-          <h3 class="training-title"><a href="/freelancing-training/telnyx-sms-api-training/" target="_self" rel="noopener"><span class="tag tag-green">Telnyx SMS API Training</span></a></h3>
-          <p class="training-desc">Launch Your Freelance Career as a Telnyx Messaging Specialist & Attract Premium Worldwide Projects.</p>
-          <ul style="font-size:0.8rem; color:#fff; margin-bottom:16px; padding-left:0;">
-               <li style="margin-bottom:4px;"><B>Training Features:</b></li>
-            <li style="margin-bottom:4px;">✔ Online Instructor-Led Training</li>
-            <li style="margin-bottom:4px;">✔ 20 Hands-on Training Modules</li>
-            <li style="margin-bottom:4px;">✔ Guaranteed Minimum Income (GMI)*</li>
-            <li>✔ Credential Verification Support</li>
+
+        <div class="training-body" style="color: #fff;">
+          <h3 class="training-title" style="color: #fff;">
+            <a href="/freelancing-training/telnyx-sms-api-training/" class="service-link" itemprop="url">
+              <span itemprop="name">Telnyx SMS API Training</span>
+            </a>
+          </h3>
+
+          <p class="training-desc" style="color: #fff; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;" itemprop="description">
+            Launch Your Freelance Career as a Telnyx Messaging Specialist &amp; Attract Premium Worldwide Projects.
+          </p>
+
+          <p style="font-size: 0.85rem; color: #fff; margin-bottom: 6px;"><strong>Training Features:</strong></p>
+          <ul class="service-features-list" style="font-size: 0.85rem; color: #fff; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 4px;">Online Instructor-Led Training</li>
+            <li style="margin-bottom: 4px;">20 Hands-on Training Modules</li>
+            <li style="margin-bottom: 4px;">Guaranteed Minimum Income (GMI)*</li>
+            <li>Credential Verification Support</li>
           </ul>
-                   <div class="training-meta">
-            <span class="training-price">$800, 40 Hours, 1-4 Weeks</span>
+
+          <div class="training-meta" style="margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <div class="price-container">
+              <span class="price-label" style="display: block; font-size: 0.75rem; opacity: 0.8; text-transform: uppercase;">Training Investment</span>
+              <strong class="training-price" style="color: #fff; font-size: 1.25rem;">
+                Starting at <span itemprop="price" content="800">$800</span>
+              </strong>
+              <meta itemprop="priceCurrency" content="USD">
+              <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
+                Allocation: 40 Training Hours / <time datetime="P4W">1-4 Weeks</time>
+              </span>
+            </div>
           </div>
-          <a href="/freelancing-training/telnyx-sms-api-training/" class="btn btn-primary" style="width:100%;justify-content:center;">View Modules & Enroll</a>
+
+          <a href="/freelancing-training/telnyx-sms-api-training/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+            View Modules &amp; Enroll
+          </a>
         </div>
       </article>
 
