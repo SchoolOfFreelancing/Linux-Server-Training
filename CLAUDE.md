@@ -18,11 +18,11 @@ Current sections, all fully populated (no empty placeholder pages remain anywher
 - `resource-center/` — hub page, `faqs/`, `testimonials/`
 - `freelancing-training/` — hub page (`index.html`) + 17 per-technology subpages, e.g. `linux-freelancing-training/`, `hermes-agent-training/`; replaces `/training/`
 - `linux-ai-services/` — hub page + 22 per-technology subpages, all named `<tech>-services/` (e.g. `linux-server-services/`, `gitlab-services/`); replaces `/tech-support/`; renamed from `linux-it-services/` on 2026-07-16 (`.htaccess` 301-redirects the old slug, including subpaths)
-- `location/` — hub page + 20 per-country pages (all remote/online delivery, USD pricing, no local offices — don't add location-specific claims beyond that)
+- `locations/` — hub page + 20 per-country pages (all remote/online delivery, USD pricing, no local offices — don't add location-specific claims beyond that)
 - `sitemaps/` — per-category sitemap fragments (`sitemap-main.xml`, `sitemap-training.xml`, `sitemap-service.xml`, `sitemap-local.xml`); `sitemap-blog.xml` is intentionally an empty valid `<urlset>` since this site has no blog. **Root `sitemap.xml`** (the one `robots.txt` actually references) is the comprehensive one — it lists every page directly, not via a sitemap index, so update it (or regenerate from the directory listing) whenever a page is added/removed.
 - `llms.txt` / `llms-full.txt` — site index for LLM consumption; keep in sync with the catalog if training/support items are added or removed.
 
-All hub-page cards link to their matching detail subpage (via the card title) in addition to the external GitHub repo link; the shared footer's Training/Tech Support columns link to 4-5 specific subpages plus a "View All" link to the hub. When adding a new training/support item, update: the hub page's card grid, the footer block (if it should be one of the featured items), `sitemap.xml`, and `llms-full.txt`.
+All hub-page cards link to their matching detail subpage (via the card title) in addition to the external GitHub repo link; the shared footer's Training/Tech Support columns link to 4-5 specific subpages plus a "View All" link to the hub. See the `add-page-checklist` skill for what to update when adding a new item.
 
 The homepage (`index.html`) also features 3 support items — DigitalOcean Cloud Support, Hummingbot Installation Support, Vapi Platform Support — that were originally homepage-only teasers with no matching hub/subpage entry; they were added to the services hub catalog (now `/linux-ai-services/`) and given their own subpages on 2026-07-10, so the count above (22) includes them.
 
@@ -38,9 +38,4 @@ Watch for this class of bug when renaming a page/folder: `sitemap.xml`, `sitemap
 - Every page carries its own full `<head>` (title, canonical, OG tags, JSON-LD) and duplicated nav/footer markup — there is no templating. A change to shared chrome (nav, footer, analytics) must be repeated in every page's `index.html`.
 - Shared assets live in `/assets` (`css/style.css`, `js/main.js` — matrix-rain canvas background and UI effects, favicons in `assets/icons/`, logos in `assets/images/`). Pages reference these with absolute paths (`/assets/css/style.css`, `/assets/js/main.js`, `/assets/icons/favicon.ico`) — always use absolute paths; a relative `css/style.css` link 404s outside its own directory (this happened on all 5 `legal/*` pages and was fixed 2026-07-10).
 - No per-page OG images exist; every page's `og:image`/`twitter:image` falls back to the one real image, `/assets/images/og-home.jpg`.
-- When adding or renaming a page, update `sitemap.xml` (comprehensive, not an index — see above) and `llms-full.txt`, and add a redirect in `.htaccess` if an old URL is being replaced.
-
-## CI / GitHub
-
-- `.github/workflows/claude.yml` runs Claude Code on issues/comments mentioning `@claude`; `claude-review.yml` reviews PRs with a "focus on security" system prompt. There is no build/test CI for the site itself.
-- Remote: `SchoolOfFreelancing/Linux-Freelancing-Training`, single `main` branch.
+- See the `add-page-checklist` skill for what to update when adding or renaming a page.
