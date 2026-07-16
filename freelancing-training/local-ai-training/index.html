@@ -5,10 +5,16 @@
 <!-- Basic Meta -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-chrome-192x192.png">
+<link rel="manifest" href="/site.webmanifest">
 
 <!-- SEO -->
 <title>LocalAI Hands-on Training | School of Freelancing</title>
-<meta name="description" content="20-hour, 5-day hands-on LocalAI Training. Run any model - LLMs, vision, voice, image, video - on any hardware, no GPU required, and sell it as a freelance service. $200.">
+<meta name="description" content="20-hour, 5-day hands-on LocalAI Training: run any model — LLMs, vision, voice, image, video — on any hardware, no GPU required. $200.">
 
 <meta name="author" content="School of Freelancing">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -62,13 +68,11 @@
       ]
     },
     {
-      "@type": "Training",
+      "@type": "Course",
+      "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online" },
       "name": "LocalAI Hands-on Training",
       "description": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
-      "provider": {
-        "@type": "Organization",
-        "@id": "https://www.schooloffreelancing.com/#organization"
-      },
+      "provider": { "@type": "ProfessionalService", "@id": "https://www.schooloffreelancing.com/#ProfessionalService", "name": "School of Freelancing" },
       "educationLevel": "Advanced",
       "learningResourceType": "Training",
       "offers": {
@@ -103,10 +107,39 @@
 }
 </script>
 
-<link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<!-- Verification Tags -->
+<meta name="google-site-verification" content="aKspFR5JYGO3cBf59rcq2-7hxuXZvtS-TAMndI17PBw">
+<meta name="msvalidate.01" content="C18D42C136729AADD540EB2FE7763E57">
+<meta name="yandex-verification" content="7a5b0116b50f4d68">
+<meta name="facebook-domain-verification" content="2304476026236470">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'/metrics/?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LNS69YXG5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1LNS69YXG5');
+</script>
+
+<!-- Preconnect to external domains -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
 
 <!-- Custom styles for background and text color -->
 <style>
@@ -153,11 +186,246 @@
   .detail-list li { margin-bottom: 10px; font-size: 1rem; }
   .breadcrumb-nav { font-size: 0.85rem; margin-bottom: 18px; opacity: 0.85; }
   .breadcrumb-nav a { text-decoration: underline; }
+  .module-card { background: rgba(255,255,255,0.08); border-radius: 8px; padding: 18px 22px; margin-bottom: 16px; }
+  .module-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+  .module-card ul { padding-left: 20px; margin: 0; }
+  .module-card li { margin-bottom: 6px; font-size: 0.95rem; }
+  .module-card .lab { display: block; margin-top: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.12); border-radius: 6px; padding: 6px 12px; }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
-<canvas id="matrix-canvas" role="presentation" aria-hidden="true"></canvas>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="/" class="nav-logo" aria-label="High-Income Technical Freelancing Training & Linux IT Service | School of Freelancing">
+      <div class="logo-icon" aria-hidden="true"><i class="fa-sharp-duotone fa-solid fa-house" aria-hidden="true"></i></div><span>SCHOOL OF FREELANCING</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/freelancing-training/">Freelancing Training</a></li>
+      <li><a href="/linux-ai-services/">Linux & AI Services</a></li>
+      <li><a href="/resource-center/testimonials/">Testimonials</a></li>
+      <li><a href="/about-us/">About us</a></li>
+      <li><a href="/contact-us/">Contact Us</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<header class="page-hero" aria-label="LocalAI Hands-on Training hero" style="padding: 80px 0 40px 0;">
+  <div class="container detail-wrap">
+    <p class="breadcrumb-nav"><a href="/">Home</a> / <a href="/freelancing-training/">All Training</a> / LocalAI Hands-on Training</p>
+    <h1 data-reveal style="font-size: 2.6rem; margin-bottom: 16px;"><span style="color:var(--text-primary)">LocalAI Hands-on Training</span></h1>
+    <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6;">
+      A hands-on LocalAI Training: run any model — LLMs, vision, voice, image, and video — on standard hardware with no GPU required, then sell it as a freelance service to clients who want AI without the cloud API bill.
+    </p>
+    <div class="detail-meta">
+      <span>💵 $200</span>
+      <span>⏱ 20 Hours</span>
+      <span>📅 5 Days</span>
+      <span>🎯 Guru · Freelancer · Upwork</span>
+    </div>
+
+  </div>
+</header>
+<div style="background: rgba(255,255,255,0.08); border-radius: 10px; padding: 16px 20px; margin: 24px auto 0; max-width: 860px;">
+  <p style="margin:0; color:var(--text-secondary);">Prefer to skip the training and have it done for you? <a href="/linux-ai-services/local-ai-services/"><strong>Hire us for LocalAI Support</strong></a> instead.</p>
+</div>
+
+<!-- AI-CITABLE OVERVIEW -->
+<section class="section" style="padding-bottom:0;" aria-label="LocalAI Hands-on Training overview">
+  <div class="container detail-wrap">
+
+    <h2><span style="color:var(--text-primary)">What Is LocalAI Hands-on Training?</span></h2>
+    <p style="color:var(--text-secondary); line-height:1.7;">
+      LocalAI Hands-on Training is School of Freelancing's 20-hour, instructor-led course on LocalAI, the open-source AI engine that runs LLM, vision, voice, image, and video models on standard hardware without requiring a GPU. The training walks Linux users through installing and configuring LocalAI, deploying multi-modal models, and securing a client-facing API, then teaches how to sell that skill set as a freelance service on Upwork, Freelancer.com, and Guru.com.
+    </p>
+
+    <h2><span style="color:var(--text-primary)">Key Takeaways</span></h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>Format:</strong> Online, instructor-led, hands-on labs</li>
+        <li><strong>Duration:</strong> 20 hours across 5 days (4 hours/day)</li>
+        <li><strong>Price:</strong> $200 USD, paid in full before enrollment</li>
+        <li><strong>Covers:</strong> LocalAI installation, LLM/vision/image/video/voice model deployment, API security, client integration</li>
+        <li><strong>Best for:</strong> Beginner-to-intermediate Linux users seeking freelance AI/LocalAI work</li>
+      </ul>
+    </div>
+
+    <h2><span style="color:var(--text-primary)">LocalAI Hands-on Training at a Glance</span></h2>
+    <table class="spec-table">
+      <thead><tr><th>Aspect</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td>Price</td><td>$200 USD</td></tr>
+        <tr><td>Duration</td><td>20 hours over 5 days</td></tr>
+        <tr><td>Sessions/Days</td><td>5 days × 4 hours</td></tr>
+        <tr><td>Format</td><td>Online, instructor-led</td></tr>
+        <tr><td>Prerequisites</td><td>Ubuntu Linux server (no GPU required), a domain, a freelance marketplace account</td></tr>
+        <tr><td>Marketplaces targeted</td><td>Upwork, Freelancer.com, Guru.com</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="section" aria-label="Training details">
+  <div class="container detail-wrap">
+
+  <h2><span style="color:var(--text-primary)">Participation Requirements</span></h2>
+    <ul class="detail-list">
+      <li><strong><a href="https://try.digitalocean.com/freetrialoffer/" target="_blank">DigitalOcean:</a></strong> Ubuntu Linux Server (24.04 or 26.04 LTS recommended) — no GPU required.</li>
+      <li><strong>Domain:</strong> Any domain or sub domain will work.</li>
+      <li><strong>Freelance Marketplace:</strong> Verified Upwork · Guru · Freelancer Account.</li>
+      <li><strong>Land Direct Clients:</strong> From Linkedin and YouTube Account.</li>
+      <li><strong>Rigorous:</strong> Need to have patience and concentration during all training sessions.</li>
+    </ul>
+
+     <h2><span style="color:var(--text-primary)">Connectivity</span></h2>
+    <ul class="detail-list">
+      <li><strong>Portable messaging devices for 24/7 client communication.</li>
+      <li><strong>Reliable fiber-optic internet access for uninterruptible training sessions.</li>
+        </ul>
+
+          <h2><span style="color:var(--text-primary)">Training Rules</span></h2>
+    <ul class="detail-list">
+      <li>These <a href="/legal/training-rules/">Training Rules ("Ground Rules")</a> apply to all School of Freelancing trainees. They keep training fair, focused, and productive and may be updated as the program evolves.</li>
+        </ul>
+
+    <h2><span style="color:var(--text-primary)">Who This Is For</span></h2>
+    <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:28px;">
+      Beginners to intermediate Linux users who want job-ready LocalAI skills and the ability to freelance on Upwork, Freelancer.com, Guru.com, and via direct LinkedIn outreach. You should be able to commit to 20 hours of hands-on, instructor-led training over 5 days.
+    </p>
+
+    <h2><span style="color:var(--text-primary)">Curriculum: 5 Days × 4 Hours (20 Hours Total)</span></h2>
+
+    <div class="module-card">
+      <h3>Day 1: LocalAI Fundamentals &amp; Installation (4h)</h3>
+      <ul>
+        <li>What LocalAI is, the OpenAI-compatible API, and why no GPU is needed</li>
+        <li>Installing LocalAI on a Linux VPS (Docker and binary methods)</li>
+        <li>CLI basics, config files, and the model gallery</li>
+      </ul>
+      <span class="lab">🧪 Lab: Install LocalAI on a fresh VPS and run your first prompt via the API</span>
+    </div>
+
+    <div class="module-card">
+      <h3>Day 2: Running LLM Models (4h)</h3>
+      <ul>
+        <li>Downloading and configuring LLM backends (llama.cpp-based models, quantized GGUF)</li>
+        <li>Prompt templates, context size tuning, and quantization tradeoffs</li>
+        <li>Exposing an OpenAI-compatible chat completions endpoint</li>
+      </ul>
+      <span class="lab">🧪 Lab: Deploy a quantized LLM and query it via curl/Postman</span>
+    </div>
+
+    <div class="module-card">
+      <h3>Day 3: Vision, Image &amp; Video Models (4h)</h3>
+      <ul>
+        <li>Image generation backends (Stable Diffusion-compatible models)</li>
+        <li>Vision models for image captioning and analysis</li>
+        <li>Video generation basics with LocalAI</li>
+      </ul>
+      <span class="lab">🧪 Lab: Generate images and captions through LocalAI's REST API</span>
+    </div>
+
+    <div class="module-card">
+      <h3>Day 4: Voice Models &amp; Secure Client Integration (4h)</h3>
+      <ul>
+        <li>Speech-to-text and text-to-speech backends</li>
+        <li>Securing the API: authentication, reverse proxy, SSL</li>
+        <li>Integrating LocalAI into a client-facing application</li>
+      </ul>
+      <span class="lab">🧪 Lab: Wire up speech-to-text/text-to-speech endpoints behind an SSL reverse proxy</span>
+    </div>
+
+    <div class="module-card">
+      <h3>Day 5: Client Project Simulation &amp; Freelance Client Acquisition (4h)</h3>
+      <ul>
+        <li>Full end-to-end task: fresh VPS → LocalAI install → multi-modal models → domain → SSL</li>
+        <li>Building winning Upwork/Freelancer.com/Guru.com profiles &amp; portfolios</li>
+        <li>Pricing your services and LinkedIn outreach for direct clients</li>
+      </ul>
+      <span class="lab">🧪 Final Assessment: Submit 1 Upwork proposal + 1 LinkedIn outreach message (reviewed live)</span>
+    </div>
+
+    <h2 style="margin-top:36px;"><span style="color:var(--text-primary)">Deliverables Upon Completion</span></h2>
+    <ul class="detail-list">
+      <li>A live portfolio project (your own LocalAI server running LLM, vision, and voice models)</li>
+      <li>Ready-to-use Upwork/Freelancer/Guru profile &amp; proposal templates</li>
+      <li>LinkedIn outreach message templates for direct client acquisition</li>
+      <li>Access to School of Freelancing community for ongoing support</li>
+    </ul>
+
+    <h2><span style="color:var(--text-primary)">Tools &amp; Platforms Covered</span></h2>
+    <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:28px;">
+      LocalAI, Docker, Nginx, Certbot/Let's Encrypt, Stable Diffusion-compatible models, GGUF-quantized LLMs, Upwork, Freelancer.com, Guru.com, LinkedIn
+    </p>
+
+    <div class="cta-banner" data-reveal style="margin-top:40px;">
+      <h2>Secure Payment Gateways</h2>
+     <p>Pay the <strong>$200</strong> enrollment fee below, then click <strong>Complete Registration</strong> to confirm.</p>
+      <div class="cta-actions">
+         <!--Wise Payment-->
+<a href="https://wise.com/pay/me/mohammadk206?utm_source=request_flow" target="_blank" style="display: inline-block; padding: 12px 28px; background-color: #00E676; color: #1E1E1F; font-family: Arial, sans-serif; font-weight: bold; font-size: 16px; text-decoration: none; border-radius: 24px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: background-color 0.2s;"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Pay with Wise</a>
+      <!--BTC Payment-->
+<a href="bitcoin:13UiGT3tx1K6ntGZWx2QiYTHNG8UYAYgXp" class="btc-payment-btn" target="_blank" rel="noopener noreferrer">
+  <span><i class="fa-brands fa-btc" aria-hidden="true"></i> Pay with Bitcoin</span>
+</a>
+
+      <style>
+  .btc-payment-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #F7931A;
+    color: #FFFFFF !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 32px;
+    border-radius: 25px;
+    text-decoration: none !important;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btc-payment-btn:hover {
+    background-color: #E28310;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  }
+
+  .btc-payment-btn:active {
+    background-color: #C9730C;
+    transform: translateY(1px);
+  }
+</style>
+      </div>
+    </div>
+  <article style="text-align: center;">
+      <h2>Finalize Your Seat</h2>
+      <p>Already paid? Click <strong>Complete Registration</strong> to confirm your enrollment.</p>
+      <div style="margin-top:25px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <a href="/register/" class="btn btn-primary btn-lg" target="_self">Complete Registration</a>
+      <a href="https://github.com/SchoolOfFreelancing/LocalAI-Training.git/" target="_blank" rel="noopener" class="btn btn-outline btn-lg">Technical Docs <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer" style="background:#0024ED;">
@@ -170,36 +438,36 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-                <span><B>SCHOOL OF FREELANCING v1.3.4</B></span>
-       
+        <span><strong>SCHOOL OF FREELANCING v1.3.4</strong></span>
+
         <p>AI-driven Linux training for freelancers and elite service for businesses. Build practical skills, resolve critical issues, and grow with confidence.</p>
-        Community<BR>
-        <div class="footer-social">
-          <a href="https://github.com/SchoolOfFreelancing" target="_self" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.youtube.com/@SchoolOfFreelancing" target="_self" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://www.linkedin.com/company/schooloffreelancing" target="_self" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://www.facebook.com/SchoolOfFreelancing" target="_self" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
-          <a href="https://instagram.com/schooloffreelancing" target="_self" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.threads.com/schooloffreelancing" target="_self" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i></a>
-          <a href="https://wa.me/8801748973769" target="_self" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://t.me/SchoolOfFreelancingTraining" target="_self" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i></a>
-          <a href="https://x.com/FreelancingOf" target="_self" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
+        <p>Community</p>
+        <address class="footer-social">
+          <a href="https://github.com/SchoolOfFreelancing" target="_blank" rel="noopener noreferrer" aria-label="School of Freelancing on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/@SchoolOfFreelancing" target="_blank" rel="noopener noreferrer" aria-label="School of Freelancing on YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/company/schooloffreelancing" target="_blank" rel="noopener noreferrer" aria-label="School of Freelancing on LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/SchoolOfFreelancing" target="_blank" rel="noopener noreferrer" aria-label="School of Freelancing on Facebook"><i class="fa-brands fa-square-facebook" aria-hidden="true"></i></a>
+          <a href="https://instagram.com/schooloffreelancing" target="_blank" rel="noopener noreferrer" aria-label="School of Freelancing on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.threads.com/schooloffreelancing" target="_blank" rel="noopener noreferrer" aria-label="School of Freelancing on Threads"><i class="fa-brands fa-threads" aria-hidden="true"></i></a>
+          <a href="https://wa.me/8801748973769" target="_blank" rel="noopener noreferrer" aria-label="Message School of Freelancing on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://t.me/SchoolOfFreelancingTraining" target="_blank" rel="noopener noreferrer" aria-label="Message School of Freelancing on Telegram"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+          <a href="https://x.com/SchoolOfFreelan" target="_blank" rel="noopener noreferrer" aria-label="School of Freelancing on X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+        </address>
       </div>
       
-      <div class="footer-col">
-        <span>Training</span>
+      <nav class="footer-col" aria-label="Footer: Freelancing Training">
+        <h2><span>Freelancing Training</span></h2>
         <ul class="footer-links">
           <li><a href="/freelancing-training/hermes-agent-training/">Hermes Agent Training</a></li>
           <li><a href="/freelancing-training/telnyx-sms-api-training/">Telnyx SMS API Training</a></li>
           <li><a href="/freelancing-training/fusionpbx-training/">FusionPBX VoIP Training</a></li>
           <li><a href="/freelancing-training/openai-training/">OpenAI Platform Training</a></li>
           <li><a href="/freelancing-training/linux-freelancing-training/">Linux Freelancing Training</a></li>
-          <li><a href="/freelancing-training/">All Freelancing Training</a></li>
+          <li><a href="/freelancing-training/">View All Trainings</a></li>
         </ul>
-      </div>
-      <div class="footer-col">
-        <span>Tech Support</span>
+      </nav>
+      <nav class="footer-col" aria-label="Footer: Linux & AI Services">
+        <h2><span>Linux & AI Services</span></h2>
         <ul class="footer-links">
           <li><a href="/linux-ai-services/linux-server-services/">Linux Server Services</a></li>
           <li><a href="/linux-ai-services/telnyx-sms-api-services/">Telnyx SMS API Services</a></li>
@@ -208,18 +476,19 @@
            <li><a href="/linux-ai-services/claude-ai-platform-services/">Claude Platform Services</a></li>
           <li><a href="/linux-ai-services/">View All Services</a></li>
         </ul>
-      </div>
-      <div class="footer-col">
-        <span>Legal</span>
+      </nav>
+      <nav class="footer-col" aria-label="Footer: Legal & Resources">
+       <h2><span>Legal</span></h2>
         <ul class="footer-links">
           <li><a href="/resource-center/faqs/" target="_self">FAQs</a></li>
+          <li><a href="/locations/">Locations</a></li>
             <li><a href="/legal/refund-policy/">Refund Policy</a></li>
-              <li><a href="/legal/training-rules/">Training Rules</a></li>
-            <li><a href="/legal/privacy-policy/">Privacy Policy</a></li>
-                       <li><a href="/legal/terms-and-conditions/" target="_self">Terms & Conditions</a></li>
+              <li><a href="/legal/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="/legal/terms-and-conditions/" target="_self">Terms & Conditions</a></li>
             <li><a href="/legal/credential-verification/">Credential Verification</a></li>
+            <li><a href="/sitemap/">Sitemap</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <p>© School of Freelancing. All rights reserved. Built with ❤️ from Bangladesh.</p>
@@ -227,6 +496,6 @@
   </div>
 </footer>
 
-<script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>

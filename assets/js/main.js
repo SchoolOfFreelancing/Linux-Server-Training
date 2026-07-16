@@ -66,12 +66,13 @@ function initMobileMenu() {
   const overlay = document.querySelector('.nav-overlay');
   if (!toggle || !links) return;
 
-  function closeMenu() {
+  function closeMenu(returnFocus) {
     toggle.classList.remove('open');
     links.classList.remove('open');
     if (overlay) overlay.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    if (returnFocus) toggle.focus();
   }
 
   function openMenu() {
@@ -80,16 +81,22 @@ function initMobileMenu() {
     if (overlay) overlay.classList.add('open');
     toggle.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    const firstLink = links.querySelector('a');
+    if (firstLink) firstLink.focus();
   }
 
   toggle.addEventListener('click', () => {
-    if (links.classList.contains('open')) closeMenu(); else openMenu();
+    if (links.classList.contains('open')) closeMenu(false); else openMenu();
   });
 
-  if (overlay) overlay.addEventListener('click', closeMenu);
+  if (overlay) overlay.addEventListener('click', () => closeMenu(false));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) closeMenu(true);
+  });
 
   links.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', closeMenu);
+    a.addEventListener('click', () => closeMenu(false));
   });
 }
 
@@ -307,10 +314,15 @@ function initPaymentForm() {
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
-      const target = document.querySelector(a.getAttribute('href'));
+      const href = a.getAttribute('href');
+      if (href.length < 2) return;
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+        history.pushState(null, '', href);
       }
     });
   });
@@ -404,7 +416,7 @@ function initCookieNotice() {
     font-size:0.82rem; color:#8fa3ff; flex-wrap:wrap;
   `;
   notice.innerHTML = `
-    <span>🍪 We use cookies to enhance your learning experience. By continuing, you agree to our <a href="#" style="color:#ffffff">Cookie Policy</a>.</span>
+    <span>🍪 We use cookies to enhance your user experience. By continuing, you agree to our <a href="#" style="color:#ffffff">Cookie Policy</a>.</span>
     <button onclick="document.getElementById('cookie-notice').remove();localStorage.setItem('cookie-ok','1')"
       style="background:#ffffff;color:#0024ed;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:0.8rem;font-weight:600;flex-shrink:0">
       Accept

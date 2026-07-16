@@ -23,42 +23,61 @@ RewriteRule ^(.+)/index\.html$ /$1/ [R=301,L]
 
 ##################################################
 # Redirect old flat HTML pages to current folders
+# (absolute target: guarantees a single-hop 301 even
+# when the inbound request is also non-canonical
+# host/scheme, instead of chaining through the
+# HTTPS+www rule above on a second request)
 ##################################################
-RewriteRule ^training\.html$ /freelancing-training/ [R=301,L]
-RewriteRule ^enrollment\.html$ /contact-us/ [R=301,L]
-RewriteRule ^tech-support\.html$ /linux-ai-services/ [R=301,L]
-RewriteRule ^support\.html$ /linux-ai-services/ [R=301,L]
-RewriteRule ^get-support\.html$ /linux-ai-services/ [R=301,L]
-RewriteRule ^get_support\.html$ /linux-ai-services/ [R=301,L]
-RewriteRule ^testimonials\.html$ /resource-center/testimonials/ [R=301,L]
-RewriteRule ^about\.html$ /about-us/ [R=301,L]
-RewriteRule ^faq\.html$ /resource-center/faqs/ [R=301,L]
-RewriteRule ^privacy-policy\.html$ /legal/privacy-policy/ [R=301,L]
-RewriteRule ^terms\.html$ /legal/terms-and-conditions/ [R=301,L]
-RewriteRule ^contact\.html$ /contact-us/ [R=301,L]
+RewriteRule ^training\.html$ https://www.schooloffreelancing.com/freelancing-training/ [R=301,L]
+RewriteRule ^enrollment\.html$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
+RewriteRule ^tech-support\.html$ https://www.schooloffreelancing.com/linux-ai-services/ [R=301,L]
+RewriteRule ^support\.html$ https://www.schooloffreelancing.com/linux-ai-services/ [R=301,L]
+RewriteRule ^get-support\.html$ https://www.schooloffreelancing.com/linux-ai-services/ [R=301,L]
+RewriteRule ^get_support\.html$ https://www.schooloffreelancing.com/linux-ai-services/ [R=301,L]
+RewriteRule ^testimonials\.html$ https://www.schooloffreelancing.com/resource-center/testimonials/ [R=301,L]
+RewriteRule ^about\.html$ https://www.schooloffreelancing.com/about-us/ [R=301,L]
+RewriteRule ^faq\.html$ https://www.schooloffreelancing.com/resource-center/faqs/ [R=301,L]
+RewriteRule ^privacy-policy\.html$ https://www.schooloffreelancing.com/legal/privacy-policy/ [R=301,L]
+RewriteRule ^terms\.html$ https://www.schooloffreelancing.com/legal/terms-and-conditions/ [R=301,L]
+RewriteRule ^contact\.html$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
 
 ##################################################
 # Redirect deleted section folders to their new
 # equivalents from the 2026-07 site restructure
 ##################################################
-RewriteRule ^training/enroll(/.*)?$ /contact-us/ [R=301,L]
-RewriteRule ^training/oldenroll(/.*)?$ /contact-us/ [R=301,L]
-RewriteRule ^training/enroll1(/.*)?$ /contact-us/ [R=301,L]
-RewriteRule ^training/files(/.*)?$ /contact-us/ [R=301,L]
-RewriteRule ^training/?$ /freelancing-training/ [R=301,L]
-RewriteRule ^tech-support/get-support/?$ /linux-ai-services/ [R=301,L]
-RewriteRule ^tech-support/?$ /linux-ai-services/ [R=301,L]
-RewriteRule ^linux-it-services/?$ /linux-ai-services/ [R=301,L]
-RewriteRule ^linux-it-services/(.+)$ /linux-ai-services/$1 [R=301,L]
-RewriteRule ^about/?$ /about-us/ [R=301,L]
-RewriteRule ^contact/?$ /contact-us/ [R=301,L]
-RewriteRule ^testimonials/?$ /resource-center/testimonials/ [R=301,L]
-RewriteRule ^faq/?$ /resource-center/faqs/ [R=301,L]
-RewriteRule ^terms/?$ /legal/terms-and-conditions/ [R=301,L]
-RewriteRule ^privacy/?$ /legal/privacy-policy/ [R=301,L]
-RewriteRule ^refund/?$ /legal/refund-policy/ [R=301,L]
-RewriteRule ^training-rules/?$ /legal/training-rules/ [R=301,L]
-RewriteRule ^verify/?$ /legal/credential-verification/ [R=301,L]
+RewriteRule ^training/enroll(/.*)?$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
+RewriteRule ^training/oldenroll(/.*)?$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
+RewriteRule ^training/enroll1(/.*)?$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
+RewriteRule ^training/files(/.*)?$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
+RewriteRule ^training/?$ https://www.schooloffreelancing.com/freelancing-training/ [R=301,L]
+RewriteRule ^tech-support/get-support/?$ https://www.schooloffreelancing.com/linux-ai-services/ [R=301,L]
+RewriteRule ^tech-support/?$ https://www.schooloffreelancing.com/linux-ai-services/ [R=301,L]
+RewriteRule ^linux-it-services/?$ https://www.schooloffreelancing.com/linux-ai-services/ [R=301,L]
+RewriteRule ^linux-it-services/(.+)$ https://www.schooloffreelancing.com/linux-ai-services/$1 [R=301,L]
+RewriteRule ^get-started/?$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
+RewriteRule ^about/?$ https://www.schooloffreelancing.com/about-us/ [R=301,L]
+RewriteRule ^contact/?$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
+RewriteRule ^testimonials/?$ https://www.schooloffreelancing.com/resource-center/testimonials/ [R=301,L]
+RewriteRule ^faq/?$ https://www.schooloffreelancing.com/resource-center/faqs/ [R=301,L]
+RewriteRule ^terms/?$ https://www.schooloffreelancing.com/legal/terms-and-conditions/ [R=301,L]
+RewriteRule ^privacy/?$ https://www.schooloffreelancing.com/legal/privacy-policy/ [R=301,L]
+RewriteRule ^refund/?$ https://www.schooloffreelancing.com/legal/refund-policy/ [R=301,L]
+RewriteRule ^training-rules/?$ https://www.schooloffreelancing.com/legal/training-rules/ [R=301,L]
+RewriteRule ^verify/?$ https://www.schooloffreelancing.com/legal/credential-verification/ [R=301,L]
+RewriteRule ^location/?$ https://www.schooloffreelancing.com/locations/ [R=301,L]
+RewriteRule ^location/(.+)$ https://www.schooloffreelancing.com/locations/$1 [R=301,L]
+
+##################################################
+# Force HTTPS + www (canonical host: https://www.schooloffreelancing.com)
+# Placed after the legacy-path rules above so an old
+# URL requested over http/non-www resolves in a single
+# 301 hop straight to its new canonical path, instead of
+# first bouncing to the old path on https+www and only
+# then hitting the legacy-path rule on a second request.
+##################################################
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.schooloffreelancing.com%{REQUEST_URI} [L,R=301]
 
 ##################################################
 # Internally load index.html for clean folder URLs
@@ -75,6 +94,7 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
     ExpiresActive On
     ExpiresByType text/html "access plus 0 seconds"
     ExpiresByType text/css "access plus 30 days"
+    ExpiresByType text/javascript "access plus 30 days"
     ExpiresByType application/javascript "access plus 30 days"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
@@ -85,6 +105,9 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
     ExpiresByType font/woff "access plus 1 year"
     ExpiresByType font/woff2 "access plus 1 year"
     ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType application/manifest+json "access plus 1 week"
+    ExpiresByType application/xml "access plus 1 day"
+    ExpiresByType text/plain "access plus 1 day"
 </IfModule>
 
 ##################################################
@@ -95,8 +118,10 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
     AddOutputFilterByType DEFLATE text/html
     AddOutputFilterByType DEFLATE text/xml
     AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/manifest+json
     AddOutputFilterByType DEFLATE application/xml
     AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>

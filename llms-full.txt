@@ -52,11 +52,11 @@
 - [Hummingbot Installation Support](https://www.schooloffreelancing.com/linux-ai-services/hummingbot-installation-services/) — $1500, 40 Hours, 6 Days
 - [Vapi Platform Support](https://www.schooloffreelancing.com/linux-ai-services/vapi-platform-services/) — $600, 30 Hours, 5 Days
 
-## Locations (https://www.schooloffreelancing.com/location/)
+## Locations (https://www.schooloffreelancing.com/locations/)
 
 All locations are served remotely/online, billed in USD:
 Australia, Austria, Bangladesh, Belgium, Canada, Denmark, Finland, Germany, Iceland, Ireland, Israel, Liechtenstein, Luxembourg, Netherlands, Norway, Singapore, Sweden, Switzerland, United Kingdom, United States.
-Each has its own page at `https://www.schooloffreelancing.com/location/{country-slug}/` (e.g. `/location/us/`, `/location/uk/`).
+Each has its own page at `https://www.schooloffreelancing.com/locations/{country-slug}/` (e.g. `/locations/us/`, `/locations/uk/`).
 
 ## Company & Contact
 
