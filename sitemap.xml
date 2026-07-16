@@ -17,7 +17,7 @@
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -95,6 +95,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.schooloffreelancing.com/freelancing-training/bulk-sms-setup-training/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.schooloffreelancing.com/freelancing-training/call-center-setup-training/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.schooloffreelancing.com/freelancing-training/centos-linux-training/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -103,6 +115,18 @@
   <url>
     <loc>https://www.schooloffreelancing.com/freelancing-training/claude-training/</loc>
     <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.schooloffreelancing.com/freelancing-training/debian-linux-training/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.schooloffreelancing.com/freelancing-training/docker-training/</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -197,133 +221,133 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/centos-linux-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/centos-linux-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/claude-ai-platform-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/claude-ai-platform-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/digitalocean-cloud-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/digitalocean-cloud-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/fusionpbx-voip-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/fusionpbx-voip-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/github-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/github-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/gitlab-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/gitlab-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/goautodial-voip-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/goautodial-voip-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/hermes-agent-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/hermes-agent-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/hummingbot-installation-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/hummingbot-installation-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/jasmin-sms-gateway-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/jasmin-sms-gateway-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/linux-server-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/linux-server-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/local-ai-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/local-ai-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/odysseus-ai-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/odysseus-ai-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/openai-platform-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/openai-platform-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/openclaw-ai-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/openclaw-ai-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/telnyx-sip-trunking-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/telnyx-sip-trunking-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/telnyx-sms-api-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/telnyx-sms-api-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/twilio-sip-trunking-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/twilio-sip-trunking-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/twilio-sms-api-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/twilio-sms-api-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/ubuntu-linux-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/ubuntu-linux-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/vapi-platform-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/vapi-platform-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.schooloffreelancing.com/linux-it-services/zeroclaw-ai-services/</loc>
+    <loc>https://www.schooloffreelancing.com/linux-ai-services/zeroclaw-ai-services/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
