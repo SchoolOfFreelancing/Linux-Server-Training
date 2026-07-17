@@ -5,10 +5,10 @@
 <!-- Basic Meta -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linux Freelancing Training & Support | School of Freelancing</title>
+<title>Linux Freelancing Training & Professional Services | School of Freelancing</title>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="Get expert Linux & AI freelancing training and reliable Linux support. School of Freelancing builds tech skills and provides enterprise IT services.">
+<meta name="description" content="Get expert Linux & AI freelancing training and reliable Linux support. School of Freelancing builds tech skills and provides enterprise AI services.">
 <meta name="author" content="School of Freelancing">
 <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -165,16 +165,20 @@
       ]
     },
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.schooloffreelancing.com/"
-        }
-      ]
-    },
+  "@type": "BreadcrumbList",
+  "@id": "https://www.schooloffreelancing.com/#breadcrumb",
+  "name": "Breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {
+        "@id": "https://www.schooloffreelancing.com/"
+      }
+    }
+  ]
+},
     {
       "@type": "Service",
       "name": "DigitalOcean Cloud Support",
@@ -236,14 +240,21 @@
       ]
     },
     {
-      "@type": "WebPage",
-      "@id": "https://www.schooloffreelancing.com/#webpage",
-      "url": "https://www.schooloffreelancing.com/",
-      "name": "Linux Freelancing Training & Cloud Support",
-      "isPartOf": { "@id": "https://www.schooloffreelancing.com/#website" },
-      "about": { "@id": "https://www.schooloffreelancing.com/#ProfessionalService" }
+  "@type": "WebPage",
+  "@id": "https://www.schooloffreelancing.com/#webpage",
+  "url": "https://www.schooloffreelancing.com/",
+  "name": "Linux Freelancing Training & Cloud Support",
+  "breadcrumb": {
+    "@id": "https://www.schooloffreelancing.com/#breadcrumb"
+  },
+  "isPartOf": {
+    "@id": "https://www.schooloffreelancing.com/#website"
+  },
+  "about": {
+    "@id": "https://www.schooloffreelancing.com/#ProfessionalService"
     }
-  ]
+  }
+ ]
 }
 </script>
 
@@ -391,7 +402,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar" aria-label="Main navigation">
   <div class="nav-container">
-    <a href="/" class="nav-logo" aria-label="High-Income Technical Freelancing Training & Linux IT Service | School of Freelancing">
+    <a href="/" class="nav-logo" aria-label="Freelancing Training on Linux & Linux AI Service | School of Freelancing">
       <div class="logo-icon" aria-hidden="true"><i class="fa-sharp-duotone fa-solid fa-house" aria-hidden="true"></i></div><span>SCHOOL OF FREELANCING</span>
     </a>
     <ul class="nav-links" id="nav-links">
@@ -447,33 +458,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <span class="prompt">root@sof:~#</span>
           <span class="cmd" data-typewriter="complete --module=89 'search Linux projects'" data-speed="55" data-delay="4500"></span>
         </div>
-        <div class="terminal-line">
-          <span class="output highlight">💰 First client landed: $750</span>
-        </div>
-        <div class="terminal-line">
+                <div class="terminal-line">
           <span class="prompt">root@sof:~#</span>
-          <span class="cmd" data-typewriter="Income unlocked. search more Linux projects" data-speed="55" data-delay="6000"></span>
+          <span class="cmd" data-typewriter="💰 First client landed Income unlocked. search more" data-speed="55" data-delay="6000"></span>
         </div>
-        <div class="terminal-line">
-          <span class="prompt">root@sof:~#</span>
-          <span class="cursor" aria-hidden="true"></span>
-        </div>
-      </div>
+            </div>
     </div>
   </div>
 </header>
 
 <!-- ===== FEATURED TRAINING ===== -->
-<section id="trainings" class="section no-terminal-prompt" aria-labelledby="trainings-heading" style="background:#0024ED;">
-  <style>
-    #trainings, #trainings .section-title, #trainings .section-subtitle,
-    #trainings .training-title, #trainings .training-desc, #trainings .training-price,
-    #trainings .training-body ul, #trainings .training-body ul li { color:#fff !important; }
-    #trainings .training-banner { background:#0024ED !important; }
-  </style>
+<section id="trainings" class="section no-terminal-prompt" aria-labelledby="trainings-heading" style="background:#0024ed;">
+
+  
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title" id="trainings-heading"><span>Training Built for Linux Systems</span></h2>
+      <h2 class="section-title" id="trainings-heading"><span>Freelancing Training</span></h2>
       <p class="section-subtitle"><span>On-Demand, Hands-On Training in Cutting-Edge Technology</span></p>
     </div>
     <div class="trainings-grid">
@@ -482,7 +482,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <article class="training-card" data-reveal data-delay="0" style="background: #0024ed;" itemscope itemtype="https://schema.org/Course">
         <meta itemprop="provider" content="School Of Freelancing">
 
-        <div class="training-banner" style="background: #0024ed;">
+        <div class="training-banner">
           <img
             width="120"
             height="120"
@@ -519,7 +519,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </strong>
               <meta itemprop="priceCurrency" content="USD">
               <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
-                Allocation: 180 Training Hours / <time datetime="P6M">6 Months</time>
+                Allocation: 180 Training Hours / 6 Months
               </span>
             </div>
           </div>
@@ -534,7 +534,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <article class="training-card" data-reveal data-delay="100" style="background: #0024ed;" itemscope itemtype="https://schema.org/Course">
         <meta itemprop="provider" content="School Of Freelancing">
 
-        <div class="training-banner" style="background: #0024ed;">
+        <div class="training-banner">
           <img
             width="120"
             height="120"
@@ -571,7 +571,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </strong>
               <meta itemprop="priceCurrency" content="USD">
               <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
-                Allocation: 20 Training Hours / <time datetime="P2W">2 Weeks</time>
+                Allocation: 20 Training Hours / 2 Weeks
               </span>
             </div>
           </div>
@@ -586,7 +586,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <article class="training-card" data-reveal data-delay="100" data-category="sms" id="smst" style="background: #0024ed;" itemscope itemtype="https://schema.org/Course">
         <meta itemprop="provider" content="School Of Freelancing">
 
-        <div class="training-banner" style="background: #0024ed;">
+        <div class="training-banner">
           <img
             width="140"
             height="100"
@@ -623,7 +623,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </strong>
               <meta itemprop="priceCurrency" content="USD">
               <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
-                Allocation: 40 Training Hours / <time datetime="P4W">1-4 Weeks</time>
+                Allocation: 40 Training Hours / 1-4 Weeks
               </span>
             </div>
           </div>
@@ -641,17 +641,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
-<!-- ===== FEATURED Support ===== -->
+<!-- ===== FEATURED Services ===== -->
 <section id="services" aria-labelledby="services-heading" style="background:#0024ED;">
-  <style>
-    #services, #services .section-title, #services .section-subtitle,
-    #services .training-title, #services .training-desc, #services .training-price,
-    #services .training-body ul, #services .training-body ul li { color:#fff !important; }
-    #services .training-banner { background:#0024ED !important; }
-  </style>
-  <div class="container">
+    <div class="container">
     <div class="section-header" data-reveal>
-      <h2 class="section-title" id="services-heading"><span>Global Client Tech Support</span></h2>
+      <h2 class="section-title" id="services-heading"><span>Linux & AI Services</span></h2>
       <p class="section-subtitle">Fast, reliable support for businesses worldwide, whenever you need</p>
     </div>
     <div class="trainings-grid">
@@ -662,14 +656,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta itemprop="provider" content="School Of Freelancing">
   <meta itemprop="areaServed" content="Worldwide">
 
-  <div class="training-banner" style="background: #0024ed;">
-    <img
-      width="140"
-      height="100"
-      loading="lazy"
-      decoding="async"
-      src="/assets/images/digitalocean.png"
-      alt="DigitalOcean AI-Native Cloud Infrastructure Support and Systems Administration">
+  <div class="training-banner">
+    <img width="140" height="100" loading="lazy" decoding="async" src="/assets/images/digitalocean.png" alt="DigitalOcean AI-Native Cloud Infrastructure Support and Systems Administration">
   </div>
 
   <div class="training-body" style="color: #fff;">
@@ -698,7 +686,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
-        Allocation: 40 Engineering Hours / <time datetime="P6D">5 Days</time>
+        Allocation: 40 Engineering Hours / 5 Days
         </span>
       </div>
     </div>
@@ -719,7 +707,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
-  <div class="training-banner" style="background: #0024ed;">
+  <div class="training-banner">
     <img
       width="120"
       height="120"
@@ -758,7 +746,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
-          Allocation: 40 Engineering Hours / <time datetime="P6D">6 Days</time>
+          Allocation: 40 Engineering Hours / 6 Days
         </span>
       </div>
     </div>
@@ -780,7 +768,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
-  <div class="training-banner" style="background: #0024ed;">
+  <div class="training-banner">
     <img 
       width="120" 
       height="120" 
@@ -823,7 +811,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta itemprop="availability" content="https://schema.org">
         
         <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;" itemprop="deliveryLeadTime" itemscope itemtype="https://schema.org">
-          Allocation: 30 Engineering Hours / <time datetime="P5D">5 Days</time>
+          Allocation: 30 Engineering Hours / 5 Days
           <meta itemprop="value" content="5">
           <meta itemprop="unitCode" content="DAY">
         </span>
@@ -836,32 +824,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </a>
   </div>
 </article>
-
     </div>
-    <div class="text-center" style="margin-top:40px;" data-reveal>
+    
+    <!-- ===== View All Services ===== -->
+    <div class="text-center" style="margin-top:20px; padding-bottom:20px;" data-reveal>
       <a href="/linux-ai-services/" class="btn btn-outline btn-lg">View All Services →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA ===== -->
-<section class="section" aria-label="School Of Freelancing Training and Tech Support Services" style="background:#0024ED;">
-  <div class="container">
-    <div class="cta-banner" data-reveal style="background:#0024ED;">
-      <!-- Entity-Based Label -->
-      <span class="section-label" style="color:#fff;">School Of Freelancing</span>
-      
-      <!-- Short, Impactful H2 Header -->
-      <h2><span style="color:#fff">Freelancing Trainings & Services</span></h2>
-      
-      <!-- Ultra-Short Semantic Description (Dense Entity Clustering for AI Search) -->
-      <p style="color:#fff;">At School Of Freelancing, get expert Freelancing Training or 24/7 Linux & AI Services.</p>
-      
-      <!-- Exact Match Descriptive Anchor Text & Titles for Maximum Crawl Efficiency -->
-      <div class="cta-actions">
-        <a href="/freelancing-training/" class="btn btn-primary btn-lg" title="Enroll in Linux & AI Freelancing Training">Freelancing Training</a>
-        <a href="/linux-ai-services/" class="btn btn-outline btn-lg" title="Get Linux & IT Technical Support Services">Linux & AI Services</a>
-      </div>
     </div>
   </div>
 </section>
@@ -869,12 +836,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </main>
 
 <!-- ===== FOOTER ===== -->
-<footer class="footer" style="background:#0024ED;">
-  <style>
-    .footer, .footer a, .footer p, .footer span, .footer li,
-    .footer-brand p, .footer-links a, .footer-bottom p,
-    .footer-col span { color:#fff !important; }
-  </style>
+<footer class="footer">
   
   <div class="container">
     <div class="footer-grid">
