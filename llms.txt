@@ -1,6 +1,6 @@
 # School of Freelancing
 
-> School of Freelancing is a Linux/tech freelancing training and remote IT support business based in Bangladesh, delivering everything online worldwide. It runs hands-on, instructor-led training programs (Linux, DevOps, AI platforms, VoIP, SMS APIs) that prepare students to earn on freelance marketplaces (Guru, Freelancer, Upwork), and offers paid remote technical support in the same technology areas for businesses.
+> School of Freelancing is a Linux/tech freelancing training and remote IT service business based in Bangladesh, delivering everything online worldwide. It runs hands-on, instructor-led training programs (Linux, DevOps, AI platforms, VoIP, SMS APIs) that prepare students to earn on freelance marketplaces (Guru, Freelancer, Upwork, Fiverr), and offers paid remote technical support in the same technology areas for businesses.
 
 ## Core Pages
 
@@ -11,6 +11,21 @@
 - [Contact Us](https://www.schooloffreelancing.com/contact-us/): Contact channels (Telegram, WhatsApp, email) to begin training or request support.
 - [Register](https://www.schooloffreelancing.com/register/): How to register for a training program or support service.
 - [Locations](https://www.schooloffreelancing.com/locations/): Countries served (all delivery is remote/online, priced in USD).
+
+## Featured Training Programs
+
+- [Linux Freelancing Training](https://www.schooloffreelancing.com/freelancing-training/linux-freelancing-training/): Become a Linux System Administrator and build a freelancing business; 90 hands-on modules, 180 hours over 6 months, starting at $600.
+- [Hermes Agent Training](https://www.schooloffreelancing.com/freelancing-training/hermes-agent-training/): Launch a freelance career as a Hermes AI Agent Engineer; 20 modules, 20 hours over 2 weeks, starting at $250.
+- [Telnyx SMS API Training](https://www.schooloffreelancing.com/freelancing-training/telnyx-sms-api-training/): Become a Telnyx Messaging Specialist for global clients; 20 modules, 40 hours over 1-4 weeks, starting at $800.
+- [FusionPBX VoIP Training](https://www.schooloffreelancing.com/freelancing-training/fusionpbx-training/): Hands-on training for freelancing as a FusionPBX VoIP systems specialist.
+- [OpenAI Platform Training](https://www.schooloffreelancing.com/freelancing-training/openai-training/): Hands-on training for freelancing as an OpenAI platform integration specialist.
+
+## Featured Support Services
+
+- [DigitalOcean AI-Native Cloud Solutions](https://www.schooloffreelancing.com/linux-ai-services/digitalocean-cloud-services/): Enterprise Linux sysadmin services for cloud infrastructure, GPU/ML backends, and Kubernetes; starting at $500 for 40 engineering hours.
+- [Hummingbot Algorithmic Trading Support](https://www.schooloffreelancing.com/linux-ai-services/hummingbot-installation-services/): Linux systems administration for decentralized market-making and trading bot infrastructure; starting at $1,500 for 40 engineering hours.
+- [Vapi Voice AI Platform Support](https://www.schooloffreelancing.com/linux-ai-services/vapi-platform-services/): LLM telephony integration engineering for voice AI agents, SIP trunking, and real-time backend support; starting at $600 for 30 engineering hours.
+- [Linux Server Services](https://www.schooloffreelancing.com/linux-ai-services/linux-server-services/): General remote Linux server administration and support.
 
 ## Resources
 

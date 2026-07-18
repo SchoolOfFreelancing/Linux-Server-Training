@@ -46,53 +46,73 @@
 <meta name="twitter:image" content="https://www.schooloffreelancing.com/assets/images/og-home.jpg">
 <meta name="twitter:creator" content="@FreelancingOf">
 
-<!-- Structured Data -->
+<!-- Structured Data / Training Page Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": "https://www.schooloffreelancing.com/freelancing-training/",
+      "@id": "https://schooloffreelancing.com",
       "name": "All Training Programs",
       "description": "Hands-on high-income technical training programs for freelancers",
-      "url": "https://www.schooloffreelancing.com/freelancing-training/",
-      "isPartOf": { "@id": "https://www.schooloffreelancing.com/#website" }
+      "url": "https://schooloffreelancing.com",
+      "isPartOf": { "@id": "https://schooloffreelancing.com" },
+      "breadcrumb": { "@id": "https://schooloffreelancing.com#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://schooloffreelancing.com#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.schooloffreelancing.com/"
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://schooloffreelancing.com",
+            "url": "https://schooloffreelancing.com"
+          }
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "All Training",
-          "item": "https://www.schooloffreelancing.com/freelancing-training/"
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://schooloffreelancing.com",
+            "url": "https://schooloffreelancing.com"
+          }
         }
       ]
     },
     {
       "@type": "Course",
-      "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online" },
+      "@id": "https://schooloffreelancing.com#linux-course",
       "name": "Linux Server Freelancing Training",
       "description": "Become a top-earning freelance Linux Systems Administrator managing production servers and daily package updates.",
-      "provider": { "@type": "ProfessionalService", "@id": "https://www.schooloffreelancing.com/#ProfessionalService", "name": "School of Freelancing" },
-      "educationLevel": "Advanced",
+      "url": "https://schooloffreelancing.com",
+      "educationalLevel": "Advanced",
       "learningResourceType": "Training",
+      "provider": { 
+        "@type": "EducationalOrganization", 
+        "@id": "https://schooloffreelancing.com#organization", 
+        "name": "School of Freelancing" 
+      },
+      "hasCourseInstance": { 
+        "@type": "CourseInstance", 
+        "courseMode": "online" 
+      },
       "offers": {
         "@type": "Offer",
-        "price": "600",
+        "price": "600.00",
         "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org"
       }
     },
     {
       "@type": "FAQPage",
+      "@id": "https://schooloffreelancing.com#faq",
       "mainEntity": [
         {
           "@type": "Question",

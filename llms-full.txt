@@ -2,10 +2,14 @@
 
 > School of Freelancing is a Linux/tech freelancing training and remote IT support business based in Bangladesh, delivering everything online worldwide, billed in USD via Telegram/WhatsApp/email.
 
+## Core Pages
+
+- [Home](https://www.schooloffreelancing.com/) — Overview of training and support offerings.
+
 ## Freelancing Training (https://www.schooloffreelancing.com/freelancing-training/)
 
 - [Linux Freelancing Training](https://www.schooloffreelancing.com/freelancing-training/linux-freelancing-training/) — $600, 180 Hours, 6 Months
-- [Hermes Agent Training](https://www.schooloffreelancing.com/freelancing-training/hermes-agent-training/) — $250, 15 Hours, 5 Days
+- [Hermes Agent Training](https://www.schooloffreelancing.com/freelancing-training/hermes-agent-training/) — $250, 20 Hours, 2 Weeks
 - [Odysseus AI Workspace Training](https://www.schooloffreelancing.com/freelancing-training/odysseus-ai-training/) — $200, 20 Hours, 5 Days
 - [OpenClaw Hands-on Training](https://www.schooloffreelancing.com/freelancing-training/openclaw-training/) — $200, 20 Hours, 5 Days
 - [LocalAI Hands-on Training](https://www.schooloffreelancing.com/freelancing-training/local-ai-training/) — $200, 20 Hours, 5 Days
@@ -21,7 +25,7 @@
 - [CentOS Linux Training](https://www.schooloffreelancing.com/freelancing-training/centos-linux-training/) — $200, 20 Hours, 5 Days
 - [OpenAI Platform Training](https://www.schooloffreelancing.com/freelancing-training/openai-training/) — $200, 20 Hours, 5 Days
 - [Claude Platform Training](https://www.schooloffreelancing.com/freelancing-training/claude-training/) — $200, 20 Hours, 5 Days
-- [Telnyx SMS API Training](https://www.schooloffreelancing.com/freelancing-training/telnyx-sms-api-training/) — $500, 38 Hours, 1-4 Weeks
+- [Telnyx SMS API Training](https://www.schooloffreelancing.com/freelancing-training/telnyx-sms-api-training/) — $800, 40 Hours, 2-4 Weeks
 - [Twilio SMS API Training](https://www.schooloffreelancing.com/freelancing-training/twilio-sms-api-training/) — $1100, 38 Hours, 1-4 Weeks
 - [Jasmin SMS Gateway Training](https://www.schooloffreelancing.com/freelancing-training/jasmin-sms-gateway-training/) — $1100, 38 Hours, 1 Week
 - [Bulk SMS Engineering Training](https://www.schooloffreelancing.com/freelancing-training/bulk-sms-setup-training/) — $400, 20 Hours, 2 Weeks

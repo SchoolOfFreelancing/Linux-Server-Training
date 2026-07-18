@@ -5,7 +5,7 @@
 <!-- Basic Meta -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linux Freelancing Training & Professional Services | School of Freelancing</title>
+<title>Linux Freelancing Training &amp; Services | School of Freelancing</title>
 
 <!-- SEO Meta Tags -->
 <meta name="description" content="Get expert Linux & AI freelancing training and reliable Linux support. School of Freelancing builds tech skills and provides enterprise AI services.">
@@ -63,9 +63,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
-      "@id": "https://www.schooloffreelancing.com/#ProfessionalService",
+      "@type": ["Organization", "EducationalOrganization"],
+      "@id": "https://www.schooloffreelancing.com/#organization",
       "name": "School of Freelancing",
+      "alternateName": "AnythingLinux",
       "url": "https://www.schooloffreelancing.com",
       "logo": "https://www.schooloffreelancing.com/assets/images/logo.jpg",
       "image": "https://www.schooloffreelancing.com/assets/images/og-home.jpg",
@@ -74,7 +75,7 @@
       "founder": {
         "@type": "Person",
         "name": "S K Chowdhury Masum",
-        "jobTitle": "Founder & Lead Instructor"
+        "jobTitle": "Founder & Linux System Administrator"
       },
       "contactPoint": {
         "@type": "ContactPoint",
@@ -87,24 +88,26 @@
         "https://www.linkedin.com/company/schooloffreelancing",
         "https://www.facebook.com/SchoolOfFreelancing",
         "https://www.youtube.com/@SchoolOfFreelancing",
-        "https://x.com/FreelancingOf",
+        "https://x.com/SchoolOfFreelan",
         "https://www.instagram.com/schooloffreelancing",
         "https://www.threads.com/@schooloffreelancing",
         "https://github.com/SchoolOfFreelancing"
       ],
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "BD",
-        "addressLocality": "Bangladesh"
+        "postalCode": "3500",
+        "streetAddress": "Word no: 12, North Chortha, Nobab Bari Rd",
+        "addressLocality": "Cumilla City Corporation",
+        "addressRegion": "Chattogram",
+        "addressCountry" : "BD"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
         "ratingCount": "36",
         "bestRating": "5",
-        "worstRating": "1"
-      },
-      "priceRange": "$200-$1500"
+        "worstRating": "0"
+      }
     },
     {
       "@type": "WebSite",
@@ -112,7 +115,7 @@
       "url": "https://www.schooloffreelancing.com",
       "name": "School of Freelancing",
       "description": "Get expert Linux & AI freelancing training and reliable Linux support. School of Freelancing builds tech skills and provides enterprise IT services.",
-      "publisher": { "@id": "https://www.schooloffreelancing.com/#ProfessionalService" },
+      "publisher": { "@id": "https://www.schooloffreelancing.com/#organization" },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -123,138 +126,38 @@
       }
     },
     {
-      "@type": "Course",
-      "name": "Linux Freelancing Training",
-      "description": "Hands-on Linux freelancing training for beginners to become professional Linux freelancers.",
-      "url": "https://www.schooloffreelancing.com/freelancing-training/",
-      "provider": { "@type": "ProfessionalService", "@id": "https://www.schooloffreelancing.com/#ProfessionalService", "name": "School of Freelancing" },
-      "image": "https://www.schooloffreelancing.com/assets/images/linux.png",
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "online",
-        "courseWorkload": "PT180H"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.schooloffreelancing.com/freelancing-training/",
-        "price": "650",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@type": "BreadcrumbList",
+      "@id": "https://www.schooloffreelancing.com/#breadcrumb",
+      "name": "Breadcrumb",
+      "itemListElement": [
         {
-          "@type": "Question",
-          "name": "What is School of Freelancing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "School of Freelancing is a Linux freelancing training platform offering hands-on training and professional cloud support services."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What training programs are available?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Training programs include Linux Freelancing (180 hrs), Hermes Agent, Telnyx SMS API, FusionPBX VoIP, and OpenAI Platform training."
+          "@type": "ListItem",
+          "position": 1,
+          "name": "School Of Freelancing",
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://www.schooloffreelancing.com/",
+            "url": "https://www.schooloffreelancing.com/"
           }
         }
       ]
     },
     {
-  "@type": "BreadcrumbList",
-  "@id": "https://www.schooloffreelancing.com/#breadcrumb",
-  "name": "Breadcrumb",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": {
-        "@id": "https://www.schooloffreelancing.com/"
+      "@type": "WebPage",
+      "@id": "https://www.schooloffreelancing.com/#webpage",
+      "url": "https://www.schooloffreelancing.com/",
+      "name": "Linux Freelancing Training &amp; Services | School of Freelancing",
+      "breadcrumb": {
+        "@id": "https://www.schooloffreelancing.com/#breadcrumb"
+      },
+      "isPartOf": {
+        "@id": "https://www.schooloffreelancing.com/#website"
+      },
+      "about": {
+        "@id": "https://www.schooloffreelancing.com/#organization"
       }
     }
   ]
-},
-    {
-      "@type": "Service",
-      "name": "DigitalOcean Cloud Support",
-      "serviceType": "DigitalOcean Cloud Support",
-      "provider": { "@type": "ProfessionalService", "@id": "https://www.schooloffreelancing.com/#ProfessionalService", "name": "School of Freelancing" },
-      "areaServed": "Worldwide",
-      "url": "https://www.schooloffreelancing.com/linux-ai-services/",
-      "offers": {
-        "@type": "Offer",
-        "price": "500",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@type": "Service",
-      "name": "Hummingbot Installation Support",
-      "serviceType": "Hummingbot Installation Support",
-      "provider": { "@type": "ProfessionalService", "@id": "https://www.schooloffreelancing.com/#ProfessionalService", "name": "School of Freelancing" },
-      "areaServed": "Worldwide",
-      "url": "https://www.schooloffreelancing.com/linux-ai-services/",
-      "offers": {
-        "@type": "Offer",
-        "price": "1500",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@type": "Service",
-      "name": "Vapi Platform Support",
-      "serviceType": "Vapi Platform Support",
-      "provider": { "@type": "ProfessionalService", "@id": "https://www.schooloffreelancing.com/#ProfessionalService", "name": "School of Freelancing" },
-      "areaServed": "Worldwide",
-      "url": "https://www.schooloffreelancing.com/linux-ai-services/",
-      "offers": {
-        "@type": "Offer",
-        "price": "600",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "@id": "https://www.schooloffreelancing.com/#navigation",
-      "name": [
-        "Training Programs",
-        "Expert Support Services",
-        "Student Testimonials",
-        "About School of Freelancing",
-        "Contact Us"
-      ],
-      "url": [
-        "https://www.schooloffreelancing.com/freelancing-training/",
-        "https://www.schooloffreelancing.com/linux-ai-services/",
-        "https://www.schooloffreelancing.com/resource-center/testimonials/",
-        "https://www.schooloffreelancing.com/about-us/",
-        "https://www.schooloffreelancing.com/contact-us/"
-      ]
-    },
-    {
-  "@type": "WebPage",
-  "@id": "https://www.schooloffreelancing.com/#webpage",
-  "url": "https://www.schooloffreelancing.com/",
-  "name": "Linux Freelancing Training & Cloud Support",
-  "breadcrumb": {
-    "@id": "https://www.schooloffreelancing.com/#breadcrumb"
-  },
-  "isPartOf": {
-    "@id": "https://www.schooloffreelancing.com/#website"
-  },
-  "about": {
-    "@id": "https://www.schooloffreelancing.com/#ProfessionalService"
-    }
-  }
- ]
 }
 </script>
 
@@ -263,7 +166,7 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '/metrics/?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','');</script>
+})(window,document,'script','dataLayer','GTM-K7D2DXT');</script>
 <!-- End Google Tag Manager -->
 
 <!-- Google tag (gtag.js) -->
