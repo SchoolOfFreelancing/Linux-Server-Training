@@ -19,6 +19,7 @@ function initMatrix() {
   const drops = Array(columns).fill(1);
 
   function draw() {
+    if (document.hidden) return;
     ctx.fillStyle = 'rgba(0, 36, 237, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#ffffff';
@@ -416,7 +417,7 @@ function initCookieNotice() {
     font-size:0.82rem; color:#8fa3ff; flex-wrap:wrap;
   `;
   notice.innerHTML = `
-    <span>🍪 We use cookies to enhance your user experience. By continuing, you agree to our <a href="#" style="color:#ffffff">Cookie Policy</a>.</span>
+    <span>🍪 We use cookies to enhance your user experience. By continuing, you agree to our <a href="/legal/privacy-policy/" style="color:#ffffff;text-decoration:underline">Cookie Policy</a>.</span>
     <button onclick="document.getElementById('cookie-notice').remove();localStorage.setItem('cookie-ok','1')"
       style="background:#ffffff;color:#0024ed;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:0.8rem;font-weight:600;flex-shrink:0">
       Accept
@@ -426,7 +427,14 @@ function initCookieNotice() {
 
 /* ---------- Init All ---------- */
 document.addEventListener('DOMContentLoaded', () => {
-  initMatrix();
+  // Purely decorative canvas animation: start once the browser is idle
+  // (or after a short fallback delay) so it doesn't compete with the
+  // critical rendering path during initial page load.
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(initMatrix, { timeout: 2000 });
+  } else {
+    setTimeout(initMatrix, 200);
+  }
   initNavbar();
   initMobileMenu();
   initTypewriter();
