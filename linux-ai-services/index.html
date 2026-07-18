@@ -45,75 +45,136 @@
 <meta name="twitter:image" content="https://www.schooloffreelancing.com/assets/images/og-home.jpg">
 <meta name="twitter:creator" content="@FreelancingOf">
 
-<!-- Structured Data -->
+<!-- Structured Data / Training Archive Page Schema (100% Fixed & Valid) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": "https://www.schooloffreelancing.com/linux-ai-services/",
-      "name": "Expert Support Services",
-      "description": "Professional technical support for Linux, DevOps, cloud, AI & VoIP systems",
-      "url": "https://www.schooloffreelancing.com/linux-ai-services/",
-      "isPartOf": { "@id": "https://www.schooloffreelancing.com/#website" }
+      "@id": "https://schooloffreelancing.com",
+      "name": "All Training Programs",
+      "description": "Hands-on high-income technical training programs for freelancers",
+      "url": "https://schooloffreelancing.com",
+      "isPartOf": { "@id": "https://schooloffreelancing.com" },
+      "breadcrumb": { "@id": "https://schooloffreelancing.com#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://schooloffreelancing.com#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.schooloffreelancing.com/"
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://schooloffreelancing.com",
+            "url": "https://schooloffreelancing.com"
+          }
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Support Services",
-          "item": "https://www.schooloffreelancing.com/linux-ai-services/"
+          "name": "All Training",
+          "item": {
+            "@type": "WebPage",
+            "@id": "https://schooloffreelancing.com",
+            "url": "https://schooloffreelancing.com"
+          }
         }
       ]
     },
     {
-      "@type": "Service",
-      "name": "Linux System Administration Support",
-      "description": "Professional Linux server support, troubleshooting, security, performance optimization",
-      "provider": { "@type": "ProfessionalService", "@id": "https://www.schooloffreelancing.com/#ProfessionalService", "name": "School of Freelancing" },
-      "serviceType": "Technical Support",
-      "areaServed": "Worldwide",
+      "@type": "Course",
+      "@id": "https://schooloffreelancing.com#linux-course",
+      "name": "Linux Server Freelancing Training",
+      "description": "Become a top-earning freelance Linux Systems Administrator managing production servers and daily package updates.",
+      "url": "https://schooloffreelancing.com",
+      "educationalLevel": "Advanced",
+      "learningResourceType": "Training",
+      "provider": { 
+        "@type": "EducationalOrganization", 
+        "@id": "https://schooloffreelancing.com#organization", 
+        "name": "School of Freelancing" 
+      },
+      "hasCourseInstance": { 
+        "@type": "CourseInstance", 
+        "courseMode": "online" 
+      },
       "offers": {
         "@type": "Offer",
-        "price": "650",
+        "price": "600.00",
         "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
+        "availability": "http://schema.org"
       }
     },
     {
       "@type": "FAQPage",
+      "@id": "https://schooloffreelancing.com#faq",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What technical services do you provide?",
+          "name": "What is Online Instructor-Led Training (ILT) at School of Freelancing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We offer Linux server administration, cloud deployment, VoIP, DevOps, security, troubleshooting, and ongoing technical support for businesses worldwide."
+            "text": "It's a live virtual classroom—not pre-recorded video—with real-time interaction from expert freelancers and hands-on practice, using Telegram for chat and voice calls during sessions."
           }
         },
         {
           "@type": "Question",
-          "name": "Can you start immediately?",
+          "name": "What is the Guaranteed Minimum Income (GMI)* program?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, in most cases we can begin as soon as the project requirements are confirmed."
+            "text": "A career assurance initiative guaranteeing a baseline freelance income to graduates who maintain full attendance and independently purchase required marketplace bids/connects."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you provide remote support?",
+          "name": "What is Client Acquisition Service Development?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. We provide secure remote support for servers, cloud infrastructure, and applications worldwide."
+            "text": "A practical training phase where trainees build professional portfolios and optimize profiles to land high-paying marketplace jobs or direct international clients."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Credential Verification Support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a service where School of Freelancing directly confirms a trainee's technical skills and training credentials to any inquiring organization or client."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are training prices and durations determined?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Training prices and durations are not random; they are structured logically based on the complexity of the technical skill, the depth of the curriculum, and the nature of the training framework."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I pay in installments to join a training program?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all training programs require full upfront payment prior to enrollment to secure dedicated mentor resources and efforts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of projects are used in the training pipeline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We exclusively use Free and Open-Source Software (FOSS) projects, ensuring students build transparent, publicly verifiable repositories on GitHub with zero licensing overhead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is a project eligible to be included in the training pipeline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A project is eligible only when it becomes a functional, secure, production-ready, and high-demand solution that matches active real-world client demands."
           }
         }
       ]
@@ -263,13 +324,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-category="linux" 
   id="linuxt" 
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search & Knowledge Graphs -->
   <meta itemprop="serviceType" content="Linux Server Administration & Infrastructure Optimization">
   <meta itemprop="description" content="Professional Linux server services specializing in enterprise systems administration, automated security hardening, and 24/7 cloud infrastructure troubleshooting.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org">
@@ -310,7 +371,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -318,7 +379,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
                      Allocation: 72 Engineering Hours / <time datetime="P6D">3 Days</time>
@@ -341,13 +402,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-category="ai" 
   id="ait" 
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="Hermes AI Agent Deployment &amp; Persistent Memory Optimization">
   <meta itemprop="description" content="Professional implementation services for Hermes AI Agents featuring persistent memory configuration, self-improving skill mapping, and multi-platform messaging integration.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -387,7 +448,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -395,7 +456,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -417,13 +478,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="0" 
   data-category="ai"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="Odysseus Self-Hosted AI Workspace Support &amp; Private Hardware Orchestration">
   <meta itemprop="description" content="On-premise deployment support for Odysseus AI Workspace, allowing businesses to run secure large language models on local localized hardware.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -463,7 +524,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -471,7 +532,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -493,13 +554,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="0" 
   data-category="ai"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="OpenClaw AI Agent Deployment &amp; Autonomous Assistant Configuration">
   <meta itemprop="description" content="Professional open-source installation and support for OpenClaw autonomous AI agent platforms, configuring 24/7 digital personal assistants.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -539,7 +600,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -547,7 +608,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -569,13 +630,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="0" 
   data-category="ai"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="LocalAI Open-Source Engine Deployment &amp; Multimodal Model Configuration">
   <meta itemprop="description" content="Professional installation and support for LocalAI open-source engines, running multi-modal models including LLMs, vision, voice, and video on consumer hardware without mandatory GPU requirements.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -615,7 +676,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -623,7 +684,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -645,13 +706,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="0" 
   data-category="ai"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="ZeroClaw AI Assistant Runtime Deployment &amp; LLM Provider Integration">
   <meta itemprop="description" content="Professional installation and support for ZeroClaw personal AI assistant agent runtimes, configuring seamless integration with Anthropic, OpenAI, Ollama, and over 20 other LLM providers.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -691,7 +752,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -699,7 +760,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -722,13 +783,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-category="devops" 
   id="devopst"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="GitLab Community Edition Installation, Migration &amp; DevOps Support">
   <meta itemprop="description" content="Professional self-hosted GitLab Community Edition (CE) setup, secure backup migration, and enterprise Linux system administration support.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- GitLab Wikidata Entity Link -->
@@ -769,7 +830,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -777,7 +838,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -799,13 +860,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="0" 
   data-category="devops"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="GitHub Enterprise Server Installation, Migration &amp; CI/CD Support">
   <meta itemprop="description" content="Professional self-hosted GitHub Enterprise Server setup, repository migration, and automated DevOps infrastructure management by an experienced Linux systems administrator.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- GitHub Wikidata Entity Link -->
@@ -846,7 +907,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -854,7 +915,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -876,13 +937,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="0"
   data-category="devops"
   itemscope
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="Docker Containerization, Production Deployment &amp; Security Hardening">
   <meta itemprop="description" content="Professional Docker containerization and production deployment services, including Dockerfile/Compose setup, Nginx reverse proxy with SSL, and security-hardened container infrastructure.">
 
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Docker Wikidata Entity Link -->
@@ -923,7 +984,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -931,7 +992,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -954,13 +1015,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-category="voip" 
   id="voipt"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="Telnyx VoIP Support, SIP Trunking &amp; Telephony Infrastructure Configuration">
   <meta itemprop="description" content="Professional installation and engineering support for Telnyx VoIP SIP trunking, private IP network routing, and global call center telephony integrations.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -1000,7 +1061,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1008,7 +1069,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -1030,13 +1091,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="100" 
   data-category="voip"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="Twilio VoIP Support, Programmable Voice &amp; Elastic SIP Trunking Setup">
   <meta itemprop="description" content="Professional implementation and optimization support for Twilio VoIP elastic SIP trunking, programmable voice workflows, and global call center API integrations.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Twilio Wikidata Entity Link -->
@@ -1077,7 +1138,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1085,7 +1146,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -1107,13 +1168,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="100" 
   data-category="voip"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="FusionPBX VoIP Support, Multi-Tenant PBX &amp; FreeSWITCH Orchestration">
   <meta itemprop="description" content="Professional installation, configuration, and engineering support for FusionPBX multi-tenant switching platforms and FreeSWITCH-based VoIP infrastructure.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -1153,7 +1214,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1161,7 +1222,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -1183,13 +1244,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="100" 
   data-category="voip"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="Goautodial VoIP Support, Omnichannel Contact Center &amp; Vicidial Engine Configuration">
   <meta itemprop="description" content="Professional installation, customization, and engineering support for Goautodial open-source omnichannel contact center systems integrating Asterisk, Kamailio, and Vicidial.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -1229,7 +1290,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1237,7 +1298,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -1259,13 +1320,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="100" 
   data-category="linux"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="Ubuntu Linux Support, System Administration &amp; Infrastructure Hardening">
   <meta itemprop="description" content="Professional administration and system support for Ubuntu Linux operating systems across production servers, workstations, cloud instances, and IoT devices.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Ubuntu Wikidata Entity Link -->
@@ -1306,7 +1367,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1314,7 +1375,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -1336,13 +1397,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="100" 
   data-category="linux"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="CentOS Linux Support, Enterprise Lifecycle Management &amp; System Hardening">
   <meta itemprop="description" content="Professional enterprise systems administration and long-term support for CentOS Linux infrastructures, package repositories, and migration deployments.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- CentOS Wikidata Entity Link -->
@@ -1383,7 +1444,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1391,7 +1452,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -1413,13 +1474,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="100" 
   data-category="ai"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="OpenAI API Integration, Model Fine-Tuning &amp; Developer Support">
   <meta itemprop="description" content="Professional software engineering and infrastructure support for OpenAI API platform integration, large language model custom fine-tuning, and scalable enterprise AI application deployment.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- OpenAI Wikidata Entity Link -->
@@ -1460,7 +1521,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1468,7 +1529,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -1490,13 +1551,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="100" 
   data-category="ai"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engine & LLM Crawlers -->
   <meta itemprop="serviceType" content="Claude API Integration, Anthropic Model Deployment &amp; AI Engineering Support">
   <meta itemprop="description" content="Professional software engineering and infrastructure support for Anthropic Claude API platform integration, context window optimization, and secure enterprise AI application deployment.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Anthropic Wikidata Entity Link -->
@@ -1537,7 +1598,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1545,7 +1606,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <meta itemprop="availability" content="https://schema.org">
+        <meta itemprop="availability" content="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
@@ -1568,13 +1629,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-category="sms" 
   id="smst"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engines & LLM RAG Crawlers -->
   <meta itemprop="serviceType" content="Telnyx SMS REST API Setup, A2P 10DLC Registration &amp; Bulk Messaging Infrastructure">
   <meta itemprop="description" content="Professional software engineering support for Telnyx SMS REST API setup, including A2P 10DLC registration, two-way messaging, bulk SMS integration, and secure SMPP API deployment.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Telnyx Wikidata Entity Link Reference -->
@@ -1624,7 +1685,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <!-- Structured Commercial Data for Google Rich Snippets & AI Search -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; color: var(--text-muted);">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px; color: var(--text-main);">
@@ -1632,7 +1693,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <link itemprop="availability" href="https://schema.org">
+        <link itemprop="availability" href="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9; color: var(--text-main);">
           Allocation: 40 Engineering Hours / <time datetime="P4W">1-4 Weeks</time>
@@ -1654,13 +1715,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="100" 
   data-category="sms"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engines & LLM RAG Crawlers -->
   <meta itemprop="serviceType" content="Twilio SMS API Integration, Messaging API Deployment &amp; A2P 10DLC Registration">
   <meta itemprop="description" content="Professional software engineering and production support for Twilio Messaging API integration, bulk SMS infrastructure development, and US A2P 10DLC compliance configuration.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Twilio Official Wikidata Entity Reference -->
@@ -1706,7 +1767,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <!-- Structured Commercial Data for Google Rich Snippets & AI Search -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; color: var(--text-muted);">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px; color: var(--text-main);">
@@ -1714,7 +1775,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <link itemprop="availability" href="https://schema.org">
+        <link itemprop="availability" href="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9; color: var(--text-main);">
           Allocation: 40 Engineering Hours / <time datetime="P4W">1-4 Weeks</time>
@@ -1736,13 +1797,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="100" 
   data-category="sms"
   itemscope 
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <!-- Core Entity Context for AI Search Engines & LLM RAG Crawlers -->
   <meta itemprop="serviceType" content="Jasmin SMS Gateway Setup, playSMS Integration &amp; SMPP/HTTP Carrier Configuration">
   <meta itemprop="description" content="Professional open-source telecom software engineering support for Jasmin SMS Gateway deployment, AMQP/Redis queue tuning, playSMS web portal integration, and production-ready enterprise bulk SMS architecture.">
   
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
     <!-- Jasmin SMS Gateway Official Repository for AI Entity Resolution -->
@@ -1789,7 +1850,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <!-- Structured Commercial Data for Google Rich Snippets & AI Search -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; color: var(--text-muted);">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px; color: var(--text-main);">
@@ -1797,7 +1858,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
-        <link itemprop="availability" href="https://schema.org">
+        <link itemprop="availability" href="https://schema.org/InStock">
 
         <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9; color: var(--text-main);">
           Allocation: 20 Engineering Hours / <time datetime="P1W">1 Week</time>
@@ -1818,12 +1879,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="0"
   data-category="cloud"
   itemscope
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <meta itemprop="serviceType" content="DigitalOcean Cloud Infrastructure Support">
   <meta itemprop="description" content="Professional DigitalOcean cloud support for server deployment, troubleshooting, security, networking, backups, and production infrastructure.">
 
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -1858,7 +1919,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <li>Ongoing remote support after initial deployment.</li>
     </ul>
 
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1885,12 +1946,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="0"
   data-category="ai"
   itemscope
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <meta itemprop="serviceType" content="Hummingbot Algorithmic Trading Deployment Support">
   <meta itemprop="description" content="Professional Hummingbot setup, configuration, and deployment for automated crypto trading, plus Exchange API integration and MCP & Skills setup.">
 
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -1925,7 +1986,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <li>Hummingbot MCP, Skills, and Tailscale setup for secure remote access.</li>
     </ul>
 
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
@@ -1952,12 +2013,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   data-delay="0"
   data-category="ai"
   itemscope
-  itemtype="https://schema.org"
+  itemtype="https://schema.org/Service"
 >
   <meta itemprop="serviceType" content="Vapi Voice AI Platform Implementation Support">
   <meta itemprop="description" content="Expert Vapi setup, configuration, and troubleshooting for voice AI agents that make and receive phone calls.">
 
-  <div itemprop="provider" itemscope itemtype="https://schema.org">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
     <meta itemprop="url" content="https://schooloffreelancing.com">
   </div>
@@ -1992,7 +2053,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <li>Appointment scheduling and customer-support call flow setup.</li>
     </ul>
 
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org">
+    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
         <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
         <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
