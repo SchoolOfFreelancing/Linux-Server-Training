@@ -159,7 +159,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     --text-muted: #cccccc;
   }
   body {
-    background-color: #0024ED !important;
+    background:
+      radial-gradient(ellipse 70% 55% at 12% -8%, rgba(94, 130, 255, 0.45) 0%, transparent 60%),
+      radial-gradient(ellipse 55% 45% at 105% 12%, rgba(0, 255, 225, 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 85% 65% at 50% 112%, rgba(0, 8, 80, 0.85) 0%, transparent 65%),
+      linear-gradient(180deg, #0024ED 0%, #001bb0 55%, #00137e 100%) !important;
+    background-attachment: fixed;
     color: white !important;
   }
   /* Ensure all text elements inherit white color */
@@ -390,7 +395,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </main>
 
 <!-- ===== FOOTER ===== -->
-<footer class="footer" style="background:#0024ED;">
+<footer class="footer" style="background: rgba(0, 9, 60, 0.55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
   <style>
     .footer, .footer a, .footer p, .footer span, .footer li,
     .footer-brand p, .footer-links a, .footer-bottom p,
