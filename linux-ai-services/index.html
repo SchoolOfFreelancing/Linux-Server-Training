@@ -46,23 +46,23 @@
 <meta name="twitter:image" content="https://www.schooloffreelancing.com/assets/images/og-home.jpg">
 <meta name="twitter:creator" content="@FreelancingOf">
 
-<!-- Structured Data / Training Archive Page Schema (100% Fixed & Valid) -->
+<!-- Structured Data / Services Page Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": "https://schooloffreelancing.com",
-      "name": "All Training Programs",
-      "description": "Hands-on high-income technical training programs for freelancers",
-      "url": "https://schooloffreelancing.com",
-      "isPartOf": { "@id": "https://schooloffreelancing.com" },
-      "breadcrumb": { "@id": "https://schooloffreelancing.com#breadcrumb" }
+      "@id": "https://www.schooloffreelancing.com/linux-ai-services/",
+      "name": "Linux & AI Support Services",
+      "description": "Expert Linux, DevOps, AI, VoIP & SMS support services at School of Freelancing. Fast, remote, worldwide assistance.",
+      "url": "https://www.schooloffreelancing.com/linux-ai-services/",
+      "isPartOf": { "@id": "https://www.schooloffreelancing.com/#website" },
+      "breadcrumb": { "@id": "https://www.schooloffreelancing.com/linux-ai-services/#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://schooloffreelancing.com#breadcrumb",
+      "@id": "https://www.schooloffreelancing.com/linux-ai-services/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -70,112 +70,64 @@
           "name": "Home",
           "item": {
             "@type": "WebPage",
-            "@id": "https://schooloffreelancing.com",
-            "url": "https://schooloffreelancing.com"
+            "@id": "https://www.schooloffreelancing.com/",
+            "url": "https://www.schooloffreelancing.com/"
           }
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "All Training",
+          "name": "Linux & AI Services",
           "item": {
             "@type": "WebPage",
-            "@id": "https://schooloffreelancing.com",
-            "url": "https://schooloffreelancing.com"
+            "@id": "https://www.schooloffreelancing.com/linux-ai-services/",
+            "url": "https://www.schooloffreelancing.com/linux-ai-services/"
           }
         }
       ]
     },
     {
-      "@type": "Course",
-      "@id": "https://schooloffreelancing.com#linux-course",
-      "name": "Linux Server Freelancing Training",
-      "description": "Become a top-earning freelance Linux Systems Administrator managing production servers and daily package updates.",
-      "url": "https://schooloffreelancing.com",
-      "educationalLevel": "Advanced",
-      "learningResourceType": "Training",
-      "provider": { 
-        "@type": "EducationalOrganization", 
-        "@id": "https://schooloffreelancing.com#organization", 
-        "name": "School of Freelancing" 
-      },
-      "hasCourseInstance": { 
-        "@type": "CourseInstance", 
-        "courseMode": "online" 
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "600.00",
-        "priceCurrency": "USD",
-        "availability": "http://schema.org"
-      }
-    },
-    {
       "@type": "FAQPage",
-      "@id": "https://schooloffreelancing.com#faq",
+      "@id": "https://www.schooloffreelancing.com/linux-ai-services/#faq",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is Online Instructor-Led Training (ILT) at School of Freelancing?",
+          "name": "What technical services do you provide?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It's a live virtual classroom—not pre-recorded video—with real-time interaction from expert freelancers and hands-on practice, using Telegram for chat and voice calls during sessions."
+            "text": "We offer Linux server administration, cloud deployment, VoIP, DevOps, security, troubleshooting, and ongoing technical support for businesses worldwide."
           }
         },
         {
           "@type": "Question",
-          "name": "What is the Guaranteed Minimum Income (GMI)* program?",
+          "name": "Can you start immediately?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A career assurance initiative guaranteeing a baseline freelance income to graduates who maintain full attendance and independently purchase required marketplace bids/connects."
+            "text": "Yes, in most cases we can begin as soon as the project requirements are confirmed by both parties."
           }
         },
         {
           "@type": "Question",
-          "name": "What is Client Acquisition Service Development?",
+          "name": "Do you provide remote support?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A practical training phase where trainees build professional portfolios and optimize profiles to land high-paying marketplace jobs or direct international clients."
+            "text": "Yes. We provide secure remote support for servers, cloud infrastructure, and applications worldwide through secure channels."
           }
         },
         {
           "@type": "Question",
-          "name": "What is Credential Verification Support?",
+          "name": "How long does it take to complete a project?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is a service where School of Freelancing directly confirms a trainee's technical skills and training credentials to any inquiring organization or client."
+            "text": "The timeline depends on the project's complexity. Small tasks can often be completed within hours. Complex infrastructure projects may take days or weeks."
           }
         },
         {
           "@type": "Question",
-          "name": "How are training prices and durations determined?",
+          "name": "Do you offer ongoing maintenance and support?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Training prices and durations are not random; they are structured logically based on the complexity of the technical skill, the depth of the curriculum, and the nature of the training framework."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I pay in installments to join a training program?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, all training programs require full upfront payment prior to enrollment to secure dedicated mentor resources and efforts."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What kind of projects are used in the training pipeline?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We exclusively use Free and Open-Source Software (FOSS) projects, ensuring students build transparent, publicly verifiable repositories on GitHub with zero licensing overhead."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When is a project eligible to be included in the training pipeline?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A project is eligible only when it becomes a functional, secure, production-ready, and high-demand solution that matches active real-world client demands."
+            "text": "Yes. We provide one-time fixes as well as monthly maintenance and support plans tailored to your business needs."
           }
         }
       ]
@@ -325,6 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-hero" aria-label="Support services hero">
   <div class="container">
       <h1 data-reveal><span style="color:var(--text-primary)">Expert Freelancer Support</span></h1>
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">★★★★★ 5.0 Rating &middot; 36 Verified Reviews</p>
       </div>
 </header>
 
@@ -346,7 +299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- Support Services Grid -->
-    <div class="trainings-grid" id="trainings-grid">
+    <div class="trainings-grid" id="services-grid">
 
    <!-- Linux Infrastructure Support Service Card -->
 <article 
@@ -364,8 +317,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -377,50 +329,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/linux.png" 
-      alt="Linux Enterprise Server Administration and Workflow Automation Infrastructure"
-      title="Linux Server Engineering Services">
+      alt="Linux logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title for Generative Search Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/linux-server-services/" itemprop="url">
         <span itemprop="name">Linux Server Services</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (AEO / GEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy enterprise-grade Linux systems administration with intelligent cloud tuning. Our certified engineers deliver robust server setup, automated security hardening (CIS benchmarks), fast remote issue resolution, and custom shell scripting for complex DevOps pipelines.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Secure server setup &amp; hybrid cloud orchestration.</li>
-      <li style="margin-bottom: 4px;">Fast remote troubleshooting &amp; log analysis.</li>
-      <li style="margin-bottom: 4px;">Cryptographic auditing &amp; firewall configuration.</li>
+    <ul class="service-features-list">
+      <li>Secure server setup &amp; hybrid cloud orchestration.</li>
+      <li>Fast remote troubleshooting &amp; log analysis.</li>
+      <li>Cryptographic auditing &amp; firewall configuration.</li>
       <li>24-hour dedicated post-installation support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="350">350</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="350">$350</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
                      Allocation: 72 Engineering Hours / <time datetime="P6D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/linux-server-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/linux-server-services/" class="btn btn-primary btn-block">
       Analyze Server Services
     </a>
   </div>
@@ -442,7 +393,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -454,50 +405,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/hermesagent.png" 
-      alt="Hermes AI Agent Architecture and Neural Network Infrastructure Support"
-      title="Hermes Agent Engineering Services">
+      alt="Hermes Agent logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/hermes-agent-services/" itemprop="url">
         <span itemprop="name">Hermes Agent Setup Service</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy advanced autonomous workflows with Hermes Agent Support. Our certified engineers configure persistent memory layers, orchestrate self-improving skill graphs, and establish low-latency multi-platform messaging integrations across enterprise secure nodes.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Persistent cognitive memory setup &amp; vector routing.</li>
-      <li style="margin-bottom: 4px;">Self-improving tool calling &amp; custom skill mapping.</li>
-      <li style="margin-bottom: 4px;">Multi-platform enterprise messaging agent deployment.</li>
+    <ul class="service-features-list">
+      <li>Persistent cognitive memory setup &amp; vector routing.</li>
+      <li>Self-improving tool calling &amp; custom skill mapping.</li>
+      <li>Multi-platform enterprise messaging agent deployment.</li>
       <li>24-hour dedicated post-installation engineering support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="350">350</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="350">$350</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/hermes-agent-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/hermes-agent-services/" class="btn btn-primary btn-block">
       Analyze Agent Services
     </a>
   </div>
@@ -518,7 +468,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -530,50 +480,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/odysseus.png" 
-      alt="Odysseus Self-Hosted Private AI Workspace Server Architecture Support"
-      title="Odysseus AI Workspace Engineering Services">
+      alt="Odysseus logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/odysseus-ai-services/" itemprop="url">
         <span itemprop="name">Odysseus Private AI Workspace Support</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Take absolute control over data privacy with Odysseus Self-hosted AI Workspace Support. Our infrastructure experts deploy enterprise LLMs, fine-tuning scripts, and collaboration web UIs directly onto your dedicated bare-metal hardware or private cloud cluster.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Local bare-metal hardware deployment &amp; GPU tuning.</li>
-      <li style="margin-bottom: 4px;">Private LLM integration &amp; secure dataset onboarding.</li>
-      <li style="margin-bottom: 4px;">Zero-leakage data privacy &amp; local firewall management.</li>
+    <ul class="service-features-list">
+      <li>Local bare-metal hardware deployment &amp; GPU tuning.</li>
+      <li>Private LLM integration &amp; secure dataset onboarding.</li>
+      <li>Zero-leakage data privacy &amp; local firewall management.</li>
       <li>24-hour dedicated post-installation systems support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="350">350</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="350">$350</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/odysseus-ai-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/odysseus-ai-services/" class="btn btn-primary btn-block">
       Analyze Private AI Services
     </a>
   </div>
@@ -594,7 +543,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -606,50 +555,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/openclaw.png" 
-      alt="OpenClaw Open-Source Autonomous AI Agent Platform Infrastructure"
-      title="OpenClaw AI Engineering Support">
+      alt="OpenClaw logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/openclaw-ai-services/" itemprop="url">
         <span itemprop="name">OpenClaw AI Agent Support</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy open-source autonomous agent platforms with OpenClaw Support. Our certified systems engineers optimize complex runtime environments, manage tool-calling APIs, and configure secure workflows for your 24/7 self-hosted digital personal assistant.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Autonomous agent node setup &amp; runtime tuning.</li>
-      <li style="margin-bottom: 4px;">Secure local tool-calling API key integration.</li>
-      <li style="margin-bottom: 4px;">24/7 digital personal assistant workflow automation.</li>
+    <ul class="service-features-list">
+      <li>Autonomous agent node setup &amp; runtime tuning.</li>
+      <li>Secure local tool-calling API key integration.</li>
+      <li>24/7 digital personal assistant workflow automation.</li>
       <li>24-hour dedicated post-installation infrastructure support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="350">350</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="350">$350</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/openclaw-ai-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/openclaw-ai-services/" class="btn btn-primary btn-block">
       Analyze OpenClaw Services
     </a>
   </div>
@@ -670,7 +618,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -682,50 +630,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/localai.png" 
-      alt="LocalAI Open Source Local Artificial Intelligence Engine Infrastructure"
-      title="LocalAI Systems Engineering Support">
+      alt="LocalAI logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/local-ai-services/" itemprop="url">
         <span itemprop="name">LocalAI Support &amp; Local Model Deployment</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Run full multi-modal AI pipelines on premise with LocalAI Support. Our certified engineers configure open-source AI engines to execute LLMs, computer vision, voice generation, and video synthesis on your existing hardware infrastructure with or without dedicated GPUs.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Local AI engine setup &amp; CPU/GPU hardware scaling.</li>
-      <li style="margin-bottom: 4px;">Multi-modal model configuration (LLM, vision, voice).</li>
-      <li style="margin-bottom: 4px;">Private API endpoint creation &amp; local inference routing.</li>
+    <ul class="service-features-list">
+      <li>Local AI engine setup &amp; CPU/GPU hardware scaling.</li>
+      <li>Multi-modal model configuration (LLM, vision, voice).</li>
+      <li>Private API endpoint creation &amp; local inference routing.</li>
       <li>24-hour dedicated post-installation systems support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="350">350</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="350">$350</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/local-ai-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/local-ai-services/" class="btn btn-primary btn-block">
       Analyze LocalAI Services
     </a>
   </div>
@@ -746,7 +693,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -758,50 +705,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/zeroclaw.webp"
-      alt="ZeroClaw Personal AI Assistant Agent Runtime Architecture"
-      title="ZeroClaw Systems Engineering Support">
+      alt="ZeroClaw logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/zeroclaw-ai-services/" itemprop="url">
         <span itemprop="name">ZeroClaw Support &amp; Runtime Configuration</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Optimize your autonomous workflows with ZeroClaw Support. Our certified systems engineers deploy your personal AI assistant runtime, establish multi-LLM secure API routing, and build low-latency custom integrations for Anthropic, OpenAI, Ollama, and 20+ other leading language model infrastructures.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Agent runtime deployment &amp; server configuration.</li>
-      <li style="margin-bottom: 4px;">Multi-LLM provider endpoint &amp; secure API routing.</li>
-      <li style="margin-bottom: 4px;">Personal AI assistant workflow cross-platform integration.</li>
+    <ul class="service-features-list">
+      <li>Agent runtime deployment &amp; server configuration.</li>
+      <li>Multi-LLM provider endpoint &amp; secure API routing.</li>
+      <li>Personal AI assistant workflow cross-platform integration.</li>
       <li>24-hour dedicated post-installation infrastructure support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="350">350</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="350">$350</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/zeroclaw-ai-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/zeroclaw-ai-services/" class="btn btn-primary btn-block">
       Analyze ZeroClaw Services
     </a>
   </div>
@@ -823,8 +769,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- GitLab Wikidata Entity Link -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -836,50 +781,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/gitlab.png" 
-      alt="GitLab Community Edition Server Infrastructure and DevOps CI/CD Support"
-      title="GitLab Engineering Support">
+      alt="GitLab logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/gitlab-services/" itemprop="url">
         <span itemprop="name">GitLab Community Edition Setup &amp; Support</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Optimize your development pipeline with self-hosted GitLab CE Support. Our experienced Linux system administrators deliver robust on-premise installation, seamless repository migration, secure backup configurations, and optimized CI/CD runner setups.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">GitLab CE bare-metal or cloud installation.</li>
-      <li style="margin-bottom: 4px;">Seamless repository &amp; secure data migration.</li>
-      <li style="margin-bottom: 4px;">CI/CD runner optimization &amp; pipeline tuning.</li>
+    <ul class="service-features-list">
+      <li>GitLab CE bare-metal or cloud installation.</li>
+      <li>Seamless repository &amp; secure data migration.</li>
+      <li>CI/CD runner optimization &amp; pipeline tuning.</li>
       <li>24-hour dedicated post-installation system support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="350">350</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="350">$350</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/gitlab-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/gitlab-services/" class="btn btn-primary btn-block">
       Analyze GitLab Services
     </a>
   </div>
@@ -900,8 +844,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- GitHub Wikidata Entity Link -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -913,50 +856,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/github.png" 
-      alt="GitHub Enterprise Server Code Repository Infrastructure and CI/CD Automation Support"
-      title="GitHub Enterprise Engineering Services">
+      alt="GitHub logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/github-services/" itemprop="url">
         <span itemprop="name">GitHub Enterprise Server Setup &amp; Support</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy secure, on-premise development workflows with GitHub Enterprise Server Support. Our expert Linux administrators deliver flawless bare-metal or cloud server deployment, enterprise repository migration, and optimized integration for GitHub Actions CI/CD pipelines.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">GitHub Enterprise installation &amp; identity access configuration.</li>
-      <li style="margin-bottom: 4px;">Secure repository migration &amp; data backup engineering.</li>
-      <li style="margin-bottom: 4px;">GitHub Actions runner deployment &amp; workflow tuning.</li>
+    <ul class="service-features-list">
+      <li>GitHub Enterprise installation &amp; identity access configuration.</li>
+      <li>Secure repository migration &amp; data backup engineering.</li>
+      <li>GitHub Actions runner deployment &amp; workflow tuning.</li>
       <li>24-hour dedicated post-installation infrastructure support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="350">350</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="350">$350</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/github-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/github-services/" class="btn btn-primary btn-block">
       Analyze GitHub Services
     </a>
   </div>
@@ -977,8 +919,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Docker Wikidata Entity Link -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -990,50 +931,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy"
       decoding="async"
       src="/assets/images/docker.png"
-      alt="Docker Container Production Deployment and Infrastructure Security Hardening Support"
-      title="Docker Engineer Services">
+      alt="Docker logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/docker-engineer-services/" itemprop="url">
         <span itemprop="name">Docker Engineer Services</span>
       </a>
     </h2>
 
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Ship production-grade containers with Docker Engineer Services. Our certified engineers deliver optimized Dockerfile &amp; Compose builds, Nginx reverse proxy with Let's Encrypt SSL, hardened non-root images, and persistent volume &amp; secrets configuration.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Dockerfile &amp; multi-stage Compose build optimization.</li>
-      <li style="margin-bottom: 4px;">Domain, SSL &amp; Nginx reverse proxy configuration.</li>
-      <li style="margin-bottom: 4px;">Security hardening &amp; non-root container auditing.</li>
+    <ul class="service-features-list">
+      <li>Dockerfile &amp; multi-stage Compose build optimization.</li>
+      <li>Domain, SSL &amp; Nginx reverse proxy configuration.</li>
+      <li>Security hardening &amp; non-root container auditing.</li>
       <li>24-hour dedicated post-deployment infrastructure support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="250">250</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="250">$250</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/docker-engineer-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/docker-engineer-services/" class="btn btn-primary btn-block">
       Analyze Docker Services
     </a>
   </div>
@@ -1055,7 +995,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1067,50 +1007,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/telnyx.png" 
-      alt="Telnyx VoIP SIP Trunking Infrastructure and Telephony Network Support"
-      title="Telnyx VoIP Engineering Support">
+      alt="Telnyx logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/telnyx-sip-trunking-services/" itemprop="url">
         <span itemprop="name">Telnyx VoIP SIP Support &amp; Telephony</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy global voice connectivity with Telnyx VoIP SIP Support. Our expert telecommunication engineers optimize private IP network routing, configure high-availability SIP trunking pipelines, and implement secure cloud call center API integrations.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">SIP trunking configuration &amp; private IP voice routing.</li>
-      <li style="margin-bottom: 4px;">Fast remote VoIP troubleshooting &amp; latency tuning.</li>
-      <li style="margin-bottom: 4px;">Cloud telephony setup &amp; CRM call center integration.</li>
+    <ul class="service-features-list">
+      <li>SIP trunking configuration &amp; private IP voice routing.</li>
+      <li>Fast remote VoIP troubleshooting &amp; latency tuning.</li>
+      <li>Cloud telephony setup &amp; CRM call center integration.</li>
       <li>24-hour dedicated post-installation infrastructure support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="500">500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="500">$500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/telnyx-sip-trunking-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/telnyx-sip-trunking-services/" class="btn btn-primary btn-block">
       Analyze Telnyx Services
     </a>
   </div>
@@ -1131,8 +1070,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Twilio Wikidata Entity Link -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1144,50 +1082,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/twilio.svg" 
-      alt="Twilio VoIP Elastic SIP Trunking Infrastructure and Programmable Voice Network Support"
-      title="Twilio VoIP Engineering Support">
+      alt="Twilio logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/twilio-sip-trunking-services/" itemprop="url">
         <span itemprop="name">Twilio VoIP SIP Support &amp; Telephony</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Scale global cloud communications with Twilio VoIP SIP Support. Our certified telecommunication engineers deliver seamless Elastic SIP Trunking setup, configure programmable cloud voice API pipelines, and deploy secure remote call center architectures.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Elastic SIP trunking setup &amp; programmable voice routing.</li>
-      <li style="margin-bottom: 4px;">Fast remote VoIP troubleshooting &amp; call quality tuning.</li>
-      <li style="margin-bottom: 4px;">Cloud communication architecture &amp; call center API integration.</li>
+    <ul class="service-features-list">
+      <li>Elastic SIP trunking setup &amp; programmable voice routing.</li>
+      <li>Fast remote VoIP troubleshooting &amp; call quality tuning.</li>
+      <li>Cloud communication architecture &amp; call center API integration.</li>
       <li>24-hour dedicated post-installation infrastructure support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="500">500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="500">$500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/twilio-sip-trunking-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/twilio-sip-trunking-services/" class="btn btn-primary btn-block">
       Analyze Twilio Services
     </a>
   </div>
@@ -1208,7 +1145,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1220,50 +1157,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/fusionpbx.png" 
-      alt="FusionPBX VoIP Multi-Tenant Switching System Infrastructure and FreeSWITCH Telephony Support"
-      title="FusionPBX VoIP Engineering Support">
+      alt="FusionPBX logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/fusionpbx-voip-services/" itemprop="url">
         <span itemprop="name">FusionPBX VoIP Support &amp; Telephony</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy enterprise multi-tenant switching platforms with FusionPBX VoIP Support. Our certified systems engineers deliver robust server administration, advanced inbound/outbound dialplan configuration, secure carrier trunking setup, and high-availability FreeSWITCH tuning.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Multi-tenant PBX installation &amp; FreeSWITCH optimization.</li>
-      <li style="margin-bottom: 4px;">Advanced inbound/outbound dialplan routing configuration.</li>
-      <li style="margin-bottom: 4px;">Secure carrier SIP trunking &amp; ACL firewall setup.</li>
+    <ul class="service-features-list">
+      <li>Multi-tenant PBX installation &amp; FreeSWITCH optimization.</li>
+      <li>Advanced inbound/outbound dialplan routing configuration.</li>
+      <li>Secure carrier SIP trunking &amp; ACL firewall setup.</li>
       <li>24-hour dedicated post-installation infrastructure support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="500">500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="500">$500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/fusionpbx-voip-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/fusionpbx-voip-services/" class="btn btn-primary btn-block">
       Analyze FusionPBX Services
     </a>
   </div>
@@ -1284,7 +1220,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1296,50 +1232,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/goautodial.png" 
-      alt="Goautodial VoIP Omnichannel Contact Center Infrastructure with Asterisk and Vicidial Telephony Support"
-      title="Goautodial VoIP Engineering Support">
+      alt="Goautodial logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/goautodial-voip-services/" itemprop="url">
         <span itemprop="name">Goautodial VoIP Support &amp; Contact Center</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy high-performance call center infrastructures with Goautodial VoIP Support. Our certified systems engineers optimize open-source omnichannel suites, configure advanced Asterisk and Kamailio routing, and tune Vicidial engines for scalable enterprise lead management.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Omnichannel suite setup &amp; Vicidial engine optimization.</li>
-      <li style="margin-bottom: 4px;">Advanced Asterisk SIP trunking &amp; Kamailio session routing.</li>
-      <li style="margin-bottom: 4px;">Predictive dialer configuration &amp; inbound/outbound setup.</li>
+    <ul class="service-features-list">
+      <li>Omnichannel suite setup &amp; Vicidial engine optimization.</li>
+      <li>Advanced Asterisk SIP trunking &amp; Kamailio session routing.</li>
+      <li>Predictive dialer configuration &amp; inbound/outbound setup.</li>
       <li>24-hour dedicated post-installation infrastructure support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="500">500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="500">$500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/goautodial-voip-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/goautodial-voip-services/" class="btn btn-primary btn-block">
       Analyze Goautodial Services
     </a>
   </div>
@@ -1360,8 +1295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Ubuntu Wikidata Entity Link -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1373,50 +1307,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/ubuntu-com-logo.png" 
-      alt="Ubuntu Linux Operating System Server Infrastructure and Core DevOps Support"
-      title="Ubuntu Linux Engineering Support">
+      alt="Ubuntu logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/ubuntu-linux-services/" itemprop="url">
         <span itemprop="name">Ubuntu Linux Support &amp; Engineering</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy production-grade server architectures with Ubuntu Linux Support. Our certified systems administrators handle OS installation, kernel optimization, custom security hardening, continuous update repository management, and automated troubleshooting for scalable DevOps nodes.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Ubuntu server optimization &amp; production OS deployment.</li>
-      <li style="margin-bottom: 4px;">Automated kernel patching &amp; security policy updates.</li>
-      <li style="margin-bottom: 4px;">Fast remote environment diagnostics &amp; crash log resolution.</li>
+    <ul class="service-features-list">
+      <li>Ubuntu server optimization &amp; production OS deployment.</li>
+      <li>Automated kernel patching &amp; security policy updates.</li>
+      <li>Fast remote environment diagnostics &amp; crash log resolution.</li>
       <li>24-hour dedicated post-installation system support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="500">500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="500">$500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/ubuntu-linux-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/ubuntu-linux-services/" class="btn btn-primary btn-block">
       Analyze Ubuntu Services
     </a>
   </div>
@@ -1437,8 +1370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- CentOS Wikidata Entity Link -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1450,50 +1382,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/centos.svg" 
-      alt="CentOS Enterprise Linux Server Operating System Infrastructure and Core Systems Support"
-      title="CentOS Linux Engineering Support">
+      alt="CentOS logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/centos-linux-services/" itemprop="url">
         <span itemprop="name">CentOS Linux Support &amp; Engineering</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization with Ubuntu error fix) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy secure and reliable infrastructure with enterprise CentOS Linux Support. Our certified systems engineers deliver specialized package management, repository mirroring, custom security hardening, and safe migration strategies to modern Enterprise Linux distributions.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">CentOS infrastructure management &amp; enterprise package updates.</li>
-      <li style="margin-bottom: 4px;">Legacy systems troubleshooting &amp; security patch orchestration.</li>
-      <li style="margin-bottom: 4px;">Rocky/AlmaLinux migration paths &amp; server configuration.</li>
+    <ul class="service-features-list">
+      <li>CentOS infrastructure management &amp; enterprise package updates.</li>
+      <li>Legacy systems troubleshooting &amp; security patch orchestration.</li>
+      <li>Rocky/AlmaLinux migration paths &amp; server configuration.</li>
       <li>24-hour dedicated post-installation system support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="500">500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="500">$500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/centos-linux-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/centos-linux-services/" class="btn btn-primary btn-block">
       Analyze CentOS Services
     </a>
   </div>
@@ -1514,8 +1445,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- OpenAI Wikidata Entity Link -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1527,50 +1457,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/openai.png" 
-      alt="OpenAI Platform API Infrastructure and Enterprise Artificial Intelligence Solution Support"
-      title="OpenAI Engineering Support">
+      alt="OpenAI logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/openai-platform-services/" itemprop="url">
         <span itemprop="name">OpenAI Platform Support &amp; API Integration</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Accelerate production deployment with enterprise OpenAI Platform Support. Our certified AI engineers deliver secure API key optimization, structured data formatting setup, custom model fine-tuning orchestration, and robust middleware engineering for next-generation intelligence.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">OpenAI API key optimization &amp; token budget tuning.</li>
-      <li style="margin-bottom: 4px;">Custom model fine-tuning &amp; structured input mapping.</li>
-      <li style="margin-bottom: 4px;">Secure enterprise middleware &amp; private endpoint configuration.</li>
+    <ul class="service-features-list">
+      <li>OpenAI API key optimization &amp; token budget tuning.</li>
+      <li>Custom model fine-tuning &amp; structured input mapping.</li>
+      <li>Secure enterprise middleware &amp; private endpoint configuration.</li>
       <li>24-hour dedicated post-installation development support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="500">500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="500">$500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/openai-platform-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/openai-platform-services/" class="btn btn-primary btn-block">
       Analyze OpenAI Services
     </a>
   </div>
@@ -1591,8 +1520,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Anthropic Wikidata Entity Link -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1604,50 +1532,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/claudelogo.png" 
-      alt="Anthropic Claude AI Platform API Infrastructure and Enterprise Artificial Intelligence Support"
-      title="Claude AI Engineering Support">
+      alt="Claude logo">
   </div>
 
   <div class="training-body">
     <!-- Context-Rich Title Layered for RAG & Generative Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/claude-ai-platform-services/" itemprop="url">
         <span itemprop="name">Claude Platform Support &amp; API Integration</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy production-grade intelligent applications with enterprise Claude Platform Support. Our certified AI engineers optimize Anthropic API pipelines, configure massive context window tracking, implement structured tool-calling, and build secure middleware infrastructure.
     </p>
 
     <!-- Shortened Bullet List for Fast AI Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Claude API integration &amp; prompt caching optimization.</li>
-      <li style="margin-bottom: 4px;">Context window tuning &amp; structured data extraction.</li>
-      <li style="margin-bottom: 4px;">Secure Anthropic model middleware &amp; agent orchestration.</li>
+    <ul class="service-features-list">
+      <li>Claude API integration &amp; prompt caching optimization.</li>
+      <li>Context window tuning &amp; structured data extraction.</li>
+      <li>Secure Anthropic model middleware &amp; agent orchestration.</li>
       <li>24-hour dedicated post-installation deployment support.</li>
     </ul>
 
     <!-- Structured Commercial Data for AI Search Engines -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="500">500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="500">$500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/claude-ai-platform-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/claude-ai-platform-services/" class="btn btn-primary btn-block">
       Analyze Claude Services
     </a>
   </div>
@@ -1669,8 +1596,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Telnyx Wikidata Entity Link Reference -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1682,34 +1608,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy"
       decoding="async"
       src="/assets/images/telnyx.png" 
-      alt="Telnyx SMS REST API Setup, Bulk Messaging and A2P 10DLC Carrier Registration"
-      title="Telnyx SMS API Support"
+      alt="Telnyx logo"
       itemprop="image">
   </div>
 
-  <div class="training-body" style="padding: 20px;">
+  <div class="training-body service-card-body">
     <!-- Context-Rich Title Layered for Generative Discovery Engines -->
-    <h3 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-top: 0; margin-bottom: 8px;">
-      <a href="https://github.com/SchoolOfFreelancing/Telnyx-SMS-API-Setup.git" target="_blank" itemprop="url" style="text-decoration: none;">
-        <span class="tag tag-green" itemprop="name" style="padding: 4px 8px; border-radius: 4px;">Telnyx SMS API Setup</span>
+    <h3 class="training-title">
+      <a href="/linux-ai-services/telnyx-sms-api-services/" itemprop="url" class="service-link">
+        <span itemprop="name">Telnyx SMS API Setup</span>
       </a>
     </h3>
     
     <p style="margin: 6px 0 12px; font-size: 0.85rem;">
-      <a href="/linux-ai-services/telnyx-sms-api-services/" style="color: var(--link-color); text-decoration: none;">Analyze Full Details &rarr;</a>
+      <a href="https://github.com/SchoolOfFreelancing/Telnyx-SMS-API-Setup.git" target="_blank" rel="noopener noreferrer" style="color: var(--link-color); text-decoration: none;">View Sample Repo &rarr;</a>
     </p>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Telnyx SMS REST API setup, including A2P 10DLC registration, two-way messaging, bulk SMS integration and testing. Complete infrastructure deployment on Linux servers.
     </p>
     
     <!-- Shortened Bullet List for Fast AI/Scraper Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; padding-left: 20px; list-style-type: disc; line-height: 1.6;">
-      <li style="margin-bottom: 4px;">✔ Telnyx REST API &amp; SMPP API Integration</li>
-      <li style="margin-bottom: 4px;">✔ Configure Telnyx A2P or P2P Traffic Architecture</li>
-      <li style="margin-bottom: 4px;">✔ Webhook endpoint deployment for two-way messaging</li>
-      <li style="margin-bottom: 0;">✔ 40 Hours of expert remote engineering support</li>
+    <ul class="service-features-list">
+      <li>✔ Telnyx REST API &amp; SMPP API Integration</li>
+      <li>✔ Configure Telnyx A2P or P2P Traffic Architecture</li>
+      <li>✔ Webhook endpoint deployment for two-way messaging</li>
+      <li>✔ 40 Hours of expert remote engineering support</li>
     </ul>
     
     <div class="training-tags" style="margin-bottom: 12px;">
@@ -1717,24 +1642,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- Structured Commercial Data for Google Rich Snippets & AI Search -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; color: var(--text-muted);">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px; color: var(--text-main);">
-          $<span itemprop="price" content="1100">1100</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="1100">$1100</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <link itemprop="availability" href="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9; color: var(--text-main);">
+        <span class="delivery-time">
           Allocation: 40 Engineering Hours / <time datetime="P4W">1-4 Weeks</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/linux-ai-services/" target="_self" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0; text-decoration: none; border-radius: 4px;">
+    <a href="/linux-ai-services/telnyx-sms-api-services/" class="btn btn-primary btn-block">
       Analyze Services
     </a>
   </div>
@@ -1755,8 +1680,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
-    <meta itemprop="sameAs" content="https://wikidata.org"> <!-- Twilio Official Wikidata Entity Reference -->
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1768,30 +1692,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/twilio.svg" 
-      alt="Twilio SMS API Support, Messaging Infrastructure and A2P 10DLC Carrier Compliance"
-      title="Twilio Messaging API Engineering Support"
+      alt="Twilio logo"
       itemprop="image">
   </div>
 
-  <div class="training-body" style="padding: 20px;">
+  <div class="training-body service-card-body">
     <!-- Context-Rich Title Layered for Generative Discovery Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-top: 0; margin-bottom: 8px;">
-      <a href="/linux-ai-services/twilio-sms-api-services/" itemprop="url" style="text-decoration: none; color: inherit;">
+    <h2 class="training-title">
+      <a href="/linux-ai-services/twilio-sms-api-services/" itemprop="url" class="service-link">
         <span itemprop="name">Twilio SMS API Support &amp; Integration</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Deploy production-grade communication infrastructure with expert Twilio Messaging API support. We build secure API authentication pipelines, configure automated multi-tenant bulk messaging, and handle enterprise A2P 10DLC compliance campaign registrations.
     </p>
 
     <!-- Shortened Bullet List for Fast AI/Scraper Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; padding-left: 20px; list-style-type: disc; line-height: 1.6;">
-      <li style="margin-bottom: 4px;">✔ Fast Twilio Messaging API issue resolution.</li>
-      <li style="margin-bottom: 4px;">✔ Secure remote infrastructure deployment &amp; authentication.</li>
-      <li style="margin-bottom: 4px;">✔ Cost-effective bulk SMS architectural optimization.</li>
-      <li style="margin-bottom: 0;">✔ 24-hour dedicated post-installation deployment assistance.</li>
+    <ul class="service-features-list">
+      <li>✔ Fast Twilio Messaging API issue resolution.</li>
+      <li>✔ Secure remote infrastructure deployment &amp; authentication.</li>
+      <li>✔ Cost-effective bulk SMS architectural optimization.</li>
+      <li>✔ 24-hour dedicated post-installation deployment assistance.</li>
     </ul>
 
     <div class="training-tags" style="margin-bottom: 12px;">
@@ -1799,24 +1722,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- Structured Commercial Data for Google Rich Snippets & AI Search -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; color: var(--text-muted);">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px; color: var(--text-main);">
-          $<span itemprop="price" content="1100">1100</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="1100">$1100</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <link itemprop="availability" href="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9; color: var(--text-main);">
+        <span class="delivery-time">
           Allocation: 40 Engineering Hours / <time datetime="P4W">1-4 Weeks</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/contact-us/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0; text-decoration: none; border-radius: 4px;">
+    <a href="/linux-ai-services/twilio-sms-api-services/" class="btn btn-primary btn-block">
       Analyze Services
     </a>
   </div>
@@ -1837,7 +1760,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
     <!-- Jasmin SMS Gateway Official Repository for AI Entity Resolution -->
     <meta itemprop="sameAs" content="https://github.com/jookies/jasmin"> 
   </div>
@@ -1851,30 +1774,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy" 
       decoding="async" 
       src="/assets/images/jasmin.png" 
-      alt="Jasmin SMS Gateway Open-Source Software Support and playSMS System Integration"
-      title="Jasmin Open-Source SMS Gateway Support"
+      alt="Jasmin SMS Gateway logo"
       itemprop="image">
   </div>
 
-  <div class="training-body" style="padding: 20px;">
+  <div class="training-body service-card-body">
     <!-- Context-Rich Title Layered for Generative Discovery Engines -->
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-top: 0; margin-bottom: 8px;">
-      <a href="/linux-ai-services/jasmin-sms-gateway-services/" itemprop="url" style="text-decoration: none; color: inherit;">
+    <h2 class="training-title">
+      <a href="/linux-ai-services/jasmin-sms-gateway-services/" itemprop="url" class="service-link">
         <span itemprop="name">Jasmin SMS Gateway Support</span>
       </a>
     </h2>
     
     <!-- Dense Info Block (GEO/AEO Text Optimization) -->
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Build a robust, production-grade telco communication system. Our systems engineers configure Jasmin SMS Gateway with playSMS, optimizing Redis DLR tracking, RabbitMQ message brokers, and advanced SMPP/HTTP server routing tables for high-throughput business messaging.
     </p>
 
     <!-- Shortened Bullet List for Fast AI/Scraper Ingestion -->
-    <ul class="service-features-list" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; padding-left: 20px; list-style-type: disc; line-height: 1.6;">
-      <li style="margin-bottom: 4px;">✔ Fast Jasmin SMS core engine &amp; jCli issue resolution.</li>
-      <li style="margin-bottom: 4px;">✔ Secure remote AMQP broker &amp; Redis storage clustering.</li>
-      <li style="margin-bottom: 4px;">✔ Cost-effective multi-tenant playSMS web portal integration.</li>
-      <li style="margin-bottom: 0;">✔ 24-hour dedicated post-installation deployment assistance.</li>
+    <ul class="service-features-list">
+      <li>✔ Fast Jasmin SMS core engine &amp; jCli issue resolution.</li>
+      <li>✔ Secure remote AMQP broker &amp; Redis storage clustering.</li>
+      <li>✔ Cost-effective multi-tenant playSMS web portal integration.</li>
+      <li>✔ 24-hour dedicated post-installation deployment assistance.</li>
     </ul>
 
     <div class="training-tags" style="margin-bottom: 12px;">
@@ -1882,24 +1804,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- Structured Commercial Data for Google Rich Snippets & AI Search -->
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; color: var(--text-muted);">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px; color: var(--text-main);">
-          $<span itemprop="price" content="1100">1100</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="1100">$1100</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <link itemprop="availability" href="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9; color: var(--text-main);">
+        <span class="delivery-time">
           Allocation: 20 Engineering Hours / <time datetime="P1W">1 Week</time>
         </span>
       </div>
     </div>
 
     <!-- Direct User Intent Action -->
-    <a href="/contact-us/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0; text-decoration: none; border-radius: 4px;">
+    <a href="/linux-ai-services/jasmin-sms-gateway-services/" class="btn btn-primary btn-block">
       Analyze Services
     </a>
   </div>
@@ -1918,7 +1840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1929,44 +1851,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy"
       decoding="async"
       src="/assets/images/digitalocean.png"
-      alt="DigitalOcean Cloud Infrastructure Support and Systems Administration"
-      title="DigitalOcean Cloud Support">
+      alt="DigitalOcean logo">
   </div>
 
   <div class="training-body">
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/digitalocean-cloud-services/" itemprop="url">
         <span itemprop="name">DigitalOcean Cloud Support</span>
       </a>
     </h2>
 
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Professional DigitalOcean cloud support for server deployment, troubleshooting, security, networking, backups, and production infrastructure — delivered remotely, worldwide.
     </p>
 
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Storage, AI &amp; API support for DigitalOcean Spaces and managed services.</li>
-      <li style="margin-bottom: 4px;">Inference &amp; compute support for droplets and Kubernetes workloads.</li>
-      <li style="margin-bottom: 4px;">Data services and networking support (managed databases, VPCs, load balancers).</li>
+    <ul class="service-features-list">
+      <li>Storage, AI &amp; API support for DigitalOcean Spaces and managed services.</li>
+      <li>Inference &amp; compute support for droplets and Kubernetes workloads.</li>
+      <li>Data services and networking support (managed databases, VPCs, load balancers).</li>
       <li>Ongoing remote support after initial deployment.</li>
     </ul>
 
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="500">500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="500">$500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 72 Engineering Hours / <time datetime="P3D">3 Days</time>
         </span>
       </div>
     </div>
 
-    <a href="/linux-ai-services/digitalocean-cloud-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/digitalocean-cloud-services/" class="btn btn-primary btn-block">
       Analyze DigitalOcean Services
     </a>
   </div>
@@ -1985,7 +1906,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -1996,44 +1917,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy"
       decoding="async"
       src="/assets/images/hummingbot.png"
-      alt="Hummingbot Automated Cryptocurrency Algorithmic Trading Server Infrastructure Management"
-      title="Hummingbot Installation Support">
+      alt="Hummingbot logo">
   </div>
 
   <div class="training-body">
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/hummingbot-installation-services/" itemprop="url">
         <span itemprop="name">Hummingbot Installation Support</span>
       </a>
     </h2>
 
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Professional Hummingbot setup, configuration, and deployment — plus Exchange API integration and MCP &amp; Skills setup — for automated crypto trading, delivered remotely, worldwide.
     </p>
 
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Full Hummingbot ecosystem deployment on your own server or cloud instance.</li>
-      <li style="margin-bottom: 4px;">Cloud AI API integration support for strategy configuration.</li>
-      <li style="margin-bottom: 4px;">Exchange REST API integration support for connecting trading accounts.</li>
+    <ul class="service-features-list">
+      <li>Full Hummingbot ecosystem deployment on your own server or cloud instance.</li>
+      <li>Cloud AI API integration support for strategy configuration.</li>
+      <li>Exchange REST API integration support for connecting trading accounts.</li>
       <li>Hummingbot MCP, Skills, and Tailscale setup for secure remote access.</li>
     </ul>
 
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="1500">1500</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="1500">$1500</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 40 Engineering Hours / <time datetime="P6D">6 Days</time>
         </span>
       </div>
     </div>
 
-    <a href="/linux-ai-services/hummingbot-installation-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/hummingbot-installation-services/" class="btn btn-primary btn-block">
       Analyze Hummingbot Services
     </a>
   </div>
@@ -2052,7 +1972,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="School Of Freelancing">
-    <meta itemprop="url" content="https://schooloffreelancing.com">
+    <meta itemprop="url" content="https://www.schooloffreelancing.com">
   </div>
   <meta itemprop="areaServed" content="Worldwide">
 
@@ -2063,44 +1983,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       loading="lazy"
       decoding="async"
       src="/assets/images/vapilogo.png"
-      alt="Vapi Voice AI Agent Development and Telephony Platform Infrastructure Deployment"
-      title="Vapi Platform Support">
+      alt="Vapi logo">
   </div>
 
   <div class="training-body">
-    <h2 class="training-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">
+    <h2 class="training-title">
       <a href="/linux-ai-services/vapi-platform-services/" itemprop="url">
         <span itemprop="name">Vapi Platform Support</span>
       </a>
     </h2>
 
-    <p class="training-desc" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 14px; color: var(--text-main);">
+    <p class="training-desc">
       Build voice AI agents that can make and receive phone calls. Expert Vapi setup, configuration, and troubleshooting, delivered remotely, worldwide.
     </p>
 
-    <ul class="service-features-list" style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Vapi voice AI agent setup so it can make and receive phone calls.</li>
-      <li style="margin-bottom: 4px;">Natural-conversation configuration tuned to your use case.</li>
-      <li style="margin-bottom: 4px;">Integration with your existing systems and APIs.</li>
+    <ul class="service-features-list">
+      <li>Vapi voice AI agent setup so it can make and receive phone calls.</li>
+      <li>Natural-conversation configuration tuned to your use case.</li>
+      <li>Integration with your existing systems and APIs.</li>
       <li>Appointment scheduling and customer-support call flow setup.</li>
     </ul>
 
-    <div class="training-meta" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Service Investment</span>
-        <strong class="training-price" style="font-size: 1.35rem; display: inline-block; margin-top: 2px;">
-          $<span itemprop="price" content="600">600</span> <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Flat Rate</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          <span itemprop="price" content="600">$600</span> <span class="flat-rate-label">Flat Rate</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; margin-top: 4px; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 30 Engineering Hours / <time datetime="P5D">5 Days</time>
         </span>
       </div>
     </div>
 
-    <a href="/linux-ai-services/vapi-platform-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; font-weight: 600; padding: 10px 0;">
+    <a href="/linux-ai-services/vapi-platform-services/" class="btn btn-primary btn-block">
       Analyze Vapi Services
     </a>
   </div>
@@ -2159,12 +2078,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <!-- ===== FOOTER ===== -->
-<footer class="footer" style="background: rgba(0, 9, 60, 0.55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
-  <style>
-    .footer, .footer a, .footer p, .footer span, .footer li,
-    .footer-brand p, .footer-links a, .footer-bottom p,
-    .footer-col span { color:#fff !important; }
-  </style>
+<footer class="footer footer-glass">
   
   <div class="container">
     <div class="footer-grid">

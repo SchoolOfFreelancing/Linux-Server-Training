@@ -63,6 +63,11 @@
         "@type": "ContactPoint",
         "email": "office@schooloffreelancing.com",
         "contactType": "customer service"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "36"
       }
     },
     {
@@ -150,29 +155,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   
   <style>
-    /* Page-scoped styles for the testimonials view — falls back gracefully if css/style.css already styles these */
-    .testi-hero{padding:120px 24px 40px;text-align:center;position:relative;z-index:1;}
-    .testi-hero .prompt{font-family:"Courier New",monospace;color:#00ff41;opacity:.7;font-size:.95rem;margin:0 0 12px;}
-    .testi-hero h1{font-family:"Courier New",monospace;color:#e8ffe8;font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 14px;letter-spacing:.5px;}
-    .testi-hero p.lede{color:#9fdba8;max-width:620px;margin:0 auto;line-height:1.6;}
-    .rating-strip{display:flex;align-items:center;justify-content:center;gap:14px;margin:28px auto 0;flex-wrap:wrap;}
-    .rating-strip .stars{color:#ffd54a;font-size:1.4rem;letter-spacing:2px;}
-    .rating-strip .score{font-family:"Courier New",monospace;color:#00ff41;font-size:1.4rem;font-weight:bold;}
-    .rating-strip .count{color:#7fae86;font-size:.9rem;border-left:1px solid #1f4a2a;padding-left:14px;}
+    /* Page-scoped styles for the testimonials view — built on the same design
+       tokens as css/style.css (blue/white terminal theme) so this page reads
+       as part of the same site instead of a different brand. */
+    .testi-hero{padding:130px 24px 40px;text-align:center;position:relative;z-index:1;}
+    .testi-hero .prompt{font-family:var(--font-code);color:var(--green-mid);opacity:.75;font-size:.9rem;margin:0 0 14px;}
+    .testi-hero h1{margin:0 0 14px;}
+    .testi-hero p.lede{color:var(--text-secondary);max-width:620px;margin:0 auto;line-height:1.7;}
+
+    /* Rating trust badge */
+    .rating-strip{
+      display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+      margin:32px auto 0;padding:16px 26px;max-width:fit-content;
+      background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-card);
+    }
+    .rating-strip .google-mark{width:22px;height:22px;flex-shrink:0;}
+    .rating-strip .stars{color:var(--accent-amber);font-size:1.3rem;letter-spacing:2px;}
+    .rating-strip .score{font-family:var(--font-display);color:var(--text-primary);font-size:1.3rem;font-weight:700;}
+    .rating-strip .count{color:var(--text-muted);font-size:.85rem;border-left:1px solid var(--border-color);padding-left:16px;}
+    .rating-strip .count .review-total{color:var(--text-secondary);font-weight:600;}
     .see-all{margin:18px 0 0;}
-    .see-all a{color:#00ff41;font-family:"Courier New",monospace;font-size:.9rem;text-decoration:none;border-bottom:1px dashed #1f4a2a;padding-bottom:2px;}
-    .see-all a:hover{border-bottom-color:#00ff41;}
-    .testi-grid{max-width:1100px;margin:48px auto 100px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;position:relative;z-index:1;}
-    .testi-card{background:rgba(10,26,10,.78);border:1px solid #1f4a2a;border-radius:6px;padding:24px 22px;display:flex;flex-direction:column;gap:14px;backdrop-filter:blur(2px);transition:border-color .2s, transform .2s;}
-    .testi-card:hover{border-color:#00ff41;transform:translateY(-2px);}
-    .testi-card .card-top{display:flex;align-items:center;justify-content:space-between;font-family:"Courier New",monospace;font-size:.8rem;color:#5c8a63;}
-    .testi-card .card-top .stars{color:#ffd54a;letter-spacing:1px;font-size:.95rem;}
-    .testi-card p{color:#cfeed3;line-height:1.6;font-size:.95rem;margin:0;}
-    .testi-card .cite{font-family:"Courier New",monospace;font-size:.78rem;color:#4a7a52;border-top:1px dashed #1f4a2a;padding-top:12px;margin-top:auto;}
+    .see-all a{color:var(--green-mid);font-family:var(--font-code);font-size:.9rem;text-decoration:none;border-bottom:1px dashed var(--border-color);padding-bottom:2px;}
+    .see-all a:hover{border-bottom-color:var(--green-bright);color:#fff;}
+
+    .testi-grid{max-width:1100px;margin:52px auto 100px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;position:relative;z-index:1;}
+    .testi-card{
+      background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);
+      padding:26px 24px;display:flex;flex-direction:column;gap:14px;
+      box-shadow:var(--shadow-card);
+      transition:var(--transition);
+    }
+    .testi-card:hover{border-color:var(--border-active);box-shadow:0 0 20px var(--green-glow2),var(--shadow-card);transform:translateY(-3px);}
+    .testi-card .card-top{display:flex;align-items:center;justify-content:space-between;font-family:var(--font-code);font-size:.78rem;color:var(--text-muted);}
+    .testi-card .card-top .source{display:flex;align-items:center;gap:6px;}
+    .testi-card .card-top .google-mark{width:15px;height:15px;}
+    .testi-card .card-top .stars{color:var(--accent-amber);letter-spacing:1px;font-size:.95rem;}
+    .testi-card .quote-mark{font-family:var(--font-display);font-size:2.2rem;line-height:1;color:var(--green-dim);}
+    .testi-card p{color:var(--text-secondary);line-height:1.7;font-size:.95rem;margin:0;}
+    .testi-card .cite{font-family:var(--font-code);font-size:.78rem;color:var(--text-muted);border-top:1px solid var(--border-color);padding-top:12px;margin-top:auto;}
+
     .testi-cta{text-align:center;margin:0 0 100px;position:relative;z-index:1;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
-    .testi-cta a{display:inline-block;background:#00ff41;color:#06140a;font-family:"Courier New",monospace;font-weight:bold;padding:14px 32px;border-radius:4px;text-decoration:none;letter-spacing:.5px;}
-    .testi-cta a:hover{opacity:.85;}
-    .testi-cta a.cta-secondary{background:transparent;color:#00ff41;border:1px solid #00ff41;}
+
+    @media (max-width:480px){
+      .rating-strip{flex-direction:column;gap:8px;padding:18px 22px;}
+      .rating-strip .count{border-left:none;padding-left:0;}
+    }
   </style>
   
   
@@ -236,6 +264,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<!-- Reusable Google "G" mark, referenced via <use> on the rating badge and each review card -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="google-g" viewBox="0 0 48 48">
+    <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+    <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+    <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+    <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+  </symbol>
+</svg>
+
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar" aria-label="Main navigation">
   <div class="nav-container">
@@ -262,55 +300,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="prompt">$ cat reviews.log</p>
     <h1>What our customers say</h1>
     <p class="lede">Real feedback from students and clients who trained with and received support from School of Freelancing pulled straight from our Google Business profile.</p>
-    <div class="rating-strip">
-      <span class="stars">★★★★★</span>
-      <span class="score">5.0</span>
-      <span class="count">based on 36 Google reviews</span>
+    <div class="rating-strip" aria-live="polite">
+      <svg class="google-mark" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>
+      <span class="stars" id="reviewStars">★★★★★</span>
+      <span class="score" id="reviewScore">5.0</span>
+      <span class="count">based on <span class="review-total" data-review-total>36</span> Google reviews</span>
     </div>
-    <p class="see-all"><a href="https://search.google.com/local/reviews?placeid=ChIJhz5k1Dt_VDcRBCCQGjDjw8I" target="_blank" rel="noopener noreferrer">See all 36 reviews on Google →</a></p>
+    <p class="see-all"><a href="https://search.google.com/local/reviews?placeid=ChIJhz5k1Dt_VDcRBCCQGjDjw8I" target="_blank" rel="noopener noreferrer">See all <span class="review-total" data-review-total>36</span> reviews on Google →</a></p>
   </header>
 
   <section class="testi-grid" aria-label="Student testimonials">
-    <article class="testi-card">
-      <div class="card-top"><span class="stars">★★★★★</span><span>Google Review</span></div>
+    <article class="testi-card animate-fade-up delay-1">
+      <div class="card-top"><span class="source"><svg class="google-mark" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>Google Review</span><span class="stars">★★★★★</span></div>
+      <span class="quote-mark" aria-hidden="true">“</span>
       <p>Definitely one of the best school to kickstart your freelancing career. The expertise they share and provide are of global quality ensuring that the students are up to date with the recent trend of technology along with the know how of the skills. This is Industry 4.0 and School of Freelancing is totally ready for it.</p>
       <div class="cite">— via Google Reviews</div>
     </article>
 
-    <article class="testi-card">
-      <div class="card-top"><span class="stars">★★★★★</span><span>Google Review</span></div>
+    <article class="testi-card animate-fade-up delay-2">
+      <div class="card-top"><span class="source"><svg class="google-mark" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>Google Review</span><span class="stars">★★★★★</span></div>
+      <span class="quote-mark" aria-hidden="true">“</span>
       <p>As per my experience, one of the best institutes for freelancers ever in Bangladesh — even in the world. They have talented, skilled, sincere, dignified, respectable trainers. The instructor was very knowledgeable and helpful, and the training was excellent. Mr. Masum had the ability to convey complicated ideas in a way that was simple to comprehend, with beneficial examples. It's really proud to be a part of such a great School of Freelancing!</p>
       <div class="cite">— via Google Reviews</div>
     </article>
 
-    <article class="testi-card">
-      <div class="card-top"><span class="stars">★★★★★</span><span>Google Review</span></div>
+    <article class="testi-card animate-fade-up delay-3">
+      <div class="card-top"><span class="source"><svg class="google-mark" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>Google Review</span><span class="stars">★★★★★</span></div>
+      <span class="quote-mark" aria-hidden="true">“</span>
       <p>Last year, I was desperately looking for the right platform with proper guidance to start my Linux freelancing career, and then I met S K Chowdhury Masum and started my Linux freelancing journey with him. Today, when I check my profile on freelancing platforms, I can see more than 15 projects, all completed with 5-star ratings — which would never have been possible without the training and guidance I received from School of Freelancing. I will definitely recommend this platform to others.</p>
       <div class="cite">— via Google Reviews</div>
     </article>
 
-    <article class="testi-card">
-      <div class="card-top"><span class="stars">★★★★★</span><span>Google Review</span></div>
+    <article class="testi-card animate-fade-up delay-4">
+      <div class="card-top"><span class="source"><svg class="google-mark" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>Google Review</span><span class="stars">★★★★★</span></div>
+      <span class="quote-mark" aria-hidden="true">“</span>
       <p>School Of Freelancing is the best place for Linux freelancing. I learned and earned my first income working with this school. Highly recommended.</p>
       <div class="cite">— Rajan C., via Google Reviews</div>
     </article>
 
-    <article class="testi-card">
-      <div class="card-top"><span class="stars">★★★★★</span><span>Google Review</span></div>
+    <article class="testi-card animate-fade-up delay-5">
+      <div class="card-top"><span class="source"><svg class="google-mark" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>Google Review</span><span class="stars">★★★★★</span></div>
+      <span class="quote-mark" aria-hidden="true">“</span>
       <p>A place run by my old schoolmate, who is technically sound and has genuinely innovative ideas in freelancing.</p>
       <div class="cite">— Khalid N., via Google Reviews</div>
     </article>
 
-    <article class="testi-card">
-      <div class="card-top"><span class="stars">★★★★★</span><span>Google Review</span></div>
+    <article class="testi-card animate-fade-up delay-5">
+      <div class="card-top"><span class="source"><svg class="google-mark" aria-hidden="true" focusable="false"><use href="#google-g"></use></svg>Google Review</span><span class="stars">★★★★★</span></div>
+      <span class="quote-mark" aria-hidden="true">“</span>
       <p>In this era, freelancing plays a vital role in earning foreign currency. "School Of Freelancing" is one of the best places to learn and to earn.</p>
       <div class="cite">— via Google Reviews</div>
     </article>
   </section>
 
   <div class="testi-cta">
-    <a href="https://search.google.com/local/reviews?placeid=ChIJhz5k1Dt_VDcRBCCQGjDjw8I" target="_blank" rel="noopener noreferrer" class="cta-secondary">Read all 36 reviews on Google →</a>
-    <a href="/contact-us/">Start your freelancing journey →</a>
+    <a href="https://search.google.com/local/reviews?placeid=ChIJhz5k1Dt_VDcRBCCQGjDjw8I" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Read all <span class="review-total" data-review-total>36</span> reviews on Google →</a>
+    <a href="/contact-us/" class="btn btn-primary">Start your freelancing journey →</a>
   </div>
 </main>
 
@@ -384,5 +429,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="/assets/js/main.js?v=20260718" defer></script>
+
+<!-- ============================================================
+     Live Google review count / rating sync
+     ------------------------------------------------------------
+     What this does: on page load, calls the Google Places API
+     (New) for this business's current `rating` and
+     `userRatingCount`, then updates the numbers already baked
+     into the HTML above (5.0 / 36). That means the moment a new
+     review lands on your Google Business Profile, this page shows
+     the updated count on its very next load — no manual editing.
+
+     What this does NOT do: pull in the *text* of new reviews
+     automatically. Google's public Places API only ever returns
+     up to 5 reviews chosen by Google's own relevance algorithm —
+     it can't be filtered to "your newest 5" or "your handpicked
+     ones," so it can't be used to auto-populate curated cards
+     like the six above. If you want the review *cards* themselves
+     to auto-sync too, you need either:
+       (a) a paid embed widget (e.g. Elfsight, EmbedSocial,
+           Trustmary) that polls your Business Profile and renders
+           new review cards for you, or
+       (b) the Google Business Profile API with OAuth as the
+           verified profile owner, pulled through your own backend.
+     Both are real options — ask and I can wire either one up.
+
+     SETUP (required before this does anything):
+       1. In Google Cloud Console, enable "Places API (New)".
+       2. Create an API key restricted to:
+            - HTTP referrers: https://www.schooloffreelancing.com/*
+            - API restriction: Places API (New) only
+       3. Replace GOOGLE_PLACES_API_KEY below with that key.
+          (A referrer-restricted key is safe to expose in client
+          JS — Google's own docs use this pattern.)
+       4. PLACE_ID below is already correct — it's the same ID
+          already used in the "See all reviews" links on this page.
+     ============================================================ -->
+<script>
+(function () {
+  var GOOGLE_PLACES_API_KEY = 'REPLACE_WITH_YOUR_RESTRICTED_API_KEY';
+  var PLACE_ID = 'ChIJhz5k1Dt_VDcRBCCQGjDjw8I';
+  var CACHE_KEY = 'sof_review_cache_v1';
+  var CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6 hours — plenty fresh, keeps API calls cheap
+
+  function renderStars(rating) {
+    var rounded = Math.round(rating * 2) / 2; // nearest half star
+    var full = Math.floor(rounded);
+    var half = rounded - full === 0.5;
+    return '★'.repeat(full) + (half ? '⯨' : '') + '☆'.repeat(5 - full - (half ? 1 : 0));
+  }
+
+  function applyReviewData(data) {
+    if (!data || !data.userRatingCount || !data.rating) return;
+    var scoreEl = document.getElementById('reviewScore');
+    var starsEl = document.getElementById('reviewStars');
+    if (scoreEl) scoreEl.textContent = data.rating.toFixed(1);
+    if (starsEl) starsEl.textContent = renderStars(data.rating);
+    document.querySelectorAll('[data-review-total]').forEach(function (el) {
+      el.textContent = data.userRatingCount;
+    });
+  }
+
+  function getCached() {
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var parsed = JSON.parse(raw);
+      if (Date.now() - parsed.savedAt > CACHE_TTL_MS) return null;
+      return parsed.data;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function setCached(data) {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ savedAt: Date.now(), data: data }));
+    } catch (e) { /* storage unavailable — safe to ignore */ }
+  }
+
+  function fetchLiveReviewData() {
+    if (!GOOGLE_PLACES_API_KEY || GOOGLE_PLACES_API_KEY.indexOf('REPLACE_WITH') === 0) {
+      return; // not configured yet — page keeps showing the static fallback numbers
+    }
+    fetch('https://places.googleapis.com/v1/places/' + PLACE_ID, {
+      headers: {
+        'X-Goog-Api-Key': GOOGLE_PLACES_API_KEY,
+        'X-Goog-FieldMask': 'rating,userRatingCount'
+      }
+    })
+      .then(function (res) { return res.ok ? res.json() : Promise.reject(res.status); })
+      .then(function (data) {
+        applyReviewData(data);
+        setCached(data);
+      })
+      .catch(function () {
+        // Network/API error: the static values already in the HTML remain visible, so
+        // visitors never see a broken or blank state.
+      });
+  }
+
+  var cached = getCached();
+  if (cached) {
+    applyReviewData(cached); // instant update from cache, no flash of stale numbers
+  } else {
+    fetchLiveReviewData();
+  }
+  // Always revalidate in the background so cache and live data stay in sync.
+  if (cached) fetchLiveReviewData();
+})();
+</script>
 </body>
 </html>

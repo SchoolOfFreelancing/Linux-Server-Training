@@ -13,8 +13,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <title>About us | School Of Freelancing</title>
 
-<meta name="description" content="School of Freelancing offers Linux freelancing training and professional Linux cloud support for businesses">
-<meta name="keywords" content="linux freelancing,cloud support,linux training,freelance beginners,it career,sysadmin freelance,cloud infrastructure,school of freelancing">
+<meta name="description" content="Founded in 2015 by S K Chowdhury Masum, School of Freelancing trains beginners into professional Linux freelancers and provides expert Linux cloud support for businesses.">
+<meta name="keywords" content="linux freelancing,cloud support,linux training,freelance beginners,it career,sysadmin freelance,cloud infrastructure,school of freelancing,about school of freelancing">
 
 <meta name="author" content="School of Freelancing">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -24,8 +24,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="School Of Freelancing">
 <meta property="og:url" content="https://www.schooloffreelancing.com/about-us/">
-<meta property="og:title" content="Linux Freelancing Training & Cloud Support | School Of Freelancing">
-<meta property="og:description" content="School of Freelancing offers Linux freelancing training and professional Linux cloud support for businesses">
+<meta property="og:title" content="About Us | School Of Freelancing">
+<meta property="og:description" content="Founded in 2015 by S K Chowdhury Masum, School of Freelancing trains beginners into professional Linux freelancers and supports businesses with expert Linux cloud services.">
 <meta property="og:image" content="https://www.schooloffreelancing.com/assets/images/og-home.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -35,8 +35,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="School of Freelancing">
-  <meta name="twitter:description" content="School of Freelancing offers Linux freelancing training and professional Linux cloud support for businesses">
+  <meta name="twitter:title"       content="About Us | School of Freelancing">
+  <meta name="twitter:description" content="Founded in 2015 by S K Chowdhury Masum, School of Freelancing trains beginners into professional Linux freelancers and supports businesses with expert Linux cloud services.">
   <meta name="twitter:image"       content="https://www.schooloffreelancing.com/assets/images/og-home.jpg">
 
 <!-- Structured Data -->
@@ -235,9 +235,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- PAGE HERO -->
 <header class="page-hero">
-  <p class="breadcrumb-nav"><a href="/">Home</a> / About Us</p>
   <div class="container">
-   
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span><span class="current" aria-current="page">About Us</span>
+    </nav>
     <span class="page-hero-label"><strong>Our Story</strong></span>
     <h1 data-reveal data-delay="100"><span style="color:var(--text-primary)">Turning beginners into freelancers, solving businesses' technical challenges.</span></h1>
   </div>
@@ -368,11 +369,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="section-label">Who's Behind It</span>
       <h2 id="founder-heading">Meet the <span style="color:var(--text-primary)">Founder</span></h2>
     </div>
-    <div class="card" data-reveal style="padding:36px; max-width:760px; margin:0 auto;">
+    <div class="card" data-reveal style="max-width:760px; margin:0 auto; padding:40px;">
+      <div class="team-card" style="border:none; padding:0; margin-bottom:24px; background:transparent;">
+        <div class="team-avatar" aria-hidden="true" style="font-size:1.6rem; font-family:var(--font-display); font-weight:700; letter-spacing:.05em;">SM</div>
+        <div class="team-name">S K Chowdhury Masum</div>
+        <div class="team-role">Founder &amp; Lead Instructor · Est. <span id="founderSince">2015</span> (<span id="yearsActive">11</span>+ years)</div>
+      </div>
       <p style="margin-bottom:16px;">School of Freelancing was founded in 2015 by <strong>S K Chowdhury Masum</strong>, Founder &amp; Lead Instructor, who personally leads instruction for our training programs.</p>
-      <p style="margin:0;">Students consistently credit his hands-on, plain-language teaching style. As one puts it in a <a href="/resource-center/testimonials/">Google review</a>: "Mr. Masum had the ability to convey complicated ideas in a way that was simple to comprehend, with beneficial examples."</p>
+      <blockquote style="margin:0; padding-left:18px; border-left:2px solid var(--border-active); color:var(--text-secondary); font-style:italic;">
+        Students consistently credit his hands-on, plain-language teaching style. As one puts it in a <a href="/resource-center/testimonials/">Google review</a>: "Mr. Masum had the ability to convey complicated ideas in a way that was simple to comprehend, with beneficial examples."
+      </blockquote>
     </div>
   </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="section" style="padding-top:0;" aria-label="Customer trust indicator">
+  <div class="container" style="text-align:center;">
+    <a href="/resource-center/testimonials/" class="trust-strip-link">
+      <span style="color:var(--accent-amber);" aria-hidden="true">★★★★★</span> 5.0 rated on Google by 36+ students &amp; clients →
+    </a>
+  </div>
+  <style>
+    .trust-strip-link{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:.85rem; color:var(--text-secondary);
+      border:1px solid var(--border-color); border-radius:100px;
+      padding:10px 22px; text-decoration:none; transition:var(--transition);
+    }
+    .trust-strip-link:hover{ border-color:var(--border-active); color:#fff; box-shadow:0 0 15px var(--green-glow2); }
+  </style>
 </section>
 
 <!-- CTA -->
@@ -469,5 +495,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="/assets/js/main.js?v=20260718" defer></script>
+
+<!-- Keeps the founder section's "years active" honest without manual edits each year -->
+<script>
+  (function () {
+    var founded = 2015;
+    var el = document.getElementById('yearsActive');
+    if (el) el.textContent = new Date().getFullYear() - founded;
+  })();
+</script>
 </body>
 </html>

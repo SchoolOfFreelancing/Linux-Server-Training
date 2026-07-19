@@ -811,10 +811,133 @@ img { max-width: 100%; height: auto; display: block; }
   background: rgba(128, 255, 245, 0.1);
 }
 
+/* ---------- Services Section (mirrors #trainings) ---------- */
+#services {
+  background: #0024ED;
+  color: white;
+}
+
+#services .section-title,
+#services .section-subtitle,
+#services .training-title,
+#services .training-desc,
+#services .training-price,
+#services .btn-outline {
+  color: white !important;
+}
+
+#services .training-meta {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#services .btn-outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#services .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+#services .btn-primary {
+  background: white;
+  color: #0024ED;
+}
+
+#services .btn-primary:hover {
+  background: #f0f0f0;
+  color: #0024ED;
+}
+
+/* ---------- Shared training/service card sub-elements ---------- */
+/* Previously duplicated as inline styles on every card instance */
+
+.training-features-label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.service-features-list {
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.service-features-list li {
+  margin-bottom: 4px;
+}
+
+.service-features-list li:last-child {
+  margin-bottom: 0;
+}
+
+.price-label {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.delivery-time {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.btn-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- Linux & AI Services listing page ---------- */
+/* Scoped to #services-grid so it doesn't affect the Training listing page,
+   which shares the same .training-card/.training-title classes at their
+   default (smaller) sizing. */
+#services-grid .training-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+#services-grid .training-price {
+  font-size: 1.35rem;
+  display: inline-block;
+  margin-top: 2px;
+}
+#services-grid .price-label {
+  letter-spacing: 0.5px;
+}
+#services-grid .delivery-time {
+  margin-top: 4px;
+}
+
+.flat-rate-label {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: var(--text-muted);
+}
+
+.service-card-body {
+  padding: 20px;
+}
+
 .trainings-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 28px;
+}
+
+/* Solid brand-blue cards for listing pages where .trainings-grid isn't
+   wrapped in a #trainings/#services section (those use higher-specificity
+   ID-scoped rules above and are unaffected) */
+.trainings-grid .training-card {
+  background: #0024ED;
+}
+.trainings-grid .training-banner {
+  background: #0024ED;
 }
 
 .training-card {
@@ -841,6 +964,14 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 3.5rem;
   position: relative;
   overflow: hidden;
+}
+
+.training-banner img {
+  max-width: 70%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .training-banner::after {
@@ -884,10 +1015,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .training-desc {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 20px;
+  line-height: 1.4;
+  margin-bottom: 12px;
   flex: 1;
 }
 
@@ -902,7 +1033,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .training-price {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--green-bright);
 }
@@ -1126,6 +1257,25 @@ img { max-width: 100%; height: auto; display: block; }
 
 .footer-bottom a { color: var(--text-muted); }
 .footer-bottom a:hover { color: var(--green-bright); }
+
+/* Reusable variant for pages on the blue gradient background (was previously
+   re-implemented per-page as a duplicated inline <style> block) */
+.footer-glass {
+  background: rgba(0, 9, 60, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.footer-glass,
+.footer-glass a,
+.footer-glass p,
+.footer-glass span,
+.footer-glass li,
+.footer-glass .footer-brand p,
+.footer-glass .footer-links a,
+.footer-glass .footer-bottom p,
+.footer-glass .footer-col span {
+  color: #fff !important;
+}
 
 /* ---------- Page Hero ---------- */
 .page-hero {
