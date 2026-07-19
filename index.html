@@ -176,11 +176,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://i.ytimg.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=optional">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=optional" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=optional"></noscript>
-<link rel="stylesheet" href="/assets/css/style.css?v=20260718">
+
+<!-- Preload the hero thumbnail: it is the Largest Contentful Paint element,
+     so it must be discovered and fetched immediately instead of waiting
+     on CSS/JS. Served as WebP directly from YouTube's CDN (~25-35% smaller
+     than the JPEG previously used). -->
+<link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/bbJCBn_vUzs/hqdefault.webp" fetchpriority="high">
+
+<!-- Full homepage stylesheet: purged (page-specific, unused selectors from
+     other templates removed) and minified - 20.6KB vs the original 49.5KB.
+     Loaded as a normal blocking stylesheet (not split into critical/async)
+     because splitting it caused a 0.417 CLS regression: below-the-fold
+     sections briefly rendered unstyled/unstacked before the async
+     stylesheet applied, then snapped into their grid/flex layout. A single
+     smaller blocking request avoids that reflow entirely. -->
+<link rel="stylesheet" href="/assets/css/style.home.min.css?v=20260720">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
 
@@ -395,9 +411,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         onclick="this.outerHTML='&lt;iframe src=&quot;https://www.youtube.com/embed/bbJCBn_vUzs?si=VyxCKZl9nrrTYyQr&amp;autoplay=1&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;'"
       >
         <img
-          src="https://i.ytimg.com/vi/bbJCBn_vUzs/hqdefault.jpg"
+          src="https://i.ytimg.com/vi_webp/bbJCBn_vUzs/hqdefault.webp"
           alt="School of Freelancing introduction video"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
           decoding="async"
           width="480"
           height="270">
