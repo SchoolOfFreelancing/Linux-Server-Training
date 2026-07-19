@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
 
+<!-- Google tag for this container -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K52NJCLQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+
 <!-- Basic Meta -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +40,7 @@
 
 <!-- Verification Tags -->
 <meta name="google-site-verification" content="aKspFR5JYGO3cBf59rcq2-7hxuXZvtS-TAMndI17PBw">
+
 <meta name="msvalidate.01" content="C18D42C136729AADD540EB2FE7763E57">
 <meta name="yandex-verification" content="7a5b0116b50f4d68">
 <meta name="facebook-domain-verification" content="2304476026236470">
@@ -161,44 +170,16 @@
 }
 </script>
 
+<!-- consent mode google -->
+<script src="https://app.secureprivacy.ai/script/6a5c2c6d8f68c24d419372cd.js"></script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7D2DXT');</script>
+})(window,document,'script','dataLayer','GTM-K52NJCLQ');</script>
 <!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1LNS69YXG5');
-
-  // Defer the ~169KB gtag.js payload until the user actually interacts
-  // (or a short fallback delay for non-interacting visits/bots), so it
-  // doesn't compete with the critical rendering path on first load.
-  (function() {
-    var loaded = false;
-    function loadGtagJs() {
-      if (loaded) return;
-      loaded = true;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1LNS69YXG5';
-      document.head.appendChild(s);
-      ['scroll','mousemove','keydown','touchstart','click'].forEach(function(evt) {
-        window.removeEventListener(evt, loadGtagJs, { passive: true });
-      });
-    }
-    ['scroll','mousemove','keydown','touchstart','click'].forEach(function(evt) {
-      window.addEventListener(evt, loadGtagJs, { passive: true, once: true });
-    });
-    setTimeout(loadGtagJs, 3500);
-  })();
-</script>
-
 <!-- Preconnect to external domains -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -318,10 +299,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
+
+  /* Click-to-load YouTube facade */
+  .video-facade {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+  }
+  .video-facade img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.85;
+    transition: opacity 0.25s ease;
+  }
+  .video-facade:hover img { opacity: 1; }
+  .video-facade .play-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: rgba(0, 36, 237, 0.85);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    font-size: 1.3rem;
+    box-shadow: 0 0 30px rgba(0, 255, 225, 0.35);
+    transition: transform 0.25s ease;
+  }
+  .video-facade:hover .play-icon { transform: translate(-50%, -50%) scale(1.08); }
 </style>
 
 </head>
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K52NJCLQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <!-- ===== NAVBAR ===== -->
@@ -350,22 +372,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <header class="hero" aria-label="Hero section">
   <div class="hero-container">
     <div class="hero-content">
-      <h1 class="hero-title" data-reveal data-delay="100">Freelancing Training & Services Worldwide</h1>
+      <h1 class="hero-title" data-reveal data-delay="100">Build a High-Income <span class="highlight">Linux & AI Freelancing</span> Career</h1>
+      <p class="hero-subtitle" data-reveal data-delay="200">Practical, instructor-led training and reliable Linux &amp; AI services for businesses. Serving clients worldwide since 2015.</p>
+      <div class="hero-stats" data-reveal data-delay="250">
+        <div class="stat-item">
+          <span class="stat-number">5.0★</span>
+          <span class="stat-label">36 Reviews</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">2015</span>
+          <span class="stat-label">Founded</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Worldwide</span>
+          <span class="stat-label">Clients Served</span>
+        </div>
+      </div>
       <div class="hero-actions" data-reveal data-delay="300">
-        <a href="/freelancing-training/" class="btn btn-primary btn-lg">Start Training</a>
-        <a href="/linux-ai-services/" class="btn btn-outline btn-lg">Get Services</a>
+        <a href="/freelancing-training/" class="btn btn-primary btn-lg">Explore Training Plans</a>
+        <a href="/linux-ai-services/" class="btn btn-outline btn-lg">Book Linux Support</a>
       </div>
     </div>
 
-    <!-- YouTube Video -->
+    <!-- YouTube Video (click-to-load facade: avoids loading the iframe/player on first paint) -->
     <div class="hero-video">
-      <iframe src="https://www.youtube.com/embed/bbJCBn_vUzs?si=VyxCKZl9nrrTYyQr" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <button
+        type="button"
+        class="video-facade"
+        aria-label="Play video: School of Freelancing introduction"
+        onclick="this.outerHTML='&lt;iframe src=&quot;https://www.youtube.com/embed/bbJCBn_vUzs?si=VyxCKZl9nrrTYyQr&amp;autoplay=1&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;'"
+      >
+        <img
+          src="https://i.ytimg.com/vi/bbJCBn_vUzs/hqdefault.jpg"
+          alt="School of Freelancing introduction video"
+          loading="lazy"
+          decoding="async"
+          width="480"
+          height="270">
+        <span class="play-icon" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+      </button>
     </div>
   </div>
 </header>
 
 <!-- ===== FEATURED TRAINING ===== -->
-<section id="trainings" class="section no-terminal-prompt" aria-labelledby="trainings-heading" style="background:#0024ed;">
+<section id="trainings" class="section no-terminal-prompt" aria-labelledby="trainings-heading">
 
   
   <div class="container">
@@ -376,7 +427,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="trainings-grid">
 
       <!-- Linux Freelancing Training -->
-      <article class="training-card" data-reveal data-delay="0" style="background: #0024ed;" itemscope itemtype="https://schema.org/Course">
+      <article class="training-card" data-reveal data-delay="0" itemscope itemtype="https://schema.org/Course">
         <meta itemprop="provider" content="School Of Freelancing">
 
         <div class="training-banner">
@@ -386,49 +437,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             loading="lazy"
             decoding="async"
             src="/assets/images/linux.png"
-            alt="Linux Freelancing Training for System Administrators and Freelancers">
+            alt="Linux logo">
         </div>
 
-        <div class="training-body" style="color: #fff;">
-          <h3 class="training-title" style="color: #fff;">
+        <div class="training-body">
+          <h3 class="training-title">
             <a href="/freelancing-training/linux-freelancing-training/" class="service-link" itemprop="url">
               <span itemprop="name">Linux Freelancing Training</span>
             </a>
           </h3>
 
-          <p class="training-desc" style="color: #fff; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;" itemprop="description">
+          <p class="training-desc" itemprop="description">
             Become a Linux System Administrator, build a freelancing business, and win high-paying global clients.
           </p>
 
-          <p style="font-size: 0.85rem; color: #fff; margin-bottom: 6px;"><strong>Training Features:</strong></p>
-          <ul class="service-features-list" style="font-size: 0.85rem; color: #fff; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-           <li style="margin-bottom: 4px;">90 Hands-on Training Sessions</li>
-            <li style="margin-bottom: 4px;">Online Instructor-Led Training</li>
-            <li style="margin-bottom: 4px;">Guaranteed Minimum Income (GMI)*</li>
+          <p class="training-features-label"><strong>Training Features:</strong></p>
+          <ul class="service-features-list">
+           <li>90 Hands-on Training Sessions</li>
+            <li>Online Instructor-Led Training</li>
+            <li>Guaranteed Minimum Income (GMI)*</li>
             <li>Credential Verification Support</li>
           </ul>
 
-          <div class="training-meta" style="margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <div class="price-container">
-              <span class="price-label" style="display: block; font-size: 0.75rem; opacity: 0.8; text-transform: uppercase;">Training Investment</span>
-              <strong class="training-price" style="color: #fff; font-size: 1.25rem;">
+              <span class="price-label">Training Investment</span>
+              <strong class="training-price">
                 Starting at <span itemprop="price" content="600">$600</span>
               </strong>
               <meta itemprop="priceCurrency" content="USD">
-              <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
+              <span class="delivery-time">
                 Allocation: 180 Training Hours / 6 Months
               </span>
             </div>
           </div>
 
-          <a href="/freelancing-training/linux-freelancing-training/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+          <a href="/freelancing-training/linux-freelancing-training/" class="btn btn-primary btn-block">
             View Modules &amp; Enroll
           </a>
         </div>
       </article>
 
       <!-- Hermes Agent Training -->
-      <article class="training-card" data-reveal data-delay="100" style="background: #0024ed;" itemscope itemtype="https://schema.org/Course">
+      <article class="training-card" data-reveal data-delay="100" itemscope itemtype="https://schema.org/Course">
         <meta itemprop="provider" content="School Of Freelancing">
 
         <div class="training-banner">
@@ -438,49 +489,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             loading="lazy"
             decoding="async"
             src="/assets/images/hermesagent.png"
-            alt="Hermes AI Agent Engineer Freelancing Training">
+            alt="Hermes Agent logo">
         </div>
 
-        <div class="training-body" style="color: #fff;">
-          <h3 class="training-title" style="color: #fff;">
+        <div class="training-body">
+          <h3 class="training-title">
             <a href="/freelancing-training/hermes-agent-training/" class="service-link" itemprop="url">
               <span itemprop="name">Hermes Agent Training</span>
             </a>
           </h3>
 
-          <p class="training-desc" style="color: #fff; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;" itemprop="description">
+          <p class="training-desc" itemprop="description">
             Launch Your Freelance Career as a Hermes AI Agent Engineer and Attract Premium Global Projects.
           </p>
 
-          <p style="font-size: 0.85rem; color: #fff; margin-bottom: 6px;"><strong>Training Features:</strong></p>
-          <ul class="service-features-list" style="font-size: 0.85rem; color: #fff; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-            <li style="margin-bottom: 4px;">Online Instructor-Led Training</li>
-            <li style="margin-bottom: 4px;">20 Hands-on Training Modules</li>
-            <li style="margin-bottom: 4px;">Guaranteed Minimum Income (GMI)*</li>
+          <p class="training-features-label"><strong>Training Features:</strong></p>
+          <ul class="service-features-list">
+            <li>Online Instructor-Led Training</li>
+            <li>20 Hands-on Training Modules</li>
+            <li>Guaranteed Minimum Income (GMI)*</li>
             <li>Credential Verification Support</li>
           </ul>
 
-          <div class="training-meta" style="margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <div class="price-container">
-              <span class="price-label" style="display: block; font-size: 0.75rem; opacity: 0.8; text-transform: uppercase;">Training Investment</span>
-              <strong class="training-price" style="color: #fff; font-size: 1.25rem;">
+              <span class="price-label">Training Investment</span>
+              <strong class="training-price">
                 Starting at <span itemprop="price" content="250">$250</span>
               </strong>
               <meta itemprop="priceCurrency" content="USD">
-              <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
+              <span class="delivery-time">
                 Allocation: 20 Training Hours / 2 Weeks
               </span>
             </div>
           </div>
 
-          <a href="/freelancing-training/hermes-agent-training/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+          <a href="/freelancing-training/hermes-agent-training/" class="btn btn-primary btn-block">
             View Modules &amp; Enroll
           </a>
         </div>
       </article>
 
       <!-- Telnyx SMS Training -->
-      <article class="training-card" data-reveal data-delay="100" data-category="sms" id="smst" style="background: #0024ed;" itemscope itemtype="https://schema.org/Course">
+      <article class="training-card" data-reveal data-delay="100" data-category="sms" id="smst" itemscope itemtype="https://schema.org/Course">
         <meta itemprop="provider" content="School Of Freelancing">
 
         <div class="training-banner">
@@ -490,42 +541,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             loading="lazy"
             decoding="async"
             src="/assets/images/telnyx.png"
-            alt="Telnyx SMS API Messaging Specialist Freelancing Training">
+            alt="Telnyx logo">
         </div>
 
-        <div class="training-body" style="color: #fff;">
-          <h3 class="training-title" style="color: #fff;">
+        <div class="training-body">
+          <h3 class="training-title">
             <a href="/freelancing-training/telnyx-sms-api-training/" class="service-link" itemprop="url">
               <span itemprop="name">Telnyx SMS API Training</span>
             </a>
           </h3>
 
-          <p class="training-desc" style="color: #fff; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;" itemprop="description">
+          <p class="training-desc" itemprop="description">
             Launch Your Freelance Career as a Telnyx Messaging Specialist &amp; Attract Premium Worldwide Projects.
           </p>
 
-          <p style="font-size: 0.85rem; color: #fff; margin-bottom: 6px;"><strong>Training Features:</strong></p>
-          <ul class="service-features-list" style="font-size: 0.85rem; color: #fff; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-            <li style="margin-bottom: 4px;">Online Instructor-Led Training</li>
-            <li style="margin-bottom: 4px;">20 Hands-on Training Modules</li>
-            <li style="margin-bottom: 4px;">Guaranteed Minimum Income (GMI)*</li>
+          <p class="training-features-label"><strong>Training Features:</strong></p>
+          <ul class="service-features-list">
+            <li>Online Instructor-Led Training</li>
+            <li>20 Hands-on Training Modules</li>
+            <li>Guaranteed Minimum Income (GMI)*</li>
             <li>Credential Verification Support</li>
           </ul>
 
-          <div class="training-meta" style="margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             <div class="price-container">
-              <span class="price-label" style="display: block; font-size: 0.75rem; opacity: 0.8; text-transform: uppercase;">Training Investment</span>
-              <strong class="training-price" style="color: #fff; font-size: 1.25rem;">
+              <span class="price-label">Training Investment</span>
+              <strong class="training-price">
                 Starting at <span itemprop="price" content="800">$800</span>
               </strong>
               <meta itemprop="priceCurrency" content="USD">
-              <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
+              <span class="delivery-time">
                 Allocation: 40 Training Hours / 1-4 Weeks
               </span>
             </div>
           </div>
 
-          <a href="/freelancing-training/telnyx-sms-api-training/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+          <a href="/freelancing-training/telnyx-sms-api-training/" class="btn btn-primary btn-block">
             View Modules &amp; Enroll
           </a>
         </div>
@@ -538,8 +589,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials" class="section" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2 class="section-title" id="testimonials-heading"><span>What Our Students Say</span></h2>
+      <p class="section-subtitle"><span>5.0★ Rating &middot; 36 Verified Google Reviews</span></p>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card" data-reveal data-delay="0">
+        <div class="testimonial-quote">&ldquo;</div>
+        <p class="testimonial-text">Definitely one of the best schools to kickstart your freelancing career. The expertise they share is of global quality, keeping students up to date with the latest technology trends.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div>
+            <div class="author-name">Verified Student</div>
+            <div class="author-role"><span class="stars">★★★★★</span> Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-reveal data-delay="100">
+        <div class="testimonial-quote">&ldquo;</div>
+        <p class="testimonial-text">One of the best institutes for freelancers in Bangladesh, even the world. The instructor was very knowledgeable and helpful, explaining complicated ideas in a way that was simple to understand.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div>
+            <div class="author-name">Verified Student</div>
+            <div class="author-role"><span class="stars">★★★★★</span> Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-reveal data-delay="200">
+        <div class="testimonial-quote">&ldquo;</div>
+        <p class="testimonial-text">School Of Freelancing is the best place for Linux freelancing. I learned and earned my first income working with this school. Highly recommended.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div>
+            <div class="author-name">Verified Student</div>
+            <div class="author-role"><span class="stars">★★★★★</span> Google Review</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center" style="margin-top:40px;" data-reveal>
+      <a href="/resource-center/testimonials/" class="btn btn-outline btn-lg">Read All Reviews →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FEATURED Services ===== -->
-<section id="services" aria-labelledby="services-heading" style="background:#0024ED;">
+<section id="services" aria-labelledby="services-heading">
     <div class="container">
     <div class="section-header" data-reveal>
       <h2 class="section-title" id="services-heading"><span>Linux & AI Services</span></h2>
@@ -548,54 +651,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="trainings-grid">
 
 <!-- DigitalOcean AI-Native Cloud Infrastructure Support Services -->
-<article class="training-card" data-reveal data-delay="0" style="background: #0024ed;" itemscope itemtype="https://schema.org/Service">
+<article class="training-card" data-reveal data-delay="0" itemscope itemtype="https://schema.org/Service">
   <meta itemprop="serviceType" content="DigitalOcean AI-Native Cloud Infrastructure Support">
   <meta itemprop="provider" content="School Of Freelancing">
   <meta itemprop="areaServed" content="Worldwide">
 
   <div class="training-banner">
-    <img width="140" height="100" loading="lazy" decoding="async" src="/assets/images/digitalocean.png" alt="DigitalOcean AI-Native Cloud Infrastructure Support and Systems Administration">
+    <img width="140" height="100" loading="lazy" decoding="async" src="/assets/images/digitalocean.png" alt="DigitalOcean logo">
   </div>
 
-  <div class="training-body" style="color: #fff;">
-    <h3 class="training-title" style="color: #fff;">
+  <div class="training-body">
+    <h3 class="training-title">
       <a href="/linux-ai-services/digitalocean-cloud-services/" class="service-link" itemprop="url">
         <span itemprop="name">DigitalOcean AI-Native Cloud Solutions</span>
       </a>
     </h3>
 
-    <p class="training-desc" style="color: #fff; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;" itemprop="description">
+    <p class="training-desc" itemprop="description">
       Enterprise Linux sysadmin services for cloud infrastructure optimization. Automated server provisioning, machine learning backend setup, distributed pipeline administration, high-availability replication, network security hardening, and production environment orchestration.
     </p>
 
-    <ul class="service-features-list" style="font-size: 0.85rem; color: #fff; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">GPU Droplets &amp; CUDA/PyTorch Environment Configuration</li>
-      <li style="margin-bottom: 4px;">Vector Databases, RAG &amp; Weaviate Hosting</li>
-      <li style="margin-bottom: 4px;">Kubernetes Clusters &amp; DigitalOcean Spaces Storage</li>
+    <p class="training-features-label"><strong>Service Features:</strong></p>
+    <ul class="service-features-list">
+      <li>GPU Droplets &amp; CUDA/PyTorch Environment Configuration</li>
+      <li>Vector Databases, RAG &amp; Weaviate Hosting</li>
+      <li>Kubernetes Clusters &amp; DigitalOcean Spaces Storage</li>
       <li>24/7 Managed Remote Infrastructure SLAs</li>
     </ul>
 
-    <div class="training-meta" style="margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; opacity: 0.8; text-transform: uppercase;">Service Investment</span>
-        <strong class="training-price" style="color: #fff; font-size: 1.25rem;">
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
           Starting at <span itemprop="price" content="500">$500</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
+        <span class="delivery-time">
         Allocation: 40 Engineering Hours / 5 Days
         </span>
       </div>
     </div>
 
-    <a href="/linux-ai-services/digitalocean-cloud-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+    <a href="/linux-ai-services/digitalocean-cloud-services/" class="btn btn-primary btn-block">
       View Services
     </a>
   </div>
 </article>
 
    <!-- Hummingbot Advanced Trading Deployment Support -->
-<article class="training-card" data-reveal data-delay="200" style="background: #0024ed;" itemscope itemtype="https://schema.org/Service">
+<article class="training-card" data-reveal data-delay="200" itemscope itemtype="https://schema.org/Service">
   <meta itemprop="serviceType" content="Hummingbot Advanced Trading Deployment Support">
 
   <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
@@ -611,51 +715,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       loading="lazy"
       decoding="async"
       src="/assets/images/hummingbot.png"
-      alt="Hummingbot Automated Cryptocurrency Algorithmic Trading Server Infrastructure Management">
+      alt="Hummingbot logo">
   </div>
 
-  <div class="training-body" style="color: #fff;">
-    <h3 class="training-title" style="color: #fff;">
+  <div class="training-body">
+    <h3 class="training-title">
       <a href="/linux-ai-services/hummingbot-installation-services/" class="service-link" itemprop="url">
         <span itemprop="name">Hummingbot Algorithmic Trading Support</span>
       </a>
     </h3>
 
-    <p class="training-desc" style="color: #fff; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;" itemprop="description">
+    <p class="training-desc" itemprop="description">
       Enterprise Linux systems administration for decentralized market making networks. Continuous execution server engineering, data transfer latency minimization tuning, cryptographic security auditing, external gateway proxy scripting, and automated node cluster orchestration.
     </p>
 
-    <ul class="service-features-list" style="font-size: 0.85rem; color: #fff; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Exchange REST/WebSocket APIs &amp; Key Integration</li>
-      <li style="margin-bottom: 4px;">Cloud AI API Inference &amp; Strategy Fine-Tuning</li>
-      <li style="margin-bottom: 4px;">Model Context Protocol (MCP) &amp; Custom Skills Mapping</li>
+    <p class="training-features-label"><strong>Service Features:</strong></p>
+    <ul class="service-features-list">
+      <li>Exchange REST/WebSocket APIs &amp; Key Integration</li>
+      <li>Cloud AI API Inference &amp; Strategy Fine-Tuning</li>
+      <li>Model Context Protocol (MCP) &amp; Custom Skills Mapping</li>
       <li>Tailscale Mesh VPN &amp; Remote Node Administration</li>
     </ul>
   
-    <div class="training-meta" style="margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; opacity: 0.8; text-transform: uppercase;">Service Investment</span>
-        <strong class="training-price" style="color: #fff; font-size: 1.25rem;">
-          Starting at $<span itemprop="price" content="1500">1500</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          Starting at <span itemprop="price" content="1500">$1500</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
 
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;">
+        <span class="delivery-time">
           Allocation: 40 Engineering Hours / 6 Days
         </span>
       </div>
     </div>
 
-    <a href="/linux-ai-services/hummingbot-installation-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+    <a href="/linux-ai-services/hummingbot-installation-services/" class="btn btn-primary btn-block">
       View Services
     </a>
   </div>
 </article>
 
 <!-- Vapi Voice AI Platform Implementation Support -->
-<article class="training-card" data-reveal data-delay="100" style="background: #0024ed;" itemscope itemtype="https://schema.org/Service">
+<article class="training-card" data-reveal data-delay="100" itemscope itemtype="https://schema.org/Service">
   <meta itemprop="serviceType" content="Vapi Voice AI Platform Implementation Support">
   
   
@@ -672,42 +777,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       loading="lazy" 
       decoding="async" 
       src="/assets/images/vapilogo.png" 
-      alt="Vapi Voice AI Agent Development and Telephony Platform Infrastructure Deployment">
+      alt="Vapi logo">
   </div>
 
-  <div class="training-body" style="color: #fff;">
+  <div class="training-body">
     
-    <h3 class="training-title" style="color: #fff;">
+    <h3 class="training-title">
       <a href="/linux-ai-services/vapi-platform-services/" class="service-link" itemprop="url">
         <span itemprop="name">Vapi Voice AI Platform Support</span>
       </a>
     </h3>
     
-    <!-- HIGH-DENSITY DECOUPLED DESCRIPTION (Focus: Architectural engineering and interactive audio pipelines) -->
-    <p class="training-desc" style="color: #fff; font-size: 0.9rem; line-height: 1.4; margin-bottom: 12px;" itemprop="description">
+    <p class="training-desc" itemprop="description">
       Advanced LLM telephony integration engineering. Prompt system parameter structuring, ultra-low latency audio streaming optimization, secure webhook routing, SIP trunk configuration, and real-time backend pipeline troubleshooting.
     </p>
     
-    <!-- HIGH-DENSITY TECH PRODUCT STACK BULLETS (Focus: Specific functional capabilities with zero description overlap) -->
-    <ul class="service-features-list" style="font-size: 0.85rem; color: #fff; margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
-      <li style="margin-bottom: 4px;">Inbound &amp; Outbound Smart Telephony Architecture</li>
-      <li style="margin-bottom: 4px;">Natural Language Understanding (NLU) Response Flows</li>
-      <li style="margin-bottom: 4px;">Enterprise CRM Systems &amp; REST Endpoint Webhooks</li>
+    <p class="training-features-label"><strong>Service Features:</strong></p>
+    <ul class="service-features-list">
+      <li>Inbound &amp; Outbound Smart Telephony Architecture</li>
+      <li>Natural Language Understanding (NLU) Response Flows</li>
+      <li>Enterprise CRM Systems &amp; REST Endpoint Webhooks</li>
       <li>Automated Appointment Scheduling &amp; Helpdesk Key SLAs</li>
     </ul>
   
-    <!-- VALIDATED TRANS-SCHEMA ARCHITECTURE (Fully resolved delivery lead time value nodes) -->
-    <div class="training-meta" style="margin-bottom: 16px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <div class="price-container">
-        <span class="price-label" style="display: block; font-size: 0.75rem; opacity: 0.8; text-transform: uppercase;">Service Investment</span>
-        <strong class="training-price" style="color: #fff; font-size: 1.25rem;">
-          Starting at $<span itemprop="price">600</span>
+        <span class="price-label">Service Investment</span>
+        <strong class="training-price">
+          Starting at <span itemprop="price" content="600">$600</span>
         </strong>
         <meta itemprop="priceCurrency" content="USD">
         <meta itemprop="priceValidUntil" content="2027-12-31">
         <meta itemprop="availability" content="https://schema.org/InStock">
         
-        <span class="delivery-time" style="display: block; font-size: 0.8rem; opacity: 0.9;" itemprop="deliveryLeadTime" itemscope itemtype="https://schema.org/QuantitativeValue">
+        <span class="delivery-time" itemprop="deliveryLeadTime" itemscope itemtype="https://schema.org/QuantitativeValue">
           Allocation: 30 Engineering Hours / 5 Days
           <meta itemprop="value" content="5">
           <meta itemprop="unitCode" content="DAY">
@@ -715,8 +818,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
     
-    <!-- Unified primary conversion target aligned with site navigation map -->
-    <a href="/linux-ai-services/vapi-platform-services/" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+    <a href="/linux-ai-services/vapi-platform-services/" class="btn btn-primary btn-block">
       View Services
     </a>
   </div>
