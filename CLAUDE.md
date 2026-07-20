@@ -178,6 +178,28 @@ Yes. Linux & IT Support Services are available directly via Upwork, Freelancer, 
 
 ---
 
+## 🖥 Server & Deployment Notes
+
+**Stack:** CWP Control Web Panel · Apache 2.4 · Varnish Cache · static HTML/CSS. Apache workers run as the `www-data` user.
+
+### `.htaccess` / `robots.txt` file permissions (403 Forbidden fix)
+
+If the whole site suddenly returns **`Forbidden — Server unable to read htaccess file, denying access to be safe`**, it is a *file-permission* problem, not a config-syntax problem. The deploy process sometimes writes `.htaccess` (and `robots.txt`) as mode `600` (root-only), which `www-data` cannot read, so Apache refuses to serve anything.
+
+Fix — restore standard web-readable permissions and restart Apache:
+
+```bash
+chmod 644 /var/www/html/.htaccess /var/www/html/robots.txt
+apache2ctl configtest      # confirm "Syntax OK" before restarting
+systemctl restart apache2
+```
+
+Verify with `curl -s -o /dev/null -w "%{http_code}\n" http://localhost/` (expect `200`).
+
+> Note: git does not reliably track full `600`/`644` file modes, so this can recur after a re-deploy or whenever a tool rewrites these files. Re-run the `chmod` above if it does.
+
+---
+
 ## 🤝 Contributing
 
 - **Update requests:** open a [pull request](https://github.com/SchoolOfFreelancing/BackOffice/pulls) with a step-by-step description to reproduce any training session.
