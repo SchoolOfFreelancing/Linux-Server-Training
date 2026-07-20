@@ -161,13 +161,29 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
     # Only enable "preload" submission once every subdomain is HTTPS-ready.
     Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
 
-    # ── ADDED: Content-Security-Policy in REPORT-ONLY mode.
-    # This does NOT block anything yet — browsers only log violations to the
-    # console. Watch the console across the site, confirm zero legitimate
-    # violations, then rename the header to "Content-Security-Policy" (drop
-    # "-Report-Only") to enforce. 'unsafe-inline' is required because the site
-    # uses inline <script>, inline styles, and inline event handlers.
+    # ── ADDED: Content-Security-Policy ──────────────────────────────────
+    # The SAME policy is written twice below: once in REPORT-ONLY mode
+    # (currently ACTIVE — logs violations, blocks nothing) and once in
+    # ENFORCING mode (currently COMMENTED OUT / prepped).
+    #
+    # 'unsafe-inline' is required because the site uses inline <script>,
+    # inline styles, and inline event handlers.
+    #
+    # HOW TO GO LIVE (do this only AFTER verifying a clean console):
+    #   1. Open the live site (home, a training page, a service page, a
+    #      location page, the testimonials page, contact) and watch the
+    #      browser DevTools Console for "[Report Only]" CSP violations.
+    #   2. If any LEGITIMATE resource is flagged, add its origin to BOTH
+    #      lines below (keep them identical).
+    #   3. When the console is clean: comment out the Report-Only line and
+    #      uncomment the enforcing line (swap the leading '#'), then Rebuild
+    #      /restart Apache. Roll back instantly by swapping them back.
+    #
+    # ACTIVE — report-only (safe, logs only):
     Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://app.secureprivacy.ai; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://i.ytimg.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googleapis.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com https://app.secureprivacy.ai https://places.googleapis.com https://maps.googleapis.com; frame-src https://www.youtube.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    #
+    # PREPPED — enforcing (uncomment this line, comment the one above, to go live):
+    # Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://app.secureprivacy.ai; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://i.ytimg.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googleapis.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com https://app.secureprivacy.ai https://places.googleapis.com https://maps.googleapis.com; frame-src https://www.youtube.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
 
     # ── ADDED: Tell ALL crawlers to index and follow ──
     # Applies to every page sitewide via HTTP header.
