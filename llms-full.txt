@@ -88,6 +88,7 @@ All locations are served remotely/online, billed in USD, with live instructor-le
 - [Register](https://www.schooloffreelancing.com/register/) — how to enroll or book a support engagement
 - [Testimonials](https://www.schooloffreelancing.com/resource-center/testimonials/)
 - [FAQs](https://www.schooloffreelancing.com/resource-center/faqs/)
+- [Intro Video](https://www.schooloffreelancing.com/resource-center/intro-video/) — Video introduction to School of Freelancing's training and support offerings
 
 ## Legal
 
