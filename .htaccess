@@ -158,8 +158,14 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
 
     # ── ADDED: HSTS — force HTTPS for 2 years on this host + subdomains.
     # Safe here because the site already 301-redirects all HTTP to HTTPS.
-    # Only enable "preload" submission once every subdomain is HTTPS-ready.
-    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+    # WARNING: "preload" is a hard commitment — EVERY subdomain must be HTTPS-only.
+    # The header directive is reversible (remove it); actual enforcement only
+    # becomes permanent once the domain is submitted at https://hstspreload.org
+    # (that submission is a separate manual step and is slow to undo).
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+    # ── ADDED: COOP — isolate the top-level window from cross-origin popups.
+    Header always set Cross-Origin-Opener-Policy "same-origin"
 
     # ── ADDED: Content-Security-Policy ──────────────────────────────────
     # The SAME policy is written twice below: once in REPORT-ONLY mode
@@ -179,11 +185,11 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
     #      uncomment the enforcing line (swap the leading '#'), then Rebuild
     #      /restart Apache. Roll back instantly by swapping them back.
     #
-    # ACTIVE — report-only (safe, logs only):
-    Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://app.secureprivacy.ai; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://i.ytimg.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googleapis.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com https://app.secureprivacy.ai https://places.googleapis.com https://maps.googleapis.com; frame-src https://www.youtube.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    # PREPPED — report-only (roll back to this: uncomment this line, comment the enforcing one below):
+    # Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://app.secureprivacy.ai https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googleapis.com https://*.clarity.ms; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com https://app.secureprivacy.ai https://places.googleapis.com https://maps.googleapis.com https://*.clarity.ms https://c.bing.com; frame-src https://www.youtube.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
     #
-    # PREPPED — enforcing (uncomment this line, comment the one above, to go live):
-    # Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://app.secureprivacy.ai; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://i.ytimg.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googleapis.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com https://app.secureprivacy.ai https://places.googleapis.com https://maps.googleapis.com; frame-src https://www.youtube.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    # ACTIVE — enforcing (live since 2026-07-20; roll back by swapping with the report-only line above):
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://app.secureprivacy.ai https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googleapis.com https://*.clarity.ms; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com https://app.secureprivacy.ai https://places.googleapis.com https://maps.googleapis.com https://*.clarity.ms https://c.bing.com; frame-src https://www.youtube.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
 
     # ── ADDED: Tell ALL crawlers to index and follow ──
     # Applies to every page sitewide via HTTP header.
