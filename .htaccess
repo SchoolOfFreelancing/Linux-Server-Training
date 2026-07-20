@@ -6,6 +6,17 @@ DirectoryIndex index.html
 RewriteEngine On
 
 ##################################################
+# Block direct access to .git (or any dotfile dir)
+# ── ADDED ──────────────────────────────────────
+# .git lives in the web root. FilesMatch below only
+# matches request filenames, not directory segments,
+# so /.git/config etc. was previously reachable over
+# HTTP. This blocks any path containing a /.git
+# segment, on every host including localhost.
+##################################################
+RewriteRule (^|/)\.git(/|$) - [F,L]
+
+##################################################
 # Localhost only (no HTTPS/WWW force)
 ##################################################
 RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1)$ [NC]
@@ -23,10 +34,6 @@ RewriteRule ^(.+)/index\.html$ /$1/ [R=301,L]
 
 ##################################################
 # Redirect old flat HTML pages to current folders
-# (absolute target: guarantees a single-hop 301 even
-# when the inbound request is also non-canonical
-# host/scheme, instead of chaining through the
-# HTTPS+www rule above on a second request)
 ##################################################
 RewriteRule ^training\.html$ https://www.schooloffreelancing.com/freelancing-training/ [R=301,L]
 RewriteRule ^enrollment\.html$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
@@ -42,8 +49,7 @@ RewriteRule ^terms\.html$ https://www.schooloffreelancing.com/legal/terms-and-co
 RewriteRule ^contact\.html$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
 
 ##################################################
-# Redirect deleted section folders to their new
-# equivalents from the 2026-07 site restructure
+# Redirect deleted section folders
 ##################################################
 RewriteRule ^training/enroll(/.*)?$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
 RewriteRule ^training/oldenroll(/.*)?$ https://www.schooloffreelancing.com/contact-us/ [R=301,L]
@@ -68,12 +74,7 @@ RewriteRule ^location/?$ https://www.schooloffreelancing.com/locations/ [R=301,L
 RewriteRule ^location/(.+)$ https://www.schooloffreelancing.com/locations/$1 [R=301,L]
 
 ##################################################
-# Force HTTPS + www (canonical host: https://www.schooloffreelancing.com)
-# Placed after the legacy-path rules above so an old
-# URL requested over http/non-www resolves in a single
-# 301 hop straight to its new canonical path, instead of
-# first bouncing to the old path on https+www and only
-# then hitting the legacy-path rule on a second request.
+# Force HTTPS + www (canonical)
 ##################################################
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
@@ -92,23 +93,23 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
 ##################################################
 <IfModule mod_expires.c>
     ExpiresActive On
-    ExpiresByType text/html "access plus 0 seconds"
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType text/javascript "access plus 30 days"
-    ExpiresByType application/javascript "access plus 1 year"
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year"
-    ExpiresByType font/woff "access plus 1 year"
-    ExpiresByType font/woff2 "access plus 1 year"
-    ExpiresByType application/font-woff2 "access plus 1 year"
-    ExpiresByType application/manifest+json "access plus 1 week"
-    ExpiresByType application/xml "access plus 1 day"
-    ExpiresByType text/plain "access plus 1 day"
+    # HTML = 0 seconds so every visit gets fresh content
+    ExpiresByType text/html                  "access plus 0 seconds"
+    ExpiresByType text/css                   "access plus 1 year"
+    ExpiresByType text/javascript            "access plus 30 days"
+    ExpiresByType application/javascript     "access plus 1 year"
+    ExpiresByType image/jpeg                 "access plus 1 year"
+    ExpiresByType image/png                  "access plus 1 year"
+    ExpiresByType image/gif                  "access plus 1 year"
+    ExpiresByType image/webp                 "access plus 1 year"
+    ExpiresByType image/svg+xml              "access plus 1 year"
+    ExpiresByType image/x-icon              "access plus 1 year"
+    ExpiresByType font/woff                  "access plus 1 year"
+    ExpiresByType font/woff2                 "access plus 1 year"
+    ExpiresByType application/font-woff2     "access plus 1 year"
+    ExpiresByType application/manifest+json  "access plus 1 week"
+    ExpiresByType application/xml            "access plus 1 day"
+    ExpiresByType text/plain                 "access plus 1 day"
 </IfModule>
 
 ##################################################
@@ -128,15 +129,74 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
 </IfModule>
 
 ##################################################
-# Security Headers
+# Security + SEO Headers
+# ── ADDED ──────────────────────────────────────
+# X-Robots-Tag: tells ALL bots (including LLM/AI
+# crawlers that read HTTP headers, not just HTML
+# meta tags) to index and follow every page.
+#
+# Cache-Control on HTML: "no-cache" does NOT mean
+# "don't cache" — it means "always revalidate with
+# the server before serving from cache". This makes
+# Varnish + browsers check for updated HTML on every
+# request, so your changes go live immediately
+# without needing SSH or a terminal to purge Varnish.
+#
+# ETag + Last-Modified: Apache sends these by default.
+# They let Googlebot do conditional GET requests —
+# if the file hasn't changed, Apache returns 304
+# (Not Modified) which saves crawl budget. If it HAS
+# changed, Apache returns the new file instantly.
 ##################################################
 <IfModule mod_headers.c>
+
+    # ── Existing security headers (unchanged) ──
     Header always set X-Frame-Options SAMEORIGIN
     Header always set X-Content-Type-Options nosniff
     Header always set Referrer-Policy strict-origin-when-cross-origin
     Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
-    
+
+    # ── ADDED: Tell ALL crawlers to index and follow ──
+    # Applies to every page sitewide via HTTP header.
+    # Covers bots that don't read <meta name="robots">.
+    Header always set X-Robots-Tag "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+
+    # ── ADDED: HTML pages — always revalidate (instant change detection) ──
+    # This replaces static assets' immutable rule for HTML only.
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+        Header set Pragma "no-cache"
+    </FilesMatch>
+
+    # ── ADDED: robots.txt and sitemap — always fresh ──
+    <FilesMatch "^(robots\.txt|sitemap.*\.xml)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+        Header set Pragma "no-cache"
+    </FilesMatch>
+
+    # ── Existing: static assets — long cache (unchanged) ──
     <FilesMatch "\.(css|js|jpe?g|png|webp|avif|svg|ico|woff2?)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
+
 </IfModule>
+
+##################################################
+# Block access to sensitive files
+# ── ADDED ──────────────────────────────────────
+# Prevents bots and scanners from reading config,
+# backup, or credential files accidentally left
+# in public_html. No SSH needed — works via Apache.
+##################################################
+<FilesMatch "(\.env|\.git|\.htpasswd|\.bak|\.sql|\.log|\.conf|\.sh|composer\.json|package\.json)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+##################################################
+# Custom Error Pages
+# ── ADDED ──────────────────────────────────────
+# Returns proper 404 instead of Apache default page.
+# Create /404.html in your public_html if not exists.
+##################################################
+ErrorDocument 404 /404.html
