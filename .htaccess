@@ -161,6 +161,14 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
     # Only enable "preload" submission once every subdomain is HTTPS-ready.
     Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
 
+    # ── ADDED: Content-Security-Policy in REPORT-ONLY mode.
+    # This does NOT block anything yet — browsers only log violations to the
+    # console. Watch the console across the site, confirm zero legitimate
+    # violations, then rename the header to "Content-Security-Policy" (drop
+    # "-Report-Only") to enforce. 'unsafe-inline' is required because the site
+    # uses inline <script>, inline styles, and inline event handlers.
+    Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://app.secureprivacy.ai; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://i.ytimg.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googleapis.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com https://app.secureprivacy.ai https://places.googleapis.com https://maps.googleapis.com; frame-src https://www.youtube.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+
     # ── ADDED: Tell ALL crawlers to index and follow ──
     # Applies to every page sitewide via HTTP header.
     # Covers bots that don't read <meta name="robots">.
