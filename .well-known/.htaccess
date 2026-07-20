@@ -1,0 +1,4 @@
+# Serve the RFC 9727 API catalog with its registered media type.
+<Files "api-catalog">
+    ForceType application/linkset+json
+</Files>
