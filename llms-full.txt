@@ -58,9 +58,28 @@
 
 ## Locations (https://www.schooloffreelancing.com/locations/)
 
-All locations are served remotely/online, billed in USD:
-Australia, Austria, Bangladesh, Belgium, Canada, Denmark, Finland, Germany, Iceland, Ireland, Israel, Liechtenstein, Luxembourg, Netherlands, Norway, Singapore, Sweden, Switzerland, United Kingdom, United States.
-Each has its own page at `https://www.schooloffreelancing.com/locations/{country-slug}/` (e.g. `/locations/us/`, `/locations/uk/`).
+All locations are served remotely/online, billed in USD, with live instructor-led sessions. Every country below has a dedicated page:
+
+- [United States Linux Training & Support](https://www.schooloffreelancing.com/locations/us/) — Online Linux freelancing training and remote Linux/IT support for the United States.
+- [United Kingdom Linux Training & Support](https://www.schooloffreelancing.com/locations/uk/) — Online Linux freelancing training and remote Linux/IT support for the United Kingdom.
+- [Canada Linux Training & Support](https://www.schooloffreelancing.com/locations/canada/) — Online Linux freelancing training and remote Linux/IT support for Canada.
+- [Australia Linux Training & Support](https://www.schooloffreelancing.com/locations/australia/) — Online Linux freelancing training and remote Linux/IT support for Australia.
+- [Germany Linux Training & Support](https://www.schooloffreelancing.com/locations/germany/) — Online Linux freelancing training and remote Linux/IT support for Germany.
+- [Netherlands Linux Training & Support](https://www.schooloffreelancing.com/locations/netherlands/) — Online Linux freelancing training and remote Linux/IT support for the Netherlands.
+- [Switzerland Linux Training & Support](https://www.schooloffreelancing.com/locations/switzerland/) — Online Linux freelancing training and remote Linux/IT support for Switzerland.
+- [Sweden Linux Training & Support](https://www.schooloffreelancing.com/locations/sweden/) — Online Linux freelancing training and remote Linux/IT support for Sweden.
+- [Norway Linux Training & Support](https://www.schooloffreelancing.com/locations/norway/) — Online Linux freelancing training and remote Linux/IT support for Norway.
+- [Denmark Linux Training & Support](https://www.schooloffreelancing.com/locations/denmark/) — Online Linux freelancing training and remote Linux/IT support for Denmark.
+- [Finland Linux Training & Support](https://www.schooloffreelancing.com/locations/finland/) — Online Linux freelancing training and remote Linux/IT support for Finland.
+- [Iceland Linux Training & Support](https://www.schooloffreelancing.com/locations/iceland/) — Online Linux freelancing training and remote Linux/IT support for Iceland.
+- [Ireland Linux Training & Support](https://www.schooloffreelancing.com/locations/ireland/) — Online Linux freelancing training and remote Linux/IT support for Ireland.
+- [Belgium Linux Training & Support](https://www.schooloffreelancing.com/locations/belgium/) — Online Linux freelancing training and remote Linux/IT support for Belgium.
+- [Austria Linux Training & Support](https://www.schooloffreelancing.com/locations/austria/) — Online Linux freelancing training and remote Linux/IT support for Austria.
+- [Luxembourg Linux Training & Support](https://www.schooloffreelancing.com/locations/luxembourg/) — Online Linux freelancing training and remote Linux/IT support for Luxembourg.
+- [Liechtenstein Linux Training & Support](https://www.schooloffreelancing.com/locations/liechtenstein/) — Online Linux freelancing training and remote Linux/IT support for Liechtenstein.
+- [Israel Linux Training & Support](https://www.schooloffreelancing.com/locations/israel/) — Online Linux freelancing training and remote Linux/IT support for Israel.
+- [Singapore Linux Training & Support](https://www.schooloffreelancing.com/locations/singapore/) — Online Linux freelancing training and remote Linux/IT support for Singapore.
+- [Bangladesh Linux Training & Support](https://www.schooloffreelancing.com/locations/bangladesh/) — Online Linux freelancing training and remote Linux/IT support for Bangladesh, School of Freelancing's home country.
 
 ## Company & Contact
 
