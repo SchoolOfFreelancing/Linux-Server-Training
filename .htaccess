@@ -156,6 +156,11 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
     Header always set Referrer-Policy strict-origin-when-cross-origin
     Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 
+    # ── ADDED: HSTS — force HTTPS for 2 years on this host + subdomains.
+    # Safe here because the site already 301-redirects all HTTP to HTTPS.
+    # Only enable "preload" submission once every subdomain is HTTPS-ready.
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+
     # ── ADDED: Tell ALL crawlers to index and follow ──
     # Applies to every page sitewide via HTTP header.
     # Covers bots that don't read <meta name="robots">.
@@ -189,8 +194,9 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
 # in public_html. No SSH needed — works via Apache.
 ##################################################
 <FilesMatch "(\.env|\.git|\.htpasswd|\.bak|\.sql|\.log|\.conf|\.sh|composer\.json|package\.json)$">
-    Order allow,deny
-    Deny from all
+    # Apache 2.4 syntax. The old "Order allow,deny / Deny from all" only works
+    # if mod_access_compat is loaded and silently fails otherwise.
+    Require all denied
 </FilesMatch>
 
 ##################################################
