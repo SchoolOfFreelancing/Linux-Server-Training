@@ -198,6 +198,35 @@ Verify with `curl -s -o /dev/null -w "%{http_code}\n" http://localhost/` (expect
 
 > Note: git does not reliably track full `600`/`644` file modes, so this can recur after a re-deploy or whenever a tool rewrites these files. Re-run the `chmod` above if it does.
 
+### Content-Security-Policy: going from report-only to enforcing
+
+`.htaccess` ships the **same CSP twice** in the `mod_headers` block: an **active** `Content-Security-Policy-Report-Only` line (logs violations, blocks nothing) and a **commented, prepped** enforcing `Content-Security-Policy` line with the identical policy. `'unsafe-inline'` is required because the site uses inline `<script>`, inline styles, and inline event handlers.
+
+To enforce (do this **only after** confirming a clean console):
+
+1. Open the live site across page types — home, a training page, a service page, a location page, testimonials, contact — with browser DevTools open, and watch for `[Report Only]` CSP violations.
+2. If a **legitimate** resource is flagged, add its origin to **both** CSP lines (keep them identical), then re-check.
+3. When clean: comment the `Content-Security-Policy-Report-Only` line, uncomment the `Content-Security-Policy` line (swap the leading `#`), then rebuild/restart Apache.
+4. Verify: `curl -sI https://www.schooloffreelancing.com/ | grep -i content-security-policy` should show a bare `Content-Security-Policy:` (no `-Report-Only`).
+5. Roll back instantly by swapping the `#` back and reloading.
+
+### Block `.git` (and VCS metadata) at the vhost level
+
+`.htaccess` blocks `/.git` via a single `mod_rewrite` rule (primary defense) plus a `Require all denied` `FilesMatch`. For a rule that **doesn't depend on mod_rewrite**, add this at the **vhost** level (`DirectoryMatch`/`FilesMatch` in this form are **not valid inside `.htaccess`**):
+
+```apache
+<DirectoryMatch "/\.(git|svn|hg|bzr)(/|$)">
+    Require all denied
+</DirectoryMatch>
+<FilesMatch "(\.(env|git|gitignore|gitattributes|htpasswd|bak|sql|log|conf|sh|ini|lock)|~)$">
+    Require all denied
+</FilesMatch>
+```
+
+In **CWP**, per-domain vhost files are regenerated on rebuild, so add this via a **rebuild-safe** path: either the per-domain *Custom config / vHost Include* box (WebServer Settings → domain config), or the **Apache vHost Templates** editor (edit the `ssl` + `default` templates, inside `<VirtualHost>`), then **Rebuild Apache**. Verify: `curl -s -o /dev/null -w "%{http_code}\n" https://www.schooloffreelancing.com/.git/config` should return **403**.
+
+> Best long-term fix: don't keep a live `.git/` checkout in the web root at all — deploy via `git archive`/rsync/CI so the document root contains no VCS metadata.
+
 ---
 
 ## 🤝 Contributing
