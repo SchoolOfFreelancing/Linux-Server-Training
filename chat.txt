@@ -1,0 +1,91 @@
+ ▐▛███▜▌   Claude Code v2.1.216
+▝▜█████▛▘  Opus 4.8 · API Usage Billing
+  ▘▘ ▝▝    /var/www/html
+
+
+❯ generate again a ready to run script file at /home/allah/Documents            
+
+● I want to make sure I generate the right script. Let me look at what's on this
+  branch to understand the context.
+
+  Read 2 files, listed 1 directory, ran 1 shell command (ctrl+o to expand)
+
+● This branch has two natural "script" candidates, and "again" is ambiguous to
+  me. Let me confirm which one you want before I write it.
+
+● User answered Claude's questions:
+  ⎿  · Which script should I generate at /home/allah/Documents? → Both scripts
+
+● Both it is. First, the one-line fix in the existing DNS-AID script (the broken
+  token check):
+
+● Update(/home/allah/Documents/publish-dns-aid.sh)
+  ⎿  Added 1 line, removed 1 line
+      73  # -------------------------------------------------------------
+          ---------------
+      74  # Create records via Cloudflare API
+      75  # -------------------------------------------------------------
+          ---------------
+      76 -: "${:?Set CF_API_TOKEN first:  export CF_API_TOKEN='<Zone:DNS:
+         -Edit token>'}"                                                 
+      76 +: "${CF_API_TOKEN:?Set CF_API_TOKEN first:  export CF_API_TOKEN
+         +='<Zone:DNS:Edit token>'}"                                     
+      77  AUTH=(-H "Authorization: Bearer ${CF_API_TOKEN}" -H "Content-Ty
+          pe: application/json")
+      78  
+      79  echo "== Resolving zone id for ${ZONE} =="
+
+● Now the edge verification script:
+
+● Write(/home/allah/Documents/verify-agent-discovery.sh)
+  ⎿  Wrote 135 lines to
+     ../../../home/allah/Documents/verify-agent-discovery.sh
+       1 #!/usr/bin/env bash
+       2 #
+       4 # -------------------------
+       5 # Post-deploy checks for the agent-discovery layer on schooloffr
+         eelancing.com.
+         rs what Apache
+       7 # serves at origin — the edge is known to strip the Link header,
+          so this is the
+       9 #
+      10 # Checks (against the live https:// site):
+     … +164 lines (ctrl+o to expand)
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Both scripts are ready to run at /home/allah/Documents. Both pass bash -n and
+  are executable.
+
+  1. publish-dns-aid.sh (fixed) — the token check on line 76 was ${:?...} with
+  no variable name, so it never actually validated CF_API_TOKEN. Now
+  ${CF_API_TOKEN:?...} — the script exits with a clear message if the token
+  isn't exported. Everything else unchanged.
+
+  export CF_API_TOKEN='<Zone:DNS:Edit token>'
+  ./publish-dns-aid.sh              # create records + DNSSEC status
+  ./publish-dns-aid.sh --verify     # DNS-only, no token needed
+
+  2. verify-agent-discovery.sh (new) — runs the AGENT-DISCOVERY.md post-deploy
+  checks against the live edge and exits non-zero if any fail:
+  - Link header on an HTML page carries service-doc / describedby / api-catalog
+  - /.well-known/api-catalog returns 200 + application/linkset+json
+  - Accept: text/markdown on /about-us/ returns Markdown with Vary: Accept
+  - Link header is absent on a static asset
+
+  ./verify-agent-discovery.sh                    # live site
+  ./verify-agent-discovery.sh https://1.2.3.4    # or a specific base URL
+  HOST_HEADER=www.schooloffreelancing.com ./verify-agent-discovery.sh
+  https://127.0.0.1  # origin, keep vhost
+
+  Note that per your edge-strips-headers memory, checks 1 and 3 are the ones
+  expected to currently fail at the production edge (nginx+Varnish) even though
+  the Apache origin serves them correctly — this script is exactly the tool to
+  confirm when that edge fix lands.
+
+  One thing I couldn't verify: the static-asset probe (check 4) guesses
+  /assets/css/style.css, /assets/style.css, then /robots.txt. If none return 200
+  it skips with a note rather than failing. If you tell me the real CSS path
+  I'll pin it.
+
+✻ Cooked for 1m 37s
