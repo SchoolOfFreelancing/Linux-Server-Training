@@ -1,0 +1,17 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.schooloffreelancing.com/",
+      "service-doc": [
+        { "href": "https://www.schooloffreelancing.com/llms.txt", "type": "text/plain", "title": "LLM-friendly site overview" },
+        { "href": "https://www.schooloffreelancing.com/llms-full.txt", "type": "text/plain", "title": "Full LLM-friendly site content" }
+      ],
+      "describedby": [
+        { "href": "https://www.schooloffreelancing.com/sitemap.xml", "type": "application/xml", "title": "XML sitemap" }
+      ],
+      "status": [
+        { "href": "https://www.schooloffreelancing.com/", "type": "text/html", "title": "Site homepage (health/liveness)" }
+      ]
+    }
+  ]
+}

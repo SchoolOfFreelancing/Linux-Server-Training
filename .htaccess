@@ -81,6 +81,22 @@ RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^ https://www.schooloffreelancing.com%{REQUEST_URI} [L,R=301]
 
 ##################################################
+# Markdown for Agents (content negotiation)
+# When a client sends "Accept: text/markdown" and a pre-rendered .md variant
+# exists for the page, serve that instead of the HTML. Browsers (which send
+# text/html) are unaffected. Responses carry Vary: Accept (see mod_headers)
+# so caches store the HTML and Markdown variants separately.
+##################################################
+# Root: "/" -> /index.md
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{DOCUMENT_ROOT}/index.md -f
+RewriteRule ^/?$ index.md [L]
+# Folder URLs: "/about-us/" -> /about-us/index.md
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{DOCUMENT_ROOT}/$1/index.md -f
+RewriteRule ^(.+?)/?$ $1/index.md [L]
+
+##################################################
 # Internally load index.html for clean folder URLs
 ##################################################
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -150,6 +166,19 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
 ##################################################
 <IfModule mod_headers.c>
 
+    # ── ADDED: RFC 8288 Link headers — advertise agent-discovery resources.
+    # Set UNCONDITIONALLY (like the security headers) so it reliably reaches the
+    # final response, including pretty DirectoryIndex URLs ("/", "/about-us/").
+    # Conditional forms (env=/FilesMatch) get dropped on the DirectoryIndex
+    # sub-request, so they never appeared on real pages. Static assets strip it
+    # back off via /assets/.htaccess. rel values are IANA-registered:
+    # service-doc (RFC 8631), describedby, api-catalog (RFC 9727).
+    Header always set Link "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", </llms-full.txt>; rel=\"describedby\"; type=\"text/plain\"; title=\"Full LLM-friendly site content\", </.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\""
+
+    # ── ADDED: Vary: Accept — HTML pages have a text/markdown variant negotiated
+    # on Accept. merge (not set) preserves the edge's Vary: Accept-Encoding.
+    Header always merge Vary "Accept"
+
     # ── Existing security headers (unchanged) ──
     Header always set X-Frame-Options SAMEORIGIN
     Header always set X-Content-Type-Options nosniff
@@ -198,9 +227,16 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
 
     # ── ADDED: HTML pages — always revalidate (instant change detection) ──
     # This replaces static assets' immutable rule for HTML only.
+    # (Vary: Accept is set unconditionally above so it survives DirectoryIndex.)
     <FilesMatch "\.(html|htm)$">
         Header set Cache-Control "no-cache, must-revalidate"
         Header set Pragma "no-cache"
+    </FilesMatch>
+
+    # ── ADDED: Markdown-for-Agents variants (.md) ──
+    <FilesMatch "\.md$">
+        Header set Content-Type "text/markdown; charset=utf-8"
+        Header set Cache-Control "no-cache, must-revalidate"
     </FilesMatch>
 
     # ── ADDED: robots.txt and sitemap — always fresh ──
