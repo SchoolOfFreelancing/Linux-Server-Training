@@ -6,15 +6,14 @@ DirectoryIndex index.html
 RewriteEngine On
 
 ##################################################
-# Block direct access to .git (or any dotfile dir)
-# ── ADDED ──────────────────────────────────────
-# .git lives in the web root. FilesMatch below only
-# matches request filenames, not directory segments,
-# so /.git/config etc. was previously reachable over
-# HTTP. This blocks any path containing a /.git
-# segment, on every host including localhost.
+# Block direct access to development metadata
 ##################################################
 RewriteRule (^|/)\.git(/|$) - [F,L]
+RewriteRule (^|/)\.github(/|$) - [F,L]
+RewriteRule (^|/)\.claude(/|$) - [F,L]
+RewriteRule (^|/)\.gitignore$ - [F,L]
+RewriteRule (^|/)CLAUDE\.md$ - [F,L]
+RewriteRule (^|/)AGENT-DISCOVERY\.md$ - [F,L]
 
 ##################################################
 # Localhost only (no HTTPS/WWW force)
