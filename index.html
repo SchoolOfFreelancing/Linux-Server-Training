@@ -169,17 +169,8 @@
 }
 </script>
 
-<!-- Consent (Secure Privacy) + Google Tag Manager.
-     These were previously loaded render-blocking in <head>: the consent
-     script alone cost ~1.6s of render-blocking time and ~1.1s of main-thread
-     work on throttled mobile, dominating the LCP (6.1s) and TBT (1.95s) that
-     tanked the mobile PageSpeed score. They are now loaded after first user
-     interaction (or a short fallback timeout for non-interacting visits and
-     bots), keeping them off the critical rendering path. The consent script
-     still loads FIRST and GTM only after it (via onload), preserving the
-     original order so Google Consent Mode gating is unchanged. -->
+<!-- Consent (Secure Privacy) - loaded after first user interaction -->
 <script>
-  window.dataLayer = window.dataLayer || [];
   (function () {
     var loaded = false;
     function loadTags() {
@@ -188,17 +179,8 @@
       ['scroll','mousemove','keydown','touchstart','click'].forEach(function (evt) {
         window.removeEventListener(evt, loadTags, { passive: true });
       });
-      // 1) Secure Privacy consent script first (sets consent-mode defaults)
       var cs = document.createElement('script');
       cs.src = 'https://app.secureprivacy.ai/script/6a5c2c6d8f68c24d419372cd.js';
-      cs.onload = cs.onerror = function () {
-        // 2) then Google Tag Manager
-        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var g = document.createElement('script');
-        g.async = true;
-        g.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-K52NJCLQ';
-        document.head.appendChild(g);
-      };
       document.head.appendChild(cs);
     }
     ['scroll','mousemove','keydown','touchstart','click'].forEach(function (evt) {
@@ -389,10 +371,6 @@
 </head>
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K52NJCLQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
@@ -427,7 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-stats" data-reveal data-delay="250">
         <div class="stat-item">
           <span class="stat-number">5.0★</span>
-          <span class="stat-label">36 Reviews</span>
+          <span class="stat-label">Reviews</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">2015</span>
@@ -651,7 +629,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="section-header" data-reveal>
       <h2 class="section-title" id="testimonials-heading"><span>What Our Students Say</span></h2>
-      <p class="section-subtitle"><span>5.0★ Rating &middot; 36 Verified Google Reviews</span></p>
+      <p class="section-subtitle"><span>⭐⭐⭐⭐⭐ 5.0★ Verified Rating on Google Reviews</span></p>
     </div>
     <div class="testimonials-grid">
 
@@ -778,20 +756,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="training-body">
     <h3 class="training-title">
       <a href="/linux-ai-services/hummingbot-installation-services/" class="service-link" itemprop="url">
-        <span itemprop="name">Hummingbot Algorithmic Trading Support</span>
+        <span itemprop="name">Hummingbot Setup Support</span>
       </a>
     </h3>
 
     <p class="training-desc" itemprop="description">
-      Enterprise Linux systems administration for decentralized market making networks. Continuous execution server engineering, data transfer latency minimization tuning, cryptographic security auditing, external gateway proxy scripting, and automated node cluster orchestration.
+Can't get Hummingbot running? Whether you're installing it for the first time or fixing setup, dependency, API, or configuration issues, get expert help to get your trading bot running reliably.
     </p>
 
     <p class="training-features-label"><strong>Service Features:</strong></p>
     <ul class="service-features-list">
-      <li>Exchange REST/WebSocket APIs &amp; Key Integration</li>
-      <li>Cloud AI API Inference &amp; Strategy Fine-Tuning</li>
-      <li>Model Context Protocol (MCP) &amp; Custom Skills Mapping</li>
-      <li>Tailscale Mesh VPN &amp; Remote Node Administration</li>
+      <li>Installing Hummingbot API, Condor, MCP, Client &amp; Gateway using Tailscale</li>
+      <li>Setup Telegram Bot, Connect Exchange API &amp; Create Traiding Strategy</li>
+      <li>Setup Bots, Arbitrage Executors, Agents &amp; Routines</li>
+      <li>Traiding, Monitoring &amp; Post-installation support</li>
     </ul>
   
     <div class="training-meta" itemprop="offers" itemscope itemtype="https://schema.org/Offer">

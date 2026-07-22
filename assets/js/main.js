@@ -417,7 +417,7 @@ function initCookieNotice() {
     font-size:0.82rem; color:#8fa3ff; flex-wrap:wrap;
   `;
   notice.innerHTML = `
-    <span>🍪 We use cookies to enhance your user experience. By continuing, you agree to our <a href="/legal/privacy-policy/" style="color:#ffffff;text-decoration:underline">Cookie Policy</a>.</span>
+    <span>We use cookies to enhance your user experience. By continuing, you agree to our <a href="/legal/privacy-policy/" style="color:#ffffff;text-decoration:underline">Cookie Policy</a>.</span>
     <button onclick="document.getElementById('cookie-notice').remove();localStorage.setItem('cookie-ok','1')"
       style="background:#ffffff;color:#0024ed;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:0.8rem;font-weight:600;flex-shrink:0">
       Accept
