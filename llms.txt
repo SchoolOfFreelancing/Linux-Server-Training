@@ -1,6 +1,18 @@
-# School of Freelancing
+# School of Freelancing — Linux & AI Training & Support Services
 
-> School of Freelancing is a Linux/tech freelancing training and remote IT service business based in Bangladesh, delivering everything online worldwide. It runs hands-on, instructor-led training programs (Linux, DevOps, AI platforms, VoIP, SMS APIs) that prepare students to earn on freelance marketplaces (Guru, Freelancer, Upwork, Fiverr), and offers paid remote technical support in the same technology areas for businesses.
+**School of Freelancing is a Bangladesh-based, 100% online Linux and AI freelancing training and IT support provider serving clients worldwide since 2015.**
+
+## Overview
+
+School of Freelancing delivers hands-on, instructor-led training programs and direct remote technical support in:
+- Linux system administration and DevOps
+- AI platforms (Hermes Agent, Odysseus AI, LocalAI, Claude)
+- Crypto trading bot infrastructure (Hummingbot)
+- VoIP and SMS systems (FusionPBX, Telnyx, Twilio, VAPI)
+- Cloud platforms (DigitalOcean, AWS, Google Cloud)
+- CI/CD and automation (GitHub, GitLab, OpenClaw)
+
+Students complete 5-day bootcamps with **live, production-deployed systems** (not certificates), then launch freelancing careers or consulting businesses on Upwork, Freelancer, Guru, and other marketplaces.
 
 ## Core Pages
 
