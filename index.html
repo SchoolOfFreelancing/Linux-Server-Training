@@ -990,15 +990,22 @@ Can't get Hummingbot running? Whether you're installing it for the first time or
   // this must not clobber a native or scanner-injected implementation.
   if (!window.navigator) return;
   if (!navigator.modelContext) {
+    var registry = new Map();
     navigator.modelContext = {
-      _tools: new Map(),
       registerTool: function (tool) {
-        this._tools.set(tool.name, tool);
-        var registry = this._tools;
+        registry.set(tool.name, tool);
         return {
-          unregister: function () { registry.delete(tool.name); }
+          unregister: function () { registry.delete(tool.name); },
+          remove: function () { registry.delete(tool.name); }
         };
-      }
+      },
+      provideContext: function (context) {
+        (context && context.tools || []).forEach(function (tool) {
+          registry.set(tool.name, tool);
+        });
+      },
+      listTools: function () { return Array.from(registry.values()); },
+      get tools () { return Array.from(registry.values()); }
     };
   }
   if (typeof navigator.modelContext.registerTool !== 'function') return;

@@ -1,4 +1,4 @@
-# Agent Authentication & Registration
+# auth.md — Agent Authentication & Registration
 
 This document describes how to authenticate and register as an agent with School of Freelancing APIs.
 
