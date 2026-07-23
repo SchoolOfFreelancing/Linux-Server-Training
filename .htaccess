@@ -97,6 +97,18 @@ RewriteCond %{DOCUMENT_ROOT}/$1/index.md -f
 RewriteRule ^(.+?)/?$ $1/index.md [L]
 
 ##################################################
+# Well-known endpoints without extensions
+##################################################
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^\.well-known/openid-configuration$ .well-known/openid-configuration.json [QSA,L]
+RewriteRule ^\.well-known/oauth-authorization-server$ .well-known/oauth-authorization-server.json [QSA,L]
+RewriteRule ^\.well-known/mcp$ .well-known/mcp.json [QSA,L]
+RewriteRule ^\.well-known/webmcp$ .well-known/webmcp.json [QSA,L]
+RewriteRule ^\.well-known/skills$ .well-known/skills.json [QSA,L]
+RewriteRule ^\.well-known/agents$ .well-known/agents.json [QSA,L]
+
+##################################################
 # Internally load index.html for clean folder URLs
 ##################################################
 RewriteCond %{REQUEST_FILENAME} !-f
