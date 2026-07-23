@@ -329,35 +329,6 @@ function initSmoothScroll() {
   });
 }
 
-/* ---------- Back to Top ---------- */
-function initBackToTop() {
-  const btn = document.createElement('button');
-  btn.id = 'back-top';
-  btn.innerHTML = '↑';
-  btn.setAttribute('aria-label', 'Back to top');
-  btn.style.cssText = `
-    position:fixed; bottom:28px; right:28px; width:44px; height:44px;
-    background:#ffffff; color:#0024ed; border:none; border-radius:4px;
-    font-size:1.2rem; cursor:pointer; z-index:999;
-    box-shadow:0 0 15px rgba(255,255,255,0.4);
-    transition:all 0.3s ease; opacity:0; transform:translateY(10px);
-    font-family:monospace; font-weight:bold;
-  `;
-  document.body.appendChild(btn);
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      btn.style.opacity = '1';
-      btn.style.transform = 'translateY(0)';
-    } else {
-      btn.style.opacity = '0';
-      btn.style.transform = 'translateY(10px)';
-    }
-  });
-
-  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-}
-
 /* ---------- Blog Search ---------- */
 function initBlogSearch() {
   const input = document.getElementById('blog-search');
@@ -403,28 +374,6 @@ function initCategoryFilter() {
   });
 }
 
-/* ---------- Cookie Notice ---------- */
-function initCookieNotice() {
-  if (localStorage.getItem('cookie-ok')) return;
-
-  const notice = document.createElement('div');
-  notice.id = 'cookie-notice';
-  notice.style.cssText = `
-    position:fixed; bottom:0; left:0; width:100%; background:#000a3d;
-    border-top:1px solid rgba(0,36,237,0.25); padding:16px 24px;
-    display:flex; align-items:center; justify-content:space-between;
-    gap:16px; z-index:1000; font-family:'Share Tech Mono',monospace;
-    font-size:0.82rem; color:#8fa3ff; flex-wrap:wrap;
-  `;
-  notice.innerHTML = `
-    <span>We use cookies to enhance your user experience. By continuing, you agree to our <a href="/legal/privacy-policy/" style="color:#ffffff;text-decoration:underline">Cookie Policy</a>.</span>
-    <button onclick="document.getElementById('cookie-notice').remove();localStorage.setItem('cookie-ok','1')"
-      style="background:#ffffff;color:#0024ed;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:0.8rem;font-weight:600;flex-shrink:0">
-      Accept
-    </button>`;
-  document.body.appendChild(notice);
-}
-
 /* ---------- Init All ---------- */
 document.addEventListener('DOMContentLoaded', () => {
   // Purely decorative canvas animation: start once the browser is idle
@@ -447,8 +396,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initEnrollmentForm();
   initPaymentForm();
   initSmoothScroll();
-  initBackToTop();
   initBlogSearch();
   initCategoryFilter();
-  initCookieNotice();
 });
