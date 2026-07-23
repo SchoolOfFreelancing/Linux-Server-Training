@@ -210,6 +210,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://i.ytimg.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.clarity.ms">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=optional">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=optional" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=optional"></noscript>
@@ -375,33 +377,58 @@
   .video-facade:hover .play-icon { transform: translate(-50%, -50%) scale(1.08); }
 </style>
 
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xpbr03hkw6");
-</script>
-<!-- End Microsoft Clarity -->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K52NJCLQ');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google Analytics (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LNS69YXG5"></script>
+<!-- Analytics & tag managers: Microsoft Clarity, Google Tag Manager, and
+     Google Analytics 4. Deferred until the browser is idle or the user first
+     interacts, so none of this third-party JS runs on the critical path or
+     inflates Total Blocking Time during initial load. The dataLayer + gtag()
+     stub are defined immediately so early config/events are queued and replay
+     once the libraries load; only the network requests are delayed. Same
+     deferral idiom as the consent script and the search module. The 3.5s
+     idle timeout guarantees the tags still fire (and the pageview is still
+     recorded) even for visitors who never interact. -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-1LNS69YXG5');
+  (function () {
+    var fired = false;
+    var events = ['scroll', 'mousemove', 'keydown', 'touchstart', 'click'];
+    function loadTags() {
+      if (fired) return;
+      fired = true;
+      events.forEach(function (evt) {
+        window.removeEventListener(evt, loadTags, { passive: true });
+      });
+      // Google Tag Manager
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-K52NJCLQ');
+      // Google Analytics (gtag.js)
+      var ga = document.createElement('script');
+      ga.async = true;
+      ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-1LNS69YXG5';
+      document.head.appendChild(ga);
+      // Microsoft Clarity
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "xpbr03hkw6");
+    }
+    events.forEach(function (evt) {
+      window.addEventListener(evt, loadTags, { passive: true, once: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadTags, { timeout: 3500 });
+    } else {
+      setTimeout(loadTags, 3000);
+    }
+  })();
 </script>
-<!-- End Google Analytics -->
+<!-- End analytics & tag managers -->
 </head>
 
 
