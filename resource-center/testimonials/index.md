@@ -10,9 +10,9 @@ Real feedback from students and clients who trained with and received support fr
 
 ★★★★★
 5.0
-based on 36 Google reviews
+Google reviews
 
-[See all 36 reviews on Google →](https://search.google.com/local/reviews?placeid=ChIJhz5k1Dt_VDcRBCCQGjDjw8I)
+[See all reviews on Google →](https://search.google.com/local/reviews?placeid=ChIJhz5k1Dt_VDcRBCCQGjDjw8I)
 
 Google Review★★★★★
 
@@ -50,5 +50,5 @@ In this era, freelancing plays a vital role in earning foreign currency. "School
 
 — via Google Reviews
 
-[Read all 36 reviews on Google →](https://search.google.com/local/reviews?placeid=ChIJhz5k1Dt_VDcRBCCQGjDjw8I)
-[Start your freelancing journey →](/contact-us/)
+[Explore All Training →](/freelancing-training/)
+[Linux &amp; AI Services →](/contact-us/)

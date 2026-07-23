@@ -11,10 +11,10 @@ Practical, instructor-led training and reliable Linux & AI services for business
 Founded
 
 Worldwide
-Clients Served
+Training & Services 
 
 [Explore Training Plans](/freelancing-training/)
-[Book Linux Support](/linux-ai-services/)
+[Hire Services](/linux-ai-services/)
 
 ![School of Freelancing introduction video](https://i.ytimg.com/vi_webp/bbJCBn_vUzs/hqdefault.webp)
 
@@ -84,9 +84,9 @@ Allocation: 40 Training Hours / 1-4 Weeks
 
 [View All Training →](/freelancing-training/)
 
-## What Our Students Say
+## Verified Rating
 
-5.0★ Rating · 36 Verified Google Reviews
+⭐⭐⭐⭐⭐ on Google Reviews
 
 “
 

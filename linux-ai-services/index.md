@@ -1,8 +1,6 @@
 <!-- Auto-generated Markdown of https://www.schooloffreelancing.com/linux-ai-services/ for AI agents (Accept: text/markdown). Source of truth: the HTML page. -->
 
-# Expert Freelancer Support
-
-★★★★★ 5.0 Rating · 36 Verified Reviews
+# Freelance Services
 
 All Services
 Linux
