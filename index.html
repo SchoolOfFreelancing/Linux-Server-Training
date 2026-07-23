@@ -1008,8 +1008,6 @@ Can't get Hummingbot running? Whether you're installing it for the first time or
       get tools () { return Array.from(registry.values()); }
     };
   }
-  if (typeof navigator.modelContext.registerTool !== 'function') return;
-
   var tools = [
     {
       name: 'search_training_programs',
@@ -1049,7 +1047,14 @@ Can't get Hummingbot running? Whether you're installing it for the first time or
     }
   ];
 
-  tools.forEach(function (tool) { navigator.modelContext.registerTool(tool); });
+  var mc = navigator.modelContext;
+  // Register through whichever API the implementation exposes: the spec's
+  // provideContext({tools}) or the incremental registerTool() form.
+  if (typeof mc.registerTool === 'function') {
+    tools.forEach(function (tool) { mc.registerTool(tool); });
+  } else if (typeof mc.provideContext === 'function') {
+    mc.provideContext({ tools: tools });
+  }
 })();
 </script>
 <chat-bubble-snippet

@@ -23,6 +23,25 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^auth\.md$ Auth.md [L]
 
 ##################################################
+# Markdown for Agents (content negotiation)
+# When a client sends "Accept: text/markdown" and a pre-rendered .md variant
+# exists for the page, serve that instead of the HTML. Browsers (which send
+# text/html) are unaffected. Responses carry Vary: Accept (see mod_headers)
+# so caches store the HTML and Markdown variants separately. Placed before
+# the localhost bypass and canonical redirect so agents get the markdown
+# variant in one hop on any host.
+##################################################
+# Root: "/" -> /index.md
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{DOCUMENT_ROOT}/index.md -f
+RewriteRule ^/?$ index.md [L]
+# Folder URLs: "/about-us/" -> /about-us/index.md
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/ [NC]
+RewriteCond %{DOCUMENT_ROOT}/$1/index.md -f
+RewriteRule ^(.+?)/?$ $1/index.md [L]
+
+##################################################
 # Localhost only (no HTTPS/WWW force)
 ##################################################
 RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1)$ [NC]
@@ -85,23 +104,6 @@ RewriteRule ^location/(.+)$ https://www.schooloffreelancing.com/locations/$1 [R=
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^ https://www.schooloffreelancing.com%{REQUEST_URI} [L,R=301]
-
-##################################################
-# Markdown for Agents (content negotiation)
-# When a client sends "Accept: text/markdown" and a pre-rendered .md variant
-# exists for the page, serve that instead of the HTML. Browsers (which send
-# text/html) are unaffected. Responses carry Vary: Accept (see mod_headers)
-# so caches store the HTML and Markdown variants separately.
-##################################################
-# Root: "/" -> /index.md
-RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
-RewriteCond %{DOCUMENT_ROOT}/index.md -f
-RewriteRule ^/?$ index.md [L]
-# Folder URLs: "/about-us/" -> /about-us/index.md
-RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
-RewriteCond %{REQUEST_URI} !^/\.well-known/ [NC]
-RewriteCond %{DOCUMENT_ROOT}/$1/index.md -f
-RewriteRule ^(.+?)/?$ $1/index.md [L]
 
 ##################################################
 # Well-known endpoints without extensions

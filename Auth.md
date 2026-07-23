@@ -31,7 +31,30 @@ curl https://www.schooloffreelancing.com/.well-known/webmcp.json
 
 # Agent Skills Index
 curl https://www.schooloffreelancing.com/.well-known/skills.json
+
+# OAuth Protected Resource Metadata (RFC 9728)
+curl https://www.schooloffreelancing.com/.well-known/oauth-protected-resource
 ```
+
+## Agent Registration Methods
+
+The authorization server metadata advertises an `agent_auth` block describing
+how agents register:
+
+- **Audience:** autonomous AI agents integrating with School of Freelancing
+  discovery and catalog APIs.
+- **Anonymous registration** (`identity_types_supported: ["anonymous"]`):
+  agents register without a user identity by POSTing to the
+  `register_uri` (`https://www.schooloffreelancing.com/api/oauth/register`)
+  and receive an `oauth2_client` credential (client ID and secret).
+- **Claiming:** an anonymous registration can later be claimed by a human
+  account via the `claim_uri`
+  (`https://www.schooloffreelancing.com/api/oauth/claim`).
+- **Credential use:** the issued client credentials are exchanged for access
+  tokens at the token endpoint (see flows below); tokens are sent as
+  `Authorization: Bearer` headers.
+- **Revocation:** credentials can be revoked at
+  `https://www.schooloffreelancing.com/api/oauth/revoke`.
 
 ## OAuth 2.0 Registration
 
