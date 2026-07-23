@@ -91,6 +91,12 @@ All locations are served remotely/online, billed in USD, with live instructor-le
 - [Testimonials](https://www.schooloffreelancing.com/resource-center/testimonials/)
 - [FAQs](https://www.schooloffreelancing.com/resource-center/faqs/)
 - [Intro Video](https://www.schooloffreelancing.com/resource-center/intro-video/) — Video introduction to School of Freelancing's training and support offerings
+- [Case Studies](https://www.schooloffreelancing.com/resource-center/case-studies/) — Real case studies from clients: Docker deployments, AI integrations, VoIP systems, and trading infrastructure
+- [Guide: Deploy a Linux Server from Zero to Production](https://www.schooloffreelancing.com/resource-center/guides/linux-deployment/) — Ubuntu Linux server installation, security hardening, networking, systemd services, backups, and monitoring
+- [Guide: Containerize a Legacy Web Application](https://www.schooloffreelancing.com/resource-center/guides/docker-containerize/) — Docker and Docker Compose: Dockerfile creation, multi-stage builds, and production deployment
+- [Guide: Set Up Your Own VoIP Phone System](https://www.schooloffreelancing.com/resource-center/guides/voip-setup/) — FusionPBX/FreeSWITCH setup: installation, extensions, IVR, call routing, and SIP trunking
+- [Guide: Create Your First AI Chatbot](https://www.schooloffreelancing.com/resource-center/guides/ai-chatbot/) — Building an AI chatbot with the Claude API: authentication, prompt engineering, and deployment
+- [Guide: Automate Your First Repetitive Task](https://www.schooloffreelancing.com/resource-center/guides/automation/) — Automating business tasks with Python and cron: email, file processing, data entry, and scheduling
 
 ## Legal
 

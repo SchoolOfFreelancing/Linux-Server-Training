@@ -65,6 +65,42 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.schooloffreelancing.com/resource-center/case-studies/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.schooloffreelancing.com/resource-center/guides/linux-deployment/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.schooloffreelancing.com/resource-center/guides/docker-containerize/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.schooloffreelancing.com/resource-center/guides/voip-setup/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.schooloffreelancing.com/resource-center/guides/ai-chatbot/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.schooloffreelancing.com/resource-center/guides/automation/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.schooloffreelancing.com/locations/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
