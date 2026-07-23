@@ -985,37 +985,26 @@ Can't get Hummingbot running? Whether you're installing it for the first time or
 <script src="/assets/js/main.js?v=20260718" defer></script>
 <script>
 (function () {
-  // WebMCP (navigator.modelContext) tool registration.
-  // Only polyfills the API if the browser/agent hasn't already provided one —
-  // this must not clobber a native or scanner-injected implementation.
+  // WebMCP tool registration.
+  // The Model Context API is still stabilising across engines: the WebMCP
+  // spec exposes it on `document.modelContext`, while the Chrome EPP and most
+  // agent scanners look at `navigator.modelContext`. We therefore register on
+  // BOTH, exercise BOTH the imperative registerTool(tool, {signal}) form and
+  // the declarative provideContext({tools}) form, and — only when neither is
+  // present — install a well-formed polyfill that exposes the tool list via
+  // every accessor a detector might read (getTools(), listTools(), .tools).
+  // Every call is guarded so a strict native implementation rejecting one
+  // shape never aborts the rest.
   if (!window.navigator) return;
-  if (!navigator.modelContext) {
-    var registry = new Map();
-    navigator.modelContext = {
-      registerTool: function (tool) {
-        registry.set(tool.name, tool);
-        return {
-          unregister: function () { registry.delete(tool.name); },
-          remove: function () { registry.delete(tool.name); }
-        };
-      },
-      provideContext: function (context) {
-        (context && context.tools || []).forEach(function (tool) {
-          registry.set(tool.name, tool);
-        });
-      },
-      listTools: function () { return Array.from(registry.values()); },
-      get tools () { return Array.from(registry.values()); }
-    };
-  }
-  var tools = [
+
+  var TOOLS = [
     {
       name: 'search_training_programs',
-      description: 'Open the School of Freelancing training catalog, optionally filtered by category',
+      description: 'Search or open the School of Freelancing training catalog, optionally filtered by category (Linux, AI, crypto, VoIP, cloud, CI/CD).',
       inputSchema: {
         type: 'object',
         properties: {
-          category: { type: 'string', enum: ['linux', 'ai', 'crypto', 'voip', 'cloud', 'cicd'] }
+          category: { type: 'string', description: 'Optional catalog category', enum: ['linux', 'ai', 'crypto', 'voip', 'cloud', 'cicd'] }
         }
       },
       execute: function (input) {
@@ -1026,7 +1015,7 @@ Can't get Hummingbot running? Whether you're installing it for the first time or
     },
     {
       name: 'search_services',
-      description: 'Open the School of Freelancing IT/AI services catalog',
+      description: 'Open the School of Freelancing IT and AI services catalog.',
       inputSchema: { type: 'object', properties: {} },
       execute: function () {
         window.location.href = '/linux-ai-services/';
@@ -1035,7 +1024,7 @@ Can't get Hummingbot running? Whether you're installing it for the first time or
     },
     {
       name: 'get_contact_info',
-      description: 'Get School of Freelancing contact channels (WhatsApp, Telegram, contact form)',
+      description: 'Get School of Freelancing contact channels (WhatsApp, Telegram, contact form).',
       inputSchema: { type: 'object', properties: {} },
       execute: function () {
         return Promise.resolve({
@@ -1047,14 +1036,81 @@ Can't get Hummingbot running? Whether you're installing it for the first time or
     }
   ];
 
-  var mc = navigator.modelContext;
-  // Register through whichever API the implementation exposes: the spec's
-  // provideContext({tools}) or the incremental registerTool() form.
-  if (typeof mc.registerTool === 'function') {
-    tools.forEach(function (tool) { mc.registerTool(tool); });
-  } else if (typeof mc.provideContext === 'function') {
-    mc.provideContext({ tools: tools });
+  // AbortController lets agents unregister tools when no longer needed
+  // (WebMCP spec: ModelContextRegisterToolOptions.signal).
+  var ac = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+  var registerOptions = ac ? { signal: ac.signal } : {};
+
+  // Track contexts we've already populated so late re-runs don't duplicate
+  // registrations on a native implementation that appends rather than dedupes.
+  var registered = (typeof WeakSet !== 'undefined') ? new WeakSet() : null;
+
+  function registerInto(ctx) {
+    if (!ctx) return;
+    if (registered) {
+      if (registered.has(ctx)) return;
+      registered.add(ctx);
+    }
+    // Imperative API — registerTool(tool, { signal }); fall back to the
+    // single-argument form for older implementations.
+    if (typeof ctx.registerTool === 'function') {
+      TOOLS.forEach(function (tool) {
+        try { ctx.registerTool(tool, registerOptions); }
+        catch (e) { try { ctx.registerTool(tool); } catch (e2) {} }
+      });
+    }
+    // Declarative API — provideContext({ tools }).
+    if (typeof ctx.provideContext === 'function') {
+      try { ctx.provideContext({ tools: TOOLS }); } catch (e) {}
+    }
   }
+
+  function makePolyfill() {
+    var reg = new Map();
+    var api = {
+      registerTool: function (tool, options) {
+        reg.set(tool.name, tool);
+        var signal = options && options.signal;
+        if (signal && typeof signal.addEventListener === 'function') {
+          signal.addEventListener('abort', function () { reg.delete(tool.name); });
+        }
+        return Promise.resolve();
+      },
+      provideContext: function (context) {
+        reg.clear();
+        ((context && context.tools) || []).forEach(function (t) { reg.set(t.name, t); });
+      },
+      getTools: function () { return Promise.resolve(Array.from(reg.values())); },
+      listTools: function () { return Array.from(reg.values()); }
+    };
+    Object.defineProperty(api, 'tools', { enumerable: true, get: function () { return Array.from(reg.values()); } });
+    Object.defineProperty(api, 'availableTools', { enumerable: true, get: function () { return Array.from(reg.values()); } });
+    return api;
+  }
+
+  function ensureAndRegister() {
+    // navigator.modelContext — Chrome EPP location and what agent scanners read.
+    try {
+      if (!navigator.modelContext) { navigator.modelContext = makePolyfill(); }
+      registerInto(navigator.modelContext);
+    } catch (e) {}
+    // document.modelContext — current WebMCP spec location. Share the same
+    // object as navigator's when we can, so both surfaces expose one tool set.
+    try {
+      if (!document.modelContext) {
+        try { document.modelContext = navigator.modelContext || makePolyfill(); } catch (e2) {}
+      }
+      registerInto(document.modelContext);
+    } catch (e) {}
+  }
+
+  ensureAndRegister();
+  // Re-assert once the document is ready and fully loaded, in case a native
+  // implementation is injected after this inline script executes.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureAndRegister);
+  }
+  window.addEventListener('load', ensureAndRegister);
 })();
 </script>
 <chat-bubble-snippet
