@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script
-  type="module"
-  src="https://d31aa325-40c1-401b-9581-4efb8d0e5044.search.ai.cloudflare.com/assets/v0.0.40/search-snippet.es.js"
-></script>
-
-
 <!-- Basic Meta -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -461,12 +455,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="stat-item">
           <span class="stat-number">Worldwide</span>
-          <span class="stat-label">Clients Served</span>
+          <span class="stat-label">Training &amp; Services</span>
         </div>
       </div>
       <div class="hero-actions" data-reveal data-delay="300">
         <a href="/freelancing-training/" class="btn btn-primary btn-lg">Explore Training Plans</a>
-        <a href="/linux-ai-services/" class="btn btn-outline btn-lg">Book Linux Support</a>
+        <a href="/linux-ai-services/" class="btn btn-outline btn-lg">Hire Services</a>
       </div>
     </div>
 
@@ -676,8 +670,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="testimonials" class="section" aria-labelledby="testimonials-heading">
   <div class="container">
     <div class="section-header" data-reveal>
-      <h2 class="section-title" id="testimonials-heading"><span>What Our Students Say</span></h2>
-      <p class="section-subtitle"><span>⭐⭐⭐⭐⭐ 5.0★ Verified Rating on Google Reviews</span></p>
+      <h2 class="section-title" id="testimonials-heading"><span>Verified Rating</span></h2>
+      <p class="section-subtitle"><span>⭐⭐⭐⭐⭐ on Google Reviews</span></p>
     </div>
     <div class="testimonials-grid">
 
@@ -1116,6 +1110,38 @@ Can't get Hummingbot running? Whether you're installing it for the first time or
 <chat-bubble-snippet
   api-url="https://d31aa325-40c1-401b-9581-4efb8d0e5044.search.ai.cloudflare.com/"
 ></chat-bubble-snippet>
+
+<!-- Lazy-load the Cloudflare AI search / chat-bubble module. It only powers
+     the floating <chat-bubble-snippet> above and is not needed for first
+     paint. Loading it as a synchronous module at the top of <head> made it a
+     network-critical third-party resource competing with FCP/LCP on mobile.
+     We defer it until the browser is idle or the user first interacts —
+     the same deferral idiom used for the consent script in <head>. -->
+<script>
+  (function () {
+    var loaded = false;
+    var events = ['scroll', 'mousemove', 'keydown', 'touchstart', 'click'];
+    function loadSearch() {
+      if (loaded) return;
+      loaded = true;
+      events.forEach(function (evt) {
+        window.removeEventListener(evt, loadSearch, { passive: true });
+      });
+      var s = document.createElement('script');
+      s.type = 'module';
+      s.src = 'https://d31aa325-40c1-401b-9581-4efb8d0e5044.search.ai.cloudflare.com/assets/v0.0.40/search-snippet.es.js';
+      document.head.appendChild(s);
+    }
+    events.forEach(function (evt) {
+      window.addEventListener(evt, loadSearch, { passive: true, once: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadSearch, { timeout: 4000 });
+    } else {
+      setTimeout(loadSearch, 3000);
+    }
+  })();
+</script>
 
 </body>
 </html>
