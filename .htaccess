@@ -92,6 +92,7 @@ RewriteCond %{DOCUMENT_ROOT}/index.md -f
 RewriteRule ^/?$ index.md [L]
 # Folder URLs: "/about-us/" -> /about-us/index.md
 RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/ [NC]
 RewriteCond %{DOCUMENT_ROOT}/$1/index.md -f
 RewriteRule ^(.+?)/?$ $1/index.md [L]
 
@@ -100,6 +101,7 @@ RewriteRule ^(.+?)/?$ $1/index.md [L]
 ##################################################
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/\.well-known/ [NC]
 RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
 RewriteRule ^(.+?)/?$ $1/index.html [L]
 
