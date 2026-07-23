@@ -1,0 +1,18 @@
+{
+  "agents": [
+    {
+      "name": "School of Freelancing Agent",
+      "description": "AI agent for School of Freelancing platform",
+      "endpoints": {
+        "a2a": {
+          "uri": "https://schooloffreelancing.com/api/agents/a2a",
+          "methods": ["POST"]
+        },
+        "mcp": {
+          "uri": "https://schooloffreelancing.com/api/agents/mcp",
+          "methods": ["POST"]
+        }
+      }
+    }
+  ]
+}
