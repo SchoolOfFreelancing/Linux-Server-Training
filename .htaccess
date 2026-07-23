@@ -172,7 +172,7 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
     # sub-request, so they never appeared on real pages. Static assets strip it
     # back off via /assets/.htaccess. rel values are IANA-registered:
     # service-doc (RFC 8631), describedby, api-catalog (RFC 9727).
-    Header always set Link "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", </llms-full.txt>; rel=\"describedby\"; type=\"text/plain\"; title=\"Full LLM-friendly site content\", </.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\""
+    Header always set Link "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\"; title=\"LLM-friendly site overview\", </llms-full.txt>; rel=\"describedby\"; type=\"text/plain\"; title=\"Full LLM-friendly site content\", </.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </.well-known/agents.json>; rel=\"agent-discovery\"; type=\"application/json\"; title=\"DNS-AID agent discovery\", </.well-known/security.txt>; rel=\"security\"; type=\"text/plain\"; title=\"Security policy\""
 
     # ── ADDED: Vary: Accept — HTML pages have a text/markdown variant negotiated
     # on Accept. merge (not set) preserves the edge's Vary: Accept-Encoding.

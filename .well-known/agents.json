@@ -1,16 +1,44 @@
 {
+  "version": "1.0",
   "agents": [
     {
+      "id": "sof-agent",
       "name": "School of Freelancing Agent",
-      "description": "AI agent for School of Freelancing platform",
+      "description": "AI agent for discovering and accessing School of Freelancing training programs, support services, and resources",
+      "homepage": "https://www.schooloffreelancing.com/",
+      "capabilities": [
+        "training-discovery",
+        "service-discovery",
+        "resource-lookup"
+      ],
       "endpoints": {
+        "index": {
+          "uri": "https://www.schooloffreelancing.com/.well-known/agents.json",
+          "description": "This agent discovery endpoint"
+        },
         "a2a": {
-          "uri": "https://schooloffreelancing.com/api/agents/a2a",
-          "methods": ["POST"]
+          "uri": "https://www.schooloffreelancing.com/api/agents/a2a",
+          "methods": ["POST"],
+          "description": "Agent-to-agent protocol endpoint",
+          "contentType": "application/json"
         },
         "mcp": {
-          "uri": "https://schooloffreelancing.com/api/agents/mcp",
-          "methods": ["POST"]
+          "uri": "https://www.schooloffreelancing.com/api/agents/mcp",
+          "methods": ["POST"],
+          "description": "Model Context Protocol endpoint",
+          "contentType": "application/json"
+        },
+        "llms": {
+          "uri": "https://www.schooloffreelancing.com/llms.txt",
+          "methods": ["GET"],
+          "description": "LLM-friendly site overview",
+          "contentType": "text/plain"
+        },
+        "llms-full": {
+          "uri": "https://www.schooloffreelancing.com/llms-full.txt",
+          "methods": ["GET"],
+          "description": "Complete LLM site content index",
+          "contentType": "text/plain"
         }
       }
     }
