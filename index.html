@@ -983,6 +983,68 @@ Can't get Hummingbot running? Whether you're installing it for the first time or
 </footer>
 
 <script src="/assets/js/main.js?v=20260718" defer></script>
+<script>
+(function () {
+  // WebMCP (navigator.modelContext) tool registration.
+  // Only polyfills the API if the browser/agent hasn't already provided one —
+  // this must not clobber a native or scanner-injected implementation.
+  if (!window.navigator) return;
+  if (!navigator.modelContext) {
+    navigator.modelContext = {
+      _tools: new Map(),
+      registerTool: function (tool) {
+        this._tools.set(tool.name, tool);
+        var registry = this._tools;
+        return {
+          unregister: function () { registry.delete(tool.name); }
+        };
+      }
+    };
+  }
+  if (typeof navigator.modelContext.registerTool !== 'function') return;
+
+  var tools = [
+    {
+      name: 'search_training_programs',
+      description: 'Open the School of Freelancing training catalog, optionally filtered by category',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          category: { type: 'string', enum: ['linux', 'ai', 'crypto', 'voip', 'cloud', 'cicd'] }
+        }
+      },
+      execute: function (input) {
+        var url = '/freelancing-training/' + (input && input.category ? '?category=' + encodeURIComponent(input.category) : '');
+        window.location.href = url;
+        return Promise.resolve({ status: 'navigated', url: url });
+      }
+    },
+    {
+      name: 'search_services',
+      description: 'Open the School of Freelancing IT/AI services catalog',
+      inputSchema: { type: 'object', properties: {} },
+      execute: function () {
+        window.location.href = '/linux-ai-services/';
+        return Promise.resolve({ status: 'navigated', url: '/linux-ai-services/' });
+      }
+    },
+    {
+      name: 'get_contact_info',
+      description: 'Get School of Freelancing contact channels (WhatsApp, Telegram, contact form)',
+      inputSchema: { type: 'object', properties: {} },
+      execute: function () {
+        return Promise.resolve({
+          whatsapp: 'https://wa.me/8801748973769',
+          telegram: 'https://t.me/SchoolOfFreelancingTraining',
+          contactForm: 'https://www.schooloffreelancing.com/contact-us/'
+        });
+      }
+    }
+  ];
+
+  tools.forEach(function (tool) { navigator.modelContext.registerTool(tool); });
+})();
+</script>
 <chat-bubble-snippet
   api-url="https://d31aa325-40c1-401b-9581-4efb8d0e5044.search.ai.cloudflare.com/"
 ></chat-bubble-snippet>

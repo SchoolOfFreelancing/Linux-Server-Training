@@ -16,6 +16,13 @@ RewriteRule (^|/)CLAUDE\.md$ - [F,L]
 RewriteRule (^|/)AGENT-DISCOVERY\.md$ - [F,L]
 
 ##################################################
+# Serve Auth.md for lowercase agent requests (Linux filesystems are
+# case-sensitive; some agent scanners request lowercase auth.md).
+##################################################
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^auth\.md$ Auth.md [L]
+
+##################################################
 # Localhost only (no HTTPS/WWW force)
 ##################################################
 RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1)$ [NC]
@@ -186,7 +193,7 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
     # sub-request, so they never appeared on real pages. Static assets strip it
     # back off via /assets/.htaccess. rel values are IANA-registered:
     # service-doc (RFC 8631), describedby, api-catalog (RFC 9727), plus auth/mcp extensions.
-    Header always set Link "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\"; title=\"LLM overview\", </llms-full.txt>; rel=\"describedby\"; type=\"text/plain\"; title=\"Full LLM content\", </Auth.md>; rel=\"service-doc\"; type=\"text/markdown\"; title=\"Agent auth guide\", </.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </.well-known/agents.json>; rel=\"agent-discovery\"; type=\"application/json\"; title=\"Agent discovery\", </.well-known/skills.json>; rel=\"agent-skills\"; type=\"application/json\"; title=\"Skills index\", </.well-known/mcp.json>; rel=\"mcp-server\"; type=\"application/json\"; title=\"MCP server config\", </.well-known/webmcp.json>; rel=\"webmcp\"; type=\"application/json\"; title=\"WebMCP config\", </.well-known/openid-configuration.json>; rel=\"auth\"; type=\"application/json\"; title=\"OpenID Connect discovery\", </.well-known/oauth-authorization-server.json>; rel=\"auth\"; type=\"application/json\"; title=\"OAuth 2.0 server\", </.well-known/security.txt>; rel=\"security\"; type=\"text/plain\"; title=\"Security policy\""
+    Header always set Link "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\"; title=\"LLM overview\", </llms-full.txt>; rel=\"describedby\"; type=\"text/plain\"; title=\"Full LLM content\", </Auth.md>; rel=\"service-doc\"; type=\"text/markdown\"; title=\"Agent auth guide\", </.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </.well-known/agents.json>; rel=\"agent-discovery\"; type=\"application/json\"; title=\"Agent discovery\", </.well-known/agent-skills/index.json>; rel=\"agent-skills\"; type=\"application/json\"; title=\"Skills index\", </.well-known/mcp/server-card.json>; rel=\"mcp-server\"; type=\"application/json\"; title=\"MCP server card\", </.well-known/webmcp.json>; rel=\"webmcp\"; type=\"application/json\"; title=\"WebMCP config\", </.well-known/openid-configuration.json>; rel=\"auth\"; type=\"application/json\"; title=\"OpenID Connect discovery\", </.well-known/oauth-authorization-server.json>; rel=\"auth\"; type=\"application/json\"; title=\"OAuth 2.0 server\", </.well-known/oauth-protected-resource>; rel=\"auth\"; type=\"application/json\"; title=\"OAuth protected resource\", </.well-known/security.txt>; rel=\"security\"; type=\"text/plain\"; title=\"Security policy\""
 
     # ── ADDED: Vary: Accept — HTML pages have a text/markdown variant negotiated
     # on Accept. merge (not set) preserves the edge's Vary: Accept-Encoding.

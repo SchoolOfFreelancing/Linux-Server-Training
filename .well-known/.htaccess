@@ -1,14 +1,16 @@
 RewriteEngine On
+RewriteBase /.well-known/
 
 # Rewrite requests for well-known endpoints without extensions to their .json files
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^oauth-authorization-server$ oauth-authorization-server.json [L]
-RewriteRule ^openid-configuration$ openid-configuration.json [L]
-RewriteRule ^mcp$ mcp.json [L]
-RewriteRule ^webmcp$ webmcp.json [L]
-RewriteRule ^skills$ skills.json [L]
-RewriteRule ^agents$ agents.json [L]
+RewriteRule ^openid-configuration$ openid-configuration.json [QSA,L]
+RewriteRule ^oauth-authorization-server$ oauth-authorization-server.json [QSA,L]
+RewriteRule ^oauth-protected-resource$ oauth-protected-resource.json [QSA,L]
+RewriteRule ^mcp$ mcp.json [QSA,L]
+RewriteRule ^webmcp$ webmcp.json [QSA,L]
+RewriteRule ^skills$ skills.json [QSA,L]
+RewriteRule ^agents$ agents.json [QSA,L]
 
 # Serve the RFC 9727 API catalog with its registered media type.
 <Files "api-catalog">
@@ -26,7 +28,7 @@ RewriteRule ^agents$ agents.json [L]
 </Files>
 
 # OAuth/OIDC discovery configuration
-<Files ~ "^(oauth-authorization-server|openid-configuration|mcp|webmcp|skills|agents)\.json$">
+<Files ~ "^(oauth-authorization-server|oauth-protected-resource|openid-configuration|mcp|webmcp|skills|agents)\.json$">
     ForceType application/json
 </Files>
 
